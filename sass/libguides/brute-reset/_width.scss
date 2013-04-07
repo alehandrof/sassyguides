@@ -1,0 +1,81 @@
+%reset-width {
+  width: auto;
+}
+#wrapper,
+#container,
+#header,
+#content,
+#contentleft,
+#contentcenter,
+#contentright,
+.searchField,
+#tabsI,#tabs12,
+.b_moreinfo,.b_edit,.b_stat,.b_pen,
+.b_edit,
+.b_stat,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.pf_bookmark,.pf_comment,.pf_print,
+.mediumbox,
+.widebox,
+.xwidebox,
+.narrowbox,
+.popupdiv,
+.descdiv,
+.descdiv a,
+* html .descdiv a,
+.dropmenudiv,
+.dropmenudiv a,
+* html .dropmenudiv a,
+.popuphelp,
+.popuphelp a,
+* html .popuphelp a,
+#footer,
+.popup,
+.balloon,
+#toolbox,
+a.info:hover span,
+* html a.info,
+.book_art_0,
+.book_art_1,
+.book_art_2,
+.forum_count,
+.cg_home_table,
+.res_icon,
+.ereserve_table,
+.google_search_box,
+.bubble_icon .bubble_dialog,
+table.qt,
+#la_qentry.la_box,
+#la_boxbutton,
+.profileimage,
+button.aptsch,
+.color_cube,.color_cube_selected,
+#la_askqform label,
+#la_askqform label.radiolabel,
+#la_askqform input,#la_askqform textarea,
+#la_askqform input[type=checkbox],
+#la_askqform select {
+    @extend %reset-width;
+}
+
+%reset-min-width {
+  min-width: 0;
+}
+.b_moreinfo,.b_edit,.b_stat,.b_pen,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search {
+    @extend %reset-min-width;
+}
+
+%reset-max-width {
+  max-width: none;
+}
+.narrowboxmid img,
+.mediumboxmid img,
+.wideboxmid img,
+.xwideboxmid img,
+.innerbox img,.innerbox object,.innerbox embed,.innerbox input,.innerbox select,
+.innerbox table img,.innerbox table object,.innerbox table embed,.innerbox table input,.innerbox table select,
+.profileimage,
+.la_video {
+    @extend %reset-max-width;
+}
