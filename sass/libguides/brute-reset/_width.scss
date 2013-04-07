@@ -55,7 +55,7 @@ button.aptsch,
 #la_askqform input,#la_askqform textarea,
 #la_askqform input[type=checkbox],
 #la_askqform select {
-    @extend %reset-width;
+  @extend %reset-width;
 }
 
 %reset-min-width {
@@ -63,7 +63,7 @@ button.aptsch,
 }
 .b_moreinfo,.b_edit,.b_stat,.b_pen,
 .bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search {
-    @extend %reset-min-width;
+  @extend %reset-min-width;
 }
 
 %reset-max-width {
@@ -77,5 +77,5 @@ button.aptsch,
 .innerbox table img,.innerbox table object,.innerbox table embed,.innerbox table input,.innerbox table select,
 .profileimage,
 .la_video {
-    @extend %reset-max-width;
+  @extend %reset-max-width;
 }

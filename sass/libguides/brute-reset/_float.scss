@@ -1,0 +1,17 @@
+%reset-float {
+  float: none;
+}
+#contentleft,#contentcenter,#contentright,
+#tabsI,#tabs12,
+#tabsI a,#tabs12 a,
+#tabsI a span,#tabs12 a span,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.img-shadow,
+.comment_date,
+#toolbox,
+.boxeditlink,
+.la_bcap,
+.la_updated,
+.ui-widget .auto_qa {
+  @extend %reset-float;
+}
