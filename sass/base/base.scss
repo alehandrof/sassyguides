@@ -1,11 +1,4 @@
 
-
-// MIXINS
-// ======
-%blocks {
-  margin: 0 0 rhythm(4) 0;
-}
-
 @include establish-baseline;
 
 @import "sections";
