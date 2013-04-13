@@ -41,10 +41,10 @@ $light: #999;
 $lighter: #eee;
 
 @function dark($color: #f0f) {
-  @return darken($color, 25%);
+  @return darken($color, 20%);
 }
 @function light($color: #f0f) {
-  @return ligthen($color, 25%);
+  @return lighten($color, 20%);
 }
 
 
@@ -93,10 +93,10 @@ $primary-color: $green;
 $primary-active-color: $orange;
 $secondary-color: $gray-6;
 $default-color: $gray-c;
-$info-color: $blue;
+$info-color: dark($yellow);
 $success-color: $green;
 $warning-color: $orange;
-$danger-color: $red;
+$error-color: $red;
 $border-color: $gray-c;
 
 $shading: 0.25;
@@ -107,8 +107,8 @@ $tab-color: $primary-color;
 $tab-active-color: $primary-active-color;
 
 
-$static-roundness: rhythm(1);
-$widget-roundness: rhythm(2/3);
+$static-radius: rhythm(1);
+$widget-radius: rhythm(2/3);
 
 /* Compass
 ========================================================================== */
