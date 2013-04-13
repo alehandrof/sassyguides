@@ -33,61 +33,73 @@ $xs: $font-size * 0.75; // 12px
 
 /* Black, white & grays */
 $black-color: #000;
-$white-color: #fff;
+$white: #fff;
 $darker-color: #222;
-$dark-color: #333;  
+$grey-5: #333;  
 $mid-color: #555;
 $light: #999;
 $lighter: #eee;
 
-/* Palette: based on [FlatUI](http://cdn.designmodo.com/wp-content/uploads/2013/03/flat-ui-free-large1.jpg) */
-$purple-color: #95b;
-$red-color:    #e43;
-$orange-color: #e72;
-$green-color:  #2c7;
-$blue-color:   #39d;
-$alt-purple-color:  #84a;
-$alt-red-color:     #c32;
-$alt-orange-color:  #d50;
-$alt-green-color:   #2a6;
-$alt-blue-color:    #28b;
-// $$$ missing: yellow & pink
-
-// More "dark & light" values...
-// $dark-color:   #5b5b5b;
-// $mid-color:    #a5a5a5;
-// $light-color:  #efefef;
-// $alt-dark-color:    #4f4f4f;
-// $alt-mid-color:     #8c8c8c;
-// $alt-light-color:   #c6c6c6;
+@function dark($color: #f0f) {
+  @return darken($color, 25%);
+}
+@function light($color: #f0f) {
+  @return ligthen($color, 25%);
+}
 
 
-$text-color: $dark-color;
-$link-color: $blue-color;
-$hover-color: $alt-blue-color;
-$visited-color: $alt-purple-color;
+/* Palette */
+$purple: #336699;
+$mauve: #663399;
+$fuschia: #993399;
+$pink: #ea4c88;
+$red: #cc0000;
+$mellow-red: #cc3333;
+$orange: #ff6600;
+$brown: #996633;
+$yellow: #ffcc33;
+// $grass-green: #999900;
+$green: #336600;
+// $turquoise:;
+$light-blue: #0099cc;
+
+$blue: #0066cc;
+$cyan: #6666cc;
+
+$gray-5: #555;
+$gray-6: #666;
+$gray-9: #999; 
+$gray-a: #aaa; 
+$gray-c: #ccc; 
+$gray-e: #eee; 
+$gray-f: #f8f8f8;
+$white: #fff;
+
+$text-color: $grey-5;
+$link-color: $blue;
+$hover-color: dark($blue);
+$visited-color: dark($purple);
 
 /* Page & content colors */
-$page-color: #f8f8f8;
-$content-color: $white-color;
-$header-color: $blue-color;
-$header-text-color: $white-color;
+$page-color: $gray-f;
+$content-color: $white;
+$header-color: $blue;
+$header-text-color: $white;
 
 $heading-color: inherit;
 
 /* Widget Colors */
-$primary-color: $green-color;
-$primary-active-color: $orange-color;
-$default-color: $alt-light-color;
-$info-color: $blue-color;
-$success-color: $green-color;
-$warning-color: $orange-color;
-$danger-color: $red-color;
-$border-color: $alt-light-color;
+$primary-color: $green;
+$primary-active-color: $orange;
+$secondary-color: $gray-6;
+$default-color: $gray-c;
+$info-color: $blue;
+$success-color: $green;
+$warning-color: $orange;
+$danger-color: $red;
+$border-color: $gray-c;
 
 $shading: 0.25;
-
-$border-color: $light-color;
 
 // settings to move into the LibGuides section
 
