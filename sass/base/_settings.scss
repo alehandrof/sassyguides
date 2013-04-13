@@ -1,15 +1,15 @@
+/* ==========================================================================
+Settings
+========================================================================== */
+
+/* Fonts
+========================================================================== */
+
+/* Sizes */
 $font-size: 16px;
 $line-height: 1.5;
 
-// Compass Settings
-$base-font-size: $font-size;
-$base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
-$default-border-radius: rhythm(99);
-
-$static-roundness: rhythm(1);
-$widget-roundness: rhythm(2/3);
-
-// Font Families & Weights
+/* Font Families & Weights */
 $text-font: 'Open Sans', Arial, sans-serif;
 $text-weight: 400;
 $heading-font: 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
@@ -17,8 +17,8 @@ $heading-weight: 400;
 $code-font: 'Source Code Pro', Monaco, Consola, monospace;
 $code-weight: 400;
 
+/* Derivative values (do not edit!) */
 $heading-size-adjustment: 0;
-
 $line-height: 1.5;
 $xxxl: $font-size * 3;
 $xxl: $font-size * 2;
@@ -28,17 +28,19 @@ $m: $font-size * 1; // 16px
 $s: $font-size * 0.85; // 14px
 $xs: $font-size * 0.75; // 12px
 
+/* Colors
+========================================================================== */
+
 /* Black, white & grays */
 $black-color: #000;
 $white-color: #fff;
 $darker-color: #222;
-$dark-color: #333;
+$dark-color: #333;  
 $mid-color: #555;
 $light: #999;
 $lighter: #eee;
 
-/* Colors */
-// Simplified [FlatUI](http://cdn.designmodo.com/wp-content/uploads/2013/03/flat-ui-free-large1.jpg)
+/* Palette: based on [FlatUI](http://cdn.designmodo.com/wp-content/uploads/2013/03/flat-ui-free-large1.jpg) */
 $purple-color: #95b;
 $red-color:    #e43;
 $orange-color: #e72;
@@ -52,12 +54,12 @@ $alt-blue-color:    #28b;
 // $$$ missing: yellow & pink
 
 // More "dark & light" values...
-$dark-color:   #5b5b5b;
-$mid-color:    #a5a5a5;
-$light-color:  #efefef;
-$alt-dark-color:    #4f4f4f;
-$alt-mid-color:     #8c8c8c;
-$alt-light-color:   #c6c6c6;
+// $dark-color:   #5b5b5b;
+// $mid-color:    #a5a5a5;
+// $light-color:  #efefef;
+// $alt-dark-color:    #4f4f4f;
+// $alt-mid-color:     #8c8c8c;
+// $alt-light-color:   #c6c6c6;
 
 
 $text-color: $dark-color;
@@ -91,3 +93,14 @@ $border-color: $light-color;
 
 $tab-color: $primary-color;
 $tab-active-color: $primary-active-color;
+
+
+$static-roundness: rhythm(1);
+$widget-roundness: rhythm(2/3);
+
+/* Compass
+========================================================================== */
+
+$base-font-size: $font-size;
+$base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+$default-border-radius: rhythm(99);
