@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Grouping Content
+   ========================================================================== */
+
+/* Block-level
+   ========================================================================== */
+
+p,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+figure,
+figcaption {
+  // font-size: 1em;
+  // line-height: 1.5;
+  @extend %blocks;
+}
+
+/* Preformatted
+   ========================================================================== */
+
+pre {
+  margin-left: rhythm(4);
+  white-space: pre-line; // TODO: Test this
+}
+
+/* Blockquote
+   ========================================================================== */
+
+blockquote {
+  color: $mid-color;
+  border-left: rhythm(1) solid $light-color;
+  padding: 0 rhythm(4) 0 rhythm(4);
+  p {
+    margin: 0 0 rhythm(2);
+  }
+}
+
+/* Lists (Ordered, Unordered, Definitions)
+   ========================================================================== */
+
+ol, ul {
+  @extend %blocks;
+  ol, ul {
+    margin-bottom: 0;
+  }
+}
+ol {
+  list-style-type: decimal;
+  padding: 0;
+}
+%base-ul {
+  list-style-type: square;
+  padding: 0;
+  & li li {
+    list-style-type: circle;
+  }
+}
+ul  {
+  @extend %base-ul;
+}
+%base-li {
+  margin-left: rhythm(4);
+}
+li,
+dd {
+  @extend %base-li;
+}
+dt {
+  color: $dark-color;
+  font-weight: $text-weight;
+}
+
+// TODO: figures ($$$)
+// figure {
+//   margin: 0 0 1.5em 0;
+// }
+// figure br {
+//   clear: both;
+// }
+// p + figure {
+//   margin-top: 1.5em;
+// }
+// figcaption {
+//   clear: left;
+// }
+// figcaption > * {
+//   color: #666;
+//   font-size: 0.875em;
+//   line-height: 1.1429;
+//   margin: 0.5714em 0;
+//   clear: left;
+// }
+// figcaption h4 {
+//   color: #444;
+//   font-size: 1em;
+//   line-height: 1;
+//   clear: left;
+// }
+
+/* Lists (Ordered, Unordered, Definitions)
+   ========================================================================== */
+
+/* Based on: */
+
+hr {
+  @extend %h1;
+  text-align: center;
+  @extend %blocks;
+  border: 0;
+  padding: 0;
+  height: 0;
+  clear: both;
+  display: block;
+}
+hr::after {
+  content: "···";
+  color: $mid-color;
+  letter-spacing: rhythm(2);
+  padding-left: rhythm(1);
+  height: 0;
+}

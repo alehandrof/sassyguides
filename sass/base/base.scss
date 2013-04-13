@@ -1,0 +1,36 @@
+
+
+// MIXINS
+// ======
+%blocks {
+  margin: 0 0 rhythm(4) 0;
+}
+
+@include establish-baseline;
+
+@import "sections";
+@import "grouping";
+@import "text-level";
+// @import "embedded";
+// @import "tabular";
+// @import "forms";
+
+
+// Embedded Content
+// ================
+// img, object, video
+
+// Tabular Data
+// ============
+table {
+  @extend %blocks;
+}
+
+// Forms
+// =====
+fieldset {
+  @extend %blocks;
+}
+::input-placeholder {
+  color: $alt-light-color;
+}

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Text-level semantics
+   ========================================================================== */
+
+/* Links
+   ========================================================================== */
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:focus {
+    outline: 1px solid  rgba($info-color, $shading * 2);
+  }
+  &:hover {
+    color: $hover-color;
+    outline: none;
+  }
+  a:link,
+  a:visited,
+  a:hover {
+    @include single-transition(all 0.3s ease);
+  }
+  a:active {
+    color: #f0f;
+    outline: none;
+    @include single-transition(none);
+  }
+}
+
+/* Use for links with bottom border (instead of underline) */
+
+%link-with-border {
+  border-bottom: 1px solid rgba($link-color, $shading);
+  &:hover {
+    border-color: rgba($hover-color, $shading * 2);
+  }
+}
+
+/* Emphasis & italicized text
+   ========================================================================== */
+
+em,
+i,
+var,
+samp,
+cite {
+  font-style: italic;
+}
+
+/* Strong and embolded text
+   ========================================================================== */
+
+strong,
+b {
+  color: lighten($text-color, 25%);
+  font-weight: 700;
+  /* @todo: I've encountered this pattern in the wild. Is it worth accounting for? */
+  a & {
+    color: $link-color;
+  }
+}
+
+/* Small or "fine print" text
+   ========================================================================== */
+
+small {
+  color: $mid-color;
+  @include adjust-font-size-to($xl + $heading-size-adjustment);
+  @include adjust-leading-to(5, $xl);
+  display: inline-block;
+}
+
+// TODO: Finish rest of inline $$$
+// abbr {
+//   -webkit-font-feature-settings: "c2sc" 1;
+//   -moz-font-feature-settings: "c2sc" 1;
+//   -ms-font-feature-settings: "c2sc" 1;
+//   -o-font-feature-settings: "c2sc" 1;
+//   font-feature-settings: "c2sc" 1;
+//   line-height: 90%;
+//   letter-spacing: 0.03125em;
+//   border: 0 none;
+// }
+// abbr[title]:hover,
+// dfn[title] {
+//   border-bottom: 1px dotted rgba(68,68,68,0.3);
+//   cursor: help;
+// }
+// code {
+//   color: #852914;
+//   font: 400 0.875em/90% source-code-pro, monospace;
+// }
+// samp {
+//   color: #333;
+//   font: 400 0.875em/90% source-code-pro, monospace;
+//   margin: 0 0.25em;
+// }
+// kbd {
+//   color: #666;
+//   font-size: 0.875em;
+//   line-height: 90%;
+//   background-color: #fcfcfc;
+//   margin: 0 0.25em;
+//   border: 1px solid #e6e6e6;
+//   border-radius: 4px;
+//   padding: 0.1429em 0.4286em;
+// }
+// sub,
+// sup {
+//   font-size: smaller;
+//   line-height: 90%;
+//   vertical-align: sub;
+// }
+// sup {
+//   vertical-align: super;
+// }
+// mark,
+// ins {
+//   background-color: #fff9dd;
+//   line-height: 90%;
+//   padding: 0 0.125em;
+// }
+// ins {
+//   background-color: #f0f0f0;
+// }
+// del,
+// s {
+//   line-height: 90%;
+//   text-decoration: line-through;
+// }
