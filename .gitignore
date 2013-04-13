@@ -1,4 +1,8 @@
 *.html
+*.sublime-*
 *_files
 .sass-cache/
 BACKUP/
+images/
+reference/
+css/
