@@ -31,7 +31,7 @@ pre {
 
 blockquote {
   color: $mid-color;
-  border-left: rhythm(1) solid $light-color;
+  border-left: rhythm(1) solid $secondary-color;
   padding: 0 rhythm(4) 0 rhythm(4);
   p {
     margin: 0 0 rhythm(2);
@@ -69,8 +69,8 @@ dd {
   @extend %base-li;
 }
 dt {
-  color: $dark-color;
-  font-weight: $text-weight;
+  // color: $text-color;
+  font-weight: $text-weight + 200;
 }
 
 // TODO: figures ($$$)

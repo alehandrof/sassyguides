@@ -1,12 +1,16 @@
 
 @include establish-baseline;
 
-@import "sections";
-@import "grouping";
-@import "text-level";
-// @import "embedded";
-// @import "tabular";
-// @import "forms";
+@import
+        "settings",
+        "webfonts",
+        "mixins",
+        "sections",
+        "grouping",
+        "text-level";
+// "embedded";
+// "tabular";
+// "forms";
 
 
 // Embedded Content
@@ -25,5 +29,5 @@ fieldset {
   @extend %blocks;
 }
 ::input-placeholder {
-  color: $alt-light-color;
+  color: $border-color;
 }

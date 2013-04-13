@@ -25,6 +25,9 @@ a {
     outline: none;
     @include single-transition(none);
   }
+  img {
+    border: 0;
+  }
 }
 
 /* Use for links with bottom border (instead of underline) */

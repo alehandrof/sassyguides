@@ -1,0 +1,9 @@
+/* ==========================================================================
+   Goodies (Classes?)
+   ========================================================================== */
+
+/* Makes the lede (or lead) paragraph more prominent */
+p.lede {
+  @include adjust-font-size-to($l);
+  color: $mid-color;
+}
