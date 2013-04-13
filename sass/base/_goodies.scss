@@ -2,8 +2,31 @@
    Goodies (Classes?)
    ========================================================================== */
 
-/* Makes the lede (or lead) paragraph more prominent */
-p.lede {
+/* Lede (or lead) paragraph */
+p.lede,
+p.lead {
   @include adjust-font-size-to($l);
   color: $mid-color;
 }
+
+/* Small caps */
+.small-caps {
+  text-transform: uppercase;
+  @include adjust-font-size-to($s);
+}
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Emphasis classes */
+.muted { color: $gray-9; }
+.text-warning { color: $warning-color; }
+.text-error { color: $error-color; }
+.text-info { color: $info-color; }
+.text-success { color: $success-color; }
+
+/* Unstyled & inline lists */
+.unstyled { @include no-bullets; }
+.inline { @include inline-list; }
