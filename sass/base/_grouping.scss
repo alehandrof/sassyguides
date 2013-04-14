@@ -7,16 +7,6 @@
   margin: 0 0 rhythm(4) 0;
 }
 
-/* Block-level */
-ul,
-ol,
-dl,
-figure,
-figcaption {
-  // font-size: 1em;
-  // line-height: 1.5;
-}
-
 /* Paragraphs */
 p {
   @extend %blocks;
@@ -93,6 +83,7 @@ figure {
   @extend %blocks;
 }
 figcaption {
+  @extend %blocks;
   & > img {
     display: block;
   }
@@ -115,7 +106,7 @@ hr {
 }
 hr::after {
   content: "···";
-  color: $mid-color;
+  color: $gray-9;
   letter-spacing: rhythm(2);
   padding-left: rhythm(1);
   height: 0;
