@@ -2,9 +2,7 @@
    Grouping Content
    ========================================================================== */
 
-/* Block-level
-   ========================================================================== */
-
+/* Block-level */
 p,
 pre,
 blockquote,
@@ -18,17 +16,22 @@ figcaption {
   @extend %blocks;
 }
 
-/* Preformatted
-   ========================================================================== */
+/* Paragraphs */
+p {
+  &.lede,
+  &.lead {
+    @include adjust-font-size-to($l);
+    color: $mid-color;
+  }
+}
 
+/* Preformatted */
 pre {
   margin-left: rhythm(4);
   white-space: pre-line; // TODO: Test this
 }
 
-/* Blockquote
-   ========================================================================== */
-
+/* Blockquote */
 blockquote {
   color: $mid-color;
   border-left: rhythm(1) solid $secondary-color;
@@ -38,14 +41,14 @@ blockquote {
   }
 }
 
-/* Lists (Ordered, Unordered, Definitions)
-   ========================================================================== */
-
+/* Lists (Ordered, Unordered, Definitions) */
 ol, ul {
   @extend %blocks;
   ol, ul {
     margin-bottom: 0;
   }
+  &.unstyled { @include no-bullets; }
+  &.inline { @include inline-list; }
 }
 ol {
   list-style-type: decimal;
@@ -101,11 +104,7 @@ dt {
 //   clear: left;
 // }
 
-/* Lists (Ordered, Unordered, Definitions)
-   ========================================================================== */
-
-/* Based on: */
-
+/* Horizontal Rulers */
 hr {
   @extend %h1;
   text-align: center;
