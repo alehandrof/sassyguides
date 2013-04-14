@@ -2,10 +2,12 @@
    Grouping Content
    ========================================================================== */
 
+/* Block-level placeholder */
+%blocks {
+  margin: 0 0 rhythm(4) 0;
+}
+
 /* Block-level */
-p,
-pre,
-blockquote,
 ul,
 ol,
 dl,
@@ -13,11 +15,11 @@ figure,
 figcaption {
   // font-size: 1em;
   // line-height: 1.5;
-  @extend %blocks;
 }
 
 /* Paragraphs */
 p {
+  @extend %blocks;
   &.lede,
   &.lead {
     @include adjust-font-size-to($l);
@@ -27,82 +29,78 @@ p {
 
 /* Preformatted */
 pre {
+  @extend %blocks;
   margin-left: rhythm(4);
   white-space: pre-line; // TODO: Test this
 }
 
 /* Blockquote */
 blockquote {
+  @extend %blocks;
   color: $secondary-color;
   border-left: rhythm(1) solid $gray-c;
-  padding: 0 rhythm(4) 0 rhythm(4);
+  padding: 0 rhythm(4) 0 rhythm(3);
   p {
     margin: 0 0 rhythm(2);
   }
 }
 
-/* Lists (Ordered, Unordered, Definitions) */
-ol, ul {
+/* Lists (Ordered & Unordered)*/
+%base-list {
   @extend %blocks;
+  padding: 0;
+}
+ol, ul {
+  @extend %base-list;
   ol, ul {
     margin-bottom: 0;
   }
-  &.unstyled { @include no-bullets; }
-  &.inline { @include inline-list; }
 }
 ol {
   list-style-type: decimal;
-  padding: 0;
 }
 %base-ul {
   list-style-type: square;
-  padding: 0;
   & li li {
     list-style-type: circle;
   }
 }
 ul  {
   @extend %base-ul;
+  &.unstyled { @include no-bullets; }
+  &.inline { @include inline-list; }
 }
 %base-li {
   margin-left: rhythm(4);
 }
-li,
+li {
+  @extend %base-li;
+}
+
+/* Definition lists */
+dl {
+ @extend %blocks; 
+}
+dt {
+  font-weight: 700;
+}
 dd {
   @extend %base-li;
 }
-dt {
-  // color: $text-color;
-  // font-weight: $text-weight + 200;
-  font-weight: 700;
-}
 
-// TODO: figures ($$$)
-// figure {
-//   margin: 0 0 1.5em 0;
-// }
-// figure br {
-//   clear: both;
-// }
-// p + figure {
-//   margin-top: 1.5em;
-// }
-// figcaption {
-//   clear: left;
-// }
-// figcaption > * {
-//   color: #666;
-//   font-size: 0.875em;
-//   line-height: 1.1429;
-//   margin: 0.5714em 0;
-//   clear: left;
-// }
-// figcaption h4 {
-//   color: #444;
-//   font-size: 1em;
-//   line-height: 1;
-//   clear: left;
-// }
+/* Figures & captions */
+figure {
+  @extend %blocks;
+}
+figcaption {
+  & > img {
+    display: block;
+  }
+  & > * {
+    @include adjust-font-size-to($s);
+    color: $secondary-color;
+  }
+}
 
 /* Horizontal Rulers */
 hr {

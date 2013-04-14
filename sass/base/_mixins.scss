@@ -1,12 +1,3 @@
 /* ==========================================================================
    Mixins & Placeholders
    ========================================================================== */
-
-/* Blocks: presets for block-level items, such as paragraphs */
-%blocks {
-  margin: 0 0 rhythm(4) 0;
-}
-
-%inline-padding {
-  padding: 0 rhythm(1/3);
-}

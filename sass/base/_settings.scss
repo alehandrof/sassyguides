@@ -91,7 +91,7 @@ $heading-color: inherit;
 /* Widget Colors */
 $primary-color: $green;
 $primary-active-color: $orange;
-$secondary-color: $gray-6;
+$secondary-color: light($text-color);
 $default-color: $gray-c;
 $info-color: dark($yellow);
 $success-color: $green;
