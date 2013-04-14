@@ -2,9 +2,7 @@
    Text-level semantics
    ========================================================================== */
 
-/* Links
-   ========================================================================== */
-
+/* Links */
 a {
   color: $link-color;
   text-decoration: none;
@@ -30,8 +28,7 @@ a {
   }
 }
 
-/* Use for links with bottom border (instead of underline) */
-
+/* Links with bottom border for decoration (instead of underline) */
 %link-with-border {
   border-bottom: 1px solid rgba($link-color, $shading);
   &:hover {
@@ -95,26 +92,31 @@ kbd {
   background-color: $gray-e;
   @include border-radius(rhythm(2/3));
 }
-// sub,
-// sup {
-//   font-size: smaller;
-//   line-height: 90%;
-//   vertical-align: sub;
-// }
-// sup {
-//   vertical-align: super;
-// }
-// mark,
-// ins {
-//   background-color: #fff9dd;
-//   line-height: 90%;
-//   padding: 0 0.125em;
-// }
-// ins {
-//   background-color: #f0f0f0;
-// }
+
+/* Superscripts & subscripts */
+sub,
+sup {
+  @include adjust-font-size-to($xs);
+}
+sub {
+  vertical-align: sub;
+}
+sup {
+  vertical-align: super;
+}
+
+/* Marked text */
+mark {
+  @extend %inline-padding;
+  background-color: light($yellow);
+}
+
+/* Edited text */
+ins {
+  @extend %inline-padding;
+  background-color: $gray-e;
+}
 del,
 s {
-  // line-height: 90%;
   text-decoration: line-through;
 }
