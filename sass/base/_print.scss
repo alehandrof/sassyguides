@@ -1,0 +1,23 @@
+@media print {
+  * {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a {
+    text-decoration: underline;
+    border: 0 none;
+  }
+  a[href]:after {
+    @include adjust-font-size-to($xs);
+    content: " (" attr(href) ")";
+  }
+  abbr[title],
+  dfn[title] {
+    &:after {
+      @include adjust-font-size-to($xs);
+      content: " (" attr(title) ")";
+    }
+  }
+}
