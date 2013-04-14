@@ -1,0 +1,19 @@
+
+$small-screen: "(max-width:768px)";
+$medium-screen: "(min-width: 768px) and (max-width: 979px)";
+$large-screen: "(min-width: 980px)";
+
+@media #{$small-screen} {
+  body {
+    @include adjust-font-size-to ($base-font-size - 2, 4);
+  }
+}
+@media #{$medium-screen} {
+  body {
+  }
+}
+@media #{$large-screen} {
+  body {
+    @include adjust-font-size-to ($base-font-size + 2, 4);
+  }
+}
