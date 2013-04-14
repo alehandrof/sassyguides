@@ -10,6 +10,9 @@
   display: none;
 }
 
+/* Options (will be triggered at the relevant wherever) */
+$hide-tags: false !default;
+
 /* Default banner */
 #banner { @extend %hide; }
 

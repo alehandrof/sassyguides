@@ -1,0 +1,267 @@
+/* ==========================================================================
+   SassyGuides :: Design - LibGuides
+   ========================================================================== */
+
+
+// $$$ @import "reset-classes";
+
+@import "overrides";
+
+#wrapper {
+}
+#container {
+  // margin: 0 rhythm(1);
+  /*& > * {
+    margin: 0 auto;
+    padding: 0 rhythm(4);
+  }*/
+}
+
+
+/* Header
+  ========================================================================== */
+
+/* Breadcrumbs */
+.topnav {
+}
+.breadcrumbs, #breadcrumbsl, #breadcrumbsr {
+  @include adjust-font-size-to($xs);
+  // @include adjust-leading-to(3, $xs);
+}
+.breadcrumb_spacer {
+  padding: 0 rhythm(1);
+}
+
+/* Guide or Page Title */
+#guide_header_title {
+  /* Overrides */
+  &, & > h1, & > span {
+    display: block;
+  }
+}
+/* Guide Tags */
+.guidetags {
+  @include adjust-font-size-to($xs, 3, $xxxl);
+  font-weight: $text-weight;
+  font-family: $text-font;
+  float: right;
+  overflow: hidden;
+  width: 50%;
+  @if $hide-tags { @extend %hide; }
+}
+
+// #guide_header_title {
+//   display: block;
+//   .guidetitle {
+//     display: block;
+//     float: left;
+//   }
+//   .guidetags {
+//     font-family: $text-font;
+//     font-weight: $text-weight;
+//     @include adjust-font-size-to($s, 3, $xxxl);
+//     display: block;
+//     float: right;
+//   }
+//   & + div {
+//     clear: both;
+//   }
+// }
+
+
+
+/* Guide Info
+   ========================================================================== */
+
+.guidedesc, .pagedesc {
+  @include adjust-font-size-to($s);
+  padding: rhythm(1/2) 0;
+  font-style: italic;
+}
+.guideattr {
+  @include adjust-font-size-to($xs);
+  padding: rhythm(1/2) 0;
+  // @include adjust-leading-to(4, $s);
+  > * {
+    // Override for inline styles
+    padding: 0 rhythm(3) 0 0 !important;
+    border: 0 !important;
+    // TODO: use the :before & :after pseudo-classes to create separators
+  }
+}
+.icomments, .irss, .iprint, .iemail {
+  // @todo: Replace icons with improved versions or (if possible) icon font
+}
+
+
+/* Content
+   ========================================================================== */
+
+$content-margin: rhythm(3); // TODO: Incorporate in settings, maybe;
+
+/* Content */
+#content {
+  @include clearfix;
+  background: #fff;
+  @include box-shadow(0 1px 3px rgba(0,0,0, 0.3));
+  @include border-radius($static-radius);
+  padding: $content-margin 0 0 $content-margin;
+  & > div {
+    float: left;
+  }
+}
+
+/* Center Column & Boxes */
+#contentcenter {
+  margin-left: 0 !important; // override inline style $$$
+  margin-right: 0 !important; // override inline style $$$
+  padding-right: $content-margin;
+}
+#centerboxes {
+  & > div {
+    border-top: 1px solid $border-color;
+    padding-top: rhythm(4);
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}
+
+/* Left & Right Columns & Boxes */
+#contentleft {
+  padding-right: $content-margin * 2;
+}
+#contentright {
+  padding-left: $content-margin;
+  padding-right: $content-margin !important; // override inline style $$$
+}
+#rightboxes, #leftboxes {
+  @include adjust-font-size-to($s, 4);
+}
+
+/* Boxes
+   ========================================================================== */
+
+.outerbox {
+}
+.headerbox {
+  h2 {
+    @extend %heading;
+    @extend %h2;
+  }
+}
+.innerbox {
+}
+.innerboxprofile {
+}
+
+/* Innerbox Elements */
+.innerbox {
+  p {
+    @extend %blocks;
+  }
+  a {
+    @extend %link-with-border;
+  }
+}
+.boxatt {
+  @extend %blocks;
+}
+.box_comments {
+  padding: 0 !important; // $$$ force reset
+}
+
+
+/* Itemlists
+   ========================================================================== */
+
+/* Resets */
+#rlist, .itemlist {
+  ul, li {
+  }
+  ul {
+    @extend %base-ul;
+  }
+  li {
+    @extend %base-li;
+  }
+}     
+#sidelist, .linklist {
+  ul, li {
+  }
+  ul {
+    @extend %base-ul;
+  }
+  li {
+    @extend %base-li;
+  }
+}
+#filelist {
+  ul, li {
+  }
+  ul {
+    @extend %base-ul;
+  }
+  li {
+    @extend %base-li;
+  }
+}
+.resdesc,
+.helpdesc,
+.linkdesc {
+} 
+/* Post-reset */
+.itemlist ul {
+  li {
+    margin-left: rhythm(4);
+  }
+  .linkdesc {
+    padding-bottom: rhythm(2);
+  }
+  #centerboxes & {
+    @include no-bullets;
+  }
+}
+
+/* Books from the Catalog */
+// .book_cover, .book_title, .book_author, .book_callno, .book_isbn, .book_pubyear, .book_description { }
+.book_title {
+  font-weight: $text-weight; // reset
+}
+.book_div {
+}
+.book_art_0,
+.book_art_1,
+.book_art_2 {
+  margin: 0 rhythm(4) rhythm(1) 0;
+}
+.book_art_0 { width: rhythm(15); }  // was: 90px;
+.book_art_1 { width: rhythm(23);  } // was: 140px;
+.book_art_2 { width: rhythm(33);  } // was: 200px;
+
+
+@import "tabs";
+
+/* Page info below tab (stitle) */
+.stitle {
+  height: auto; // reset height
+  margin: rhythm(1) 0;
+  @include adjust-font-size-to($xs);
+  table {
+    margin: 0;
+  }
+}
+
+/* Footer
+   ========================================================================== */
+
+#footer {
+  padding: rhythm(4);
+  @include adjust-font-size-to($xs);
+}
+
+/* Misc */
+a:hover {
+  text-decoration: inherit;
+}
