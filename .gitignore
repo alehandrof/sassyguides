@@ -1,8 +1,9 @@
 *.html
 *.sublime-*
 *_files
+*conflicted copy*
 .sass-cache/
 BACKUP/
+css/
 images/
 reference/
-css/
