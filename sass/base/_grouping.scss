@@ -33,8 +33,8 @@ pre {
 
 /* Blockquote */
 blockquote {
-  color: $mid-color;
-  border-left: rhythm(1) solid $secondary-color;
+  color: $secondary-color;
+  border-left: rhythm(1) solid $gray-c;
   padding: 0 rhythm(4) 0 rhythm(4);
   p {
     margin: 0 0 rhythm(2);
