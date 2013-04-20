@@ -9,8 +9,8 @@
 #tabsI,
 #tabs12 {
   @include adjust-font-size-to($s);
-  margin-bottom: rhythm(1);
-  margin-left: $content-margin / 2;
+  /* The second value is an estimade of for: $content-margin - rhythm(1) */
+  margin-bottom: rhythm(1) ($content-margin / 2) 0;
   ul {
     @include clearfix;
     margin-top: rhythm(1);
