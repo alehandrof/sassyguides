@@ -38,7 +38,6 @@ $headerbox-size: $xl;
 $black-color: #000;
 $white: #fff;
 $darker-color: #222;
-$grey-5: #333;
 $mid-color: #555;
 $light: #999;
 $lighter: #eee;
@@ -69,6 +68,7 @@ $light-blue: #0099cc;
 $blue: #0066cc;
 $cyan: #6666cc;
 
+$gray-3: #333;
 $gray-5: #555;
 $gray-6: #666;
 $gray-9: #999; 
@@ -79,7 +79,7 @@ $gray-e: #eee;
 $gray-f: #f8f8f8;
 $white: #fff;
 
-$text-color: $grey-5;
+$text-color: $gray-5;
 $link-color: $blue;
 $hover-color: dark($blue);
 $visited-color: dark($purple);

@@ -8,34 +8,57 @@
 
 #tabsI,
 #tabs12 {
-  @include adjust-font-size-to($s);
-  /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
-  margin: 0 ($content-margin / 2) rhythm(1);
+  @include adjust-font-size-to($xs);
+  font-weight: bold;
   ul {
     @include clearfix;
-    margin-top: rhythm(1);
+    margin: rhythm(2) 0 rhythm(4);
+    padding: rhythm(1/2) rhythm(1);
+    @include border-radius(rhythm($widget-radius));
+    @include background-image(linear-gradient(center top, $gray-f, $gray-d));
+    box-shadow: inset 0 1px 0 0 $white, 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid $gray-a;
+    // text-align: center;
     li {
       @include clearfix;
       display: inline-block;
-      margin: 0 rhythm(1) rhythm(1) 0;
+      // margin: 0 rhythm(1) rhythm(1) 0;
+      // float: left;
+      position: relative;
+      &:first-child:before { display: none; }
+      &:last-child:after { display: none; }
       &:last-child {
         margin-right: 0;
+      }
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        height: rhythm(4);
+        position: absolute;
+        top: rhythm(1.25);
+        width: 1px;
+        z-index: 10;
+      }
+      &:before {
+        background: $gray-f;
+        left: 0;
+      }
+      &:after {
+        background: $gray-c;
+        right: 0;
       }
     }
   }
   a {
+    @include text-shadow(0 1px 1px $gray-f);
     display: block;
-    background: $tab-color;
-    @include border-radius(rhythm($widget-radius));
-    &:hover {
-      color: $white;
-      background: darken($tab-color, 0.5);
-    }
+    color: $text-color;
+    &:hover,
     &:active {
-      background: darken($tab-color, 0.5);
+      color: $gray-9;
     }
     span {
-      color: #fff;
       padding: rhythm(1) rhythm(2);
     }
     img {
@@ -43,17 +66,22 @@
       padding-left: rhythm(1/2);
     }
   }
-  li#current a {
-    color: $white;
-    background: $tab-active-color;
-    &:hover,
-    &:focus {
-      background: darken($tab-active-color, $shading);
+  li#current {
+    &:before, &:after { display: none; }
+    margin: 0 -1px;
+    z-index: 30;
+    a {
+      @include background-image(linear-gradient(center top, $gray-5, $gray-6));
+      @include border-radius(rhythm($widget-radius));
+      @include text-shadow(0 1px 1px $gray-3);
+      color: $white;
+      &:hover,
+      &:focus {
+      }
+      &:active {
+      }
     }
-    &:active {
-      background: darken($tab-active-color, ($shading * 2));
-    }
-  } 
+  }
 }
 
 /* Tab Menu
@@ -67,7 +95,7 @@
   @include adjust-font-size-to($s, 4);
   @include border-radius(rhythm($widget-radius));
   border: 1px solid $border-color;
-  background: #fff;
+  background: $white;
 }
 .dropmenudiv a {  
   // width: auto;   
@@ -88,6 +116,6 @@
   }
   &:hover {
     background: $tab-active-color;
-    color: #fff;
+    color: $white;
   }
 }
