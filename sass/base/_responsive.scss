@@ -5,7 +5,7 @@ $large-screen: "(min-width: 980px)";
 
 @media #{$small-screen} {
   body {
-    @include adjust-font-size-to ($base-font-size * 0.875, 4 * 0.8333);
+    // @include adjust-font-size-to ($base-font-size * 0.875, 4 * 0.8333);
   }
 }
 @media #{$medium-screen} {
@@ -14,6 +14,6 @@ $large-screen: "(min-width: 980px)";
 }
 @media #{$large-screen} {
   body {
-    @include adjust-font-size-to ($base-font-size * 1.125, 4 * 1.1666);
+    // @include adjust-font-size-to ($base-font-size * 1.125, 4 * 1.1666);
   }
 }
