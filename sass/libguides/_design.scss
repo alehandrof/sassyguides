@@ -7,23 +7,20 @@
 
 @import "overrides";
 
-$content-margin: rhythm(3); // rhythm(3); // TODO: Incorporate in settings, maybe;
-
 #wrapper {
 }
 #container {
   width: $page-width;
   margin: 0 auto;
-  & > * {
-    margin: 0 $content-margin;
-  }
 }
 
 /* Top stuff */
 .topnav,
 #guide_header_title,
 .guidedesc,
-.guideattr {
+.guideattr/*,
+#tabsI, #tabs12*/ {
+  margin: 0 $content-margin;
 }
 
 /* Header
@@ -108,7 +105,7 @@ $content-margin: rhythm(3); // rhythm(3); // TODO: Incorporate in settings, mayb
 /* Content */
 #content {
   @include clearfix;
-  background: #fff;
+  background: $content-color;
   @include box-shadow(0 1px 3px rgba(0,0,0, 0.3));
   @include border-radius(rhythm($static-radius));
   padding: $content-margin 0 0 $content-margin;
@@ -253,9 +250,21 @@ $content-margin: rhythm(3); // rhythm(3); // TODO: Incorporate in settings, mayb
 
 /* Page info below tab (stitle) */
 .stitle {
-  height: auto; // reset height
-  margin: rhythm(1) 0;
+  /* Overrides */
+  height: auto;
+  /* Styling */
   @include adjust-font-size-to($xs);
+  @include box-shadow(0 0px 3px rgba(0,0,0, 0.3));
+  @include border-radius(rhythm($static-radius) rhythm($static-radius) 0 0);
+  background: $content-color;
+  padding: rhythm(1) $content-margin;
+  /* The second definition will "hide" the border on browsers which support box-shadow */
+  border: 1px solid $gray-e;
+  border-color: transparent transparent $gray-e transparent;
+  & + #content,
+  & + div + #content {
+    @include border-radius(0 0 rhythm($static-radius) rhythm($static-radius));
+  }
   table {
     margin: 0;
   }
@@ -268,6 +277,7 @@ $content-margin: rhythm(3); // rhythm(3); // TODO: Incorporate in settings, mayb
   /* Overrides */
   text-align: right;
   /* Styling */
+  margin: 0 $content-margin;
   padding: rhythm(4) 0;
   @include adjust-font-size-to($xs);
 }

@@ -9,6 +9,8 @@
 #tabsI,
 #tabs12 {
   @include adjust-font-size-to($s);
+  margin-bottom: rhythm(1);
+  margin-left: $content-margin / 2;
   ul {
     @include clearfix;
     margin-top: rhythm(1);

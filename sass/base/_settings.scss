@@ -70,6 +70,7 @@ $gray-6: #666;
 $gray-9: #999; 
 $gray-a: #aaa; 
 $gray-c: #ccc; 
+$gray-d: #ddd; 
 $gray-e: #eee; 
 $gray-f: #f8f8f8;
 $white: #fff;
@@ -107,7 +108,11 @@ $tab-active-color: $primary-active-color;
 
 /* Widths & sizes in pixels */
 $page-width: 985px;
-$static-radius: 1; // in "rhythm"
+$content-margin: 18px; // rhythm(3); // TODO: Incorporate in settings, maybe;
+
+/* Roundness (for border-radius) */
+$radius: rhythm(2/3);
+$static-radius: 2/3; // in "rhythm"
 $widget-radius: 2/3; // in "rhythm"
 
 /* Compass
@@ -115,4 +120,4 @@ $widget-radius: 2/3; // in "rhythm"
 
 $base-font-size: $font-size;
 $base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
-$default-border-radius: rhythm(99);
+$default-border-radius: rhythm(2/3);
