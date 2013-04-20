@@ -1,9 +1,9 @@
 /* ==========================================================================
-Settings
-========================================================================== */
+   Settings
+   ========================================================================== */
 
 /* Fonts
-========================================================================== */
+   ========================================================================== */
 
 /* Sizes */
 $font-size: 16px;
@@ -19,17 +19,16 @@ $code-weight: 400;
 
 /* Derivative values (do not edit!) */
 $heading-size-adjustment: 0;
-$line-height: 1.5;
-$xxxl: $font-size * 3;
-$xxl: $font-size * 2;
-$xl: $font-size * 1.5;
-$l: $font-size * 1.25;
+$xxxl: $font-size * (48/16);
+$xxl: $font-size * (36/16);
+$xl: $font-size * (21/16);
+$l: $font-size * (18/16);
 $m: $font-size * 1; // 16px
-$s: $font-size * 0.85; // 14px
-$xs: $font-size * 0.75; // 12px
+$s: $font-size * (14/16); // 14px
+$xs: $font-size * (12/16); // 12px
 
 /* Colors
-========================================================================== */
+   ========================================================================== */
 
 /* Black, white & grays */
 $black-color: #000;
@@ -101,17 +100,18 @@ $border-color: $gray-c;
 
 $shading: 0.25;
 
-// settings to move into the LibGuides section
 
+// settings to move into the LibGuides section
 $tab-color: $primary-color;
 $tab-active-color: $primary-active-color;
 
-
-$static-radius: rhythm(1);
-$widget-radius: rhythm(2/3);
+/* Widths & sizes in pixels */
+$page-width: 985px;
+$static-radius: 1; // in "rhythm"
+$widget-radius: 2/3; // in "rhythm"
 
 /* Compass
-========================================================================== */
+   ========================================================================== */
 
 $base-font-size: $font-size;
 $base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
