@@ -1,0 +1,91 @@
+/* ==========================================================================
+   LibGuides Tabs
+   ========================================================================== */
+
+
+/* Guide Tabs
+   ========================================================================== */
+
+#tabsI,
+#tabs12 {
+  @include adjust-font-size-to($s);
+  ul {
+    @include clearfix;
+    margin-top: rhythm(1);
+    li {
+      @include clearfix;
+      display: inline-block;
+      margin: 0 rhythm(1) rhythm(1) 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    display: block;
+    background: $tab-color;
+    @include border-radius(rhythm($widget-radius));
+    &:hover {
+      color: $white;
+      background: darken($tab-color, 0.5);
+    }
+    &:active {
+      background: darken($tab-color, 0.5);
+    }
+    span {
+      color: #fff;
+      padding: rhythm(1) rhythm(2);
+    }
+    img {
+      vertical-align: middle;
+      padding-left: rhythm(1/2);
+    }
+  }
+  li#current a {
+    color: $white;
+    background: $tab-active-color;
+    &:hover,
+    &:focus {
+      background: darken($tab-active-color, $shading);
+    }
+    &:active {
+      background: darken($tab-active-color, ($shading * 2));
+    }
+  } 
+}
+
+/* Tab Menu
+   ========================================================================== */
+
+.dropmenudiv {
+  // position: absolute;  
+  // top: 0;    
+  // z-index: 100;   
+  width: rhythm(50); 
+  @include adjust-font-size-to($s, 4);
+  @include border-radius(rhythm($widget-radius));
+  border: 1px solid $border-color;
+  background: #fff;
+}
+.dropmenudiv a {  
+  // width: auto;   
+  /* Overrides */
+  text-indent: -(rhythm(2));
+  padding: 0 rhythm(2) 0 rhythm(4);
+  /* New Styles */
+  border-top: 1px solid rgba($border-color, $shading * 2);
+  &:first-child {
+    border-top: 0;
+    @include border-radius(rhythm($widget-radius) rhythm($widget-radius) 0 0);
+  } 
+  &:last-child {
+    @include border-radius(0 0 rhythm($widget-radius) rhythm($widget-radius));
+  } 
+  &:first-child:last-child {
+    @include border-radius(rhythm($widget-radius));
+  }
+  &:hover {
+    background: $tab-active-color;
+    color: #fff;
+  }
+}
