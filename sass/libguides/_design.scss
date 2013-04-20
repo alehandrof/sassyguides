@@ -114,7 +114,7 @@
 #content {
   @include clearfix;
   background: $content-color;
-  @include box-shadow(0 1px 3px rgba(0,0,0, 0.3));
+  @include box-shadow(0 1px 3px rgba($darker-color, 0.3));
   @include border-radius(rhythm($static-radius));
   padding: $content-margin 0 0 $content-margin;
   width: $page-width;
@@ -161,7 +161,7 @@
 .headerbox {
   h2 {
     @extend %heading;
-    @extend %#{$box-heading};
+    @include adjust-font-size-to($headerbox-size + $heading-size-adjustment);
   }
 }
 .innerbox {
@@ -262,7 +262,7 @@
   height: auto;
   /* Styling */
   @include adjust-font-size-to($xs);
-  @include box-shadow(0 0px 3px rgba(0,0,0, 0.3));
+  @include box-shadow(0 0px 3px rgba($darker-color, 0.3));
   @include border-radius(rhythm($static-radius) rhythm($static-radius) 0 0);
   background: $content-color;
   padding: rhythm(1) $content-margin;
