@@ -161,7 +161,7 @@
 .headerbox {
   h2 {
     @extend %heading;
-    @extend %h2;
+    @extend %#{$box-heading};
   }
 }
 .innerbox {
@@ -295,3 +295,5 @@ a:hover {
   text-decoration: inherit;
 }
 
+
+@import "admin";
