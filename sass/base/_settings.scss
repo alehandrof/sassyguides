@@ -5,6 +5,8 @@
 /* Fonts
    ========================================================================== */
 
+$gr: (1 + sqrt(5)) / 2;
+
 /* Sizes */
 $font-size: 16px;
 $line-height: 1.5;
@@ -12,22 +14,22 @@ $line-height: 1.5;
 /* Font Families & Weights */
 $text-font: 'Open Sans', Arial, sans-serif;
 $text-weight: 400;
-$heading-font: 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
+$heading-font: 'Montserrat', 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
 $heading-weight: 400;
 $code-font: 'Source Code Pro', Monaco, Consola, monospace;
 $code-weight: 400;
 
 /* Derivative values (do not edit!) */
-$heading-size-adjustment: 0;
-$xxxl: $font-size * (48/16);
-$xxl: $font-size * (36/16);
-$xl: $font-size * (21/16);
-$l: $font-size * (18/16);
-$m: $font-size * 1; // 16px
-$s: $font-size * (14/16); // 14px
-$xs: $font-size * (12/16); // 12px
+$heading-size-adjustment: - 6;
+$xxxl: ceil($font-size * 3);
+$xxl: ceil($font-size * 2);
+$xl: ceil($font-size * 1.5);
+$l: ceil($font-size * 1.25);
+$m: ceil($font-size * 1); // 16px
+$s: ceil($font-size * 0.85); // 14px
+$xs: ceil($font-size * 0.75); // 12px
 
-$box-heading: h3;
+$headerbox-size: $xxl;
 
 /* Colors
    ========================================================================== */
@@ -91,8 +93,8 @@ $header-text-color: $white;
 $heading-color: inherit;
 
 /* Widget Colors */
-$primary-color: $green;
-$primary-active-color: $orange;
+$primary-color: $pink;
+$primary-active-color: $fuschia;
 $secondary-color: light($text-color);
 $default-color: $gray-c;
 $info-color: dark($yellow);
@@ -122,4 +124,5 @@ $widget-radius: 2/3; // in "rhythm"
 
 $base-font-size: $font-size;
 $base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+// $base-line-height: round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
 $default-border-radius: rhythm(2/3);
