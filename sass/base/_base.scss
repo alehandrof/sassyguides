@@ -1,10 +1,11 @@
+
+@import "settings",
+        "webfonts",
+        "mixins";
+        
 @include establish-baseline;
 
-@import
-        "settings",
-        "webfonts",
-        "mixins",
-        "sections",
+@import "sections",
         "grouping",
         "text-level",
         // "responsive",
