@@ -14,13 +14,13 @@ $line-height: 1.5;
 /* Font Families & Weights */
 $text-font: 'Open Sans', Arial, sans-serif;
 $text-weight: 400;
-$heading-font: 'Montserrat', 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
+$heading-font: 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
 $heading-weight: 400;
 $code-font: 'Source Code Pro', Monaco, Consola, monospace;
 $code-weight: 400;
 
 /* Derivative values (do not edit!) */
-$heading-size-adjustment: - 6;
+$heading-size-adjustment: 0;
 $xxxl: ceil($font-size * 3);
 $xxl: ceil($font-size * 2);
 $xl: ceil($font-size * 1.5);
@@ -29,7 +29,7 @@ $m: ceil($font-size * 1); // 16px
 $s: ceil($font-size * 0.85); // 14px
 $xs: ceil($font-size * 0.75); // 12px
 
-$headerbox-size: $xxl;
+$headerbox-size: $xl;
 
 /* Colors
    ========================================================================== */
@@ -38,7 +38,7 @@ $headerbox-size: $xxl;
 $black-color: #000;
 $white: #fff;
 $darker-color: #222;
-$grey-5: #333;  
+$grey-5: #333;
 $mid-color: #555;
 $light: #999;
 $lighter: #eee;
