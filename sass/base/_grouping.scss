@@ -39,17 +39,16 @@ blockquote {
 %base-list {
   @extend %blocks;
   padding: 0;
-}
-ol, ul {
-  @extend %base-list;
   ol, ul {
     margin-bottom: 0;
   }
 }
 ol {
+  @extend %base-list;
   list-style-type: decimal;
 }
 %base-ul {
+  @extend %base-list;
   list-style-type: square;
   & li li {
     list-style-type: circle;
