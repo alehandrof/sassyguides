@@ -7,16 +7,24 @@
 
 @import "overrides";
 
+$content-margin: rhythm(3); // rhythm(3); // TODO: Incorporate in settings, maybe;
+
 #wrapper {
 }
 #container {
-  // margin: 0 rhythm(1);
-  /*& > * {
-    margin: 0 auto;
-    padding: 0 rhythm(4);
-  }*/
+  width: $page-width;
+  margin: 0 auto;
+  & > * {
+    margin: 0 $content-margin;
+  }
 }
 
+/* Top stuff */
+.topnav,
+#guide_header_title,
+.guidedesc,
+.guideattr {
+}
 
 /* Header
   ========================================================================== */
@@ -35,17 +43,19 @@
 /* Guide or Page Title */
 #guide_header_title {
   /* Overrides */
-  &, & > h1, & > span {
+  &,
+  & > h1,
+  & > span {
     display: block;
   }
 }
+
 /* Guide Tags */
 .guidetags {
   @include adjust-font-size-to($xs, 3, $xxxl);
   font-weight: $text-weight;
   font-family: $text-font;
   float: right;
-  overflow: hidden;
   width: 50%;
   @if $hide-tags { @extend %hide; }
 }
@@ -67,8 +77,6 @@
 //     clear: both;
 //   }
 // }
-
-
 
 /* Guide Info
    ========================================================================== */
@@ -97,15 +105,15 @@
 /* Content
    ========================================================================== */
 
-$content-margin: rhythm(3); // TODO: Incorporate in settings, maybe;
-
 /* Content */
 #content {
   @include clearfix;
   background: #fff;
   @include box-shadow(0 1px 3px rgba(0,0,0, 0.3));
-  @include border-radius($static-radius);
+  @include border-radius(rhythm($static-radius));
   padding: $content-margin 0 0 $content-margin;
+  width: $page-width;
+  margin: 0;
   & > div {
     float: left;
   }
@@ -257,7 +265,10 @@ $content-margin: rhythm(3); // TODO: Incorporate in settings, maybe;
    ========================================================================== */
 
 #footer {
-  padding: rhythm(4);
+  /* Overrides */
+  text-align: right;
+  /* Styling */
+  padding: rhythm(4) 0;
   @include adjust-font-size-to($xs);
 }
 
@@ -265,3 +276,4 @@ $content-margin: rhythm(3); // TODO: Incorporate in settings, maybe;
 a:hover {
   text-decoration: inherit;
 }
+
