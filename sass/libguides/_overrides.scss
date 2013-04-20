@@ -11,13 +11,16 @@
 }
 
 /* Options (will be triggered at the relevant wherever) */
-$hide-tags: false !default;
+$hide-tags: true !default;
 
 /* Default banner */
 #banner { @extend %hide; }
 
 /* Icons at box headers (hidden by default now aren't they?) */
-.bi_text, .bi_links, .bi_file, .bi_rss, .bi_event, .bi_podcast, .bi_video, .bi_poll, .bi_books, .bi_search  { @extend %hide; }
+// .bi_text, .bi_links, .bi_file, .bi_rss, .bi_event, .bi_podcast, .bi_video, .bi_poll, .bi_books, .bi_search  { @extend %hide; }
 
 /* Break after guide tabs */
 .tab_break { @extend %hide; }
+
+/* Break at the top of guide pages */
+#container > div + a + br { @extend %hide; }
