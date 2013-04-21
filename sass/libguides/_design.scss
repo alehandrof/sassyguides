@@ -178,6 +178,9 @@
   a {
     @extend %link-with-border;
   }
+  table {
+    @extend %table;
+  }
 }
 .boxatt {
   @extend %blocks;
