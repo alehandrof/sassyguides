@@ -11,7 +11,8 @@
 }
 
 /* Options (will be triggered at the relevant wherever) */
-$hide-tags: true !default;
+$hide-tags: false !default;
+$hide-stitle: false !default;
 
 /* Default banner */
 #banner { @extend %hide; }
