@@ -8,6 +8,7 @@
 @import "sections",
         "grouping",
         "text-level",
+        "tabular",
         // "responsive",
         "goodies";
 // "embedded";
@@ -18,12 +19,6 @@
 // Embedded Content
 // ================
 // img, object, video
-
-// Tabular Data
-// ============
-table {
-  @extend %blocks;
-}
 
 // Forms
 // =====

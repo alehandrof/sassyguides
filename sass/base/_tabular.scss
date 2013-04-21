@@ -1,0 +1,30 @@
+table {
+  @extend %blocks;
+  @include adjust-font-size-to ($s);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td, th {
+  text-align: left;
+  padding: rhythm(1) rhythm(2);
+  vertical-align: top;
+  border-bottom: 1px solid $border-color;
+  border-left: 1px dotted $border-color;
+  &:first-child {
+    border-left: none;
+  }
+}
+th {
+  border-top: 1px solid $border-color;
+}
+th, tfoot td {
+  font-weight: 700;
+  background: $gray-e;
+}
+caption {
+  @include adjust-font-size-to ($xs, 4, $s);
+  caption-side: bottom;
+  color: $gray-9;
+  text-align: right;
+  margin: rhythm(2) 0;
+}
