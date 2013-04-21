@@ -12,15 +12,22 @@ $font-size: 16px;
 $line-height: 1.5;
 
 /* Font Families & Weights */
-$text-font: 'Open Sans', Arial, sans-serif;
+$sans-serif: Helvetica, Arial, sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: Monaco, Consolas, monospace;
+$text-font: 'Open Sans', $sans-serif;
 $text-weight: 400;
-$heading-font: 'Bree Serif', 'Open Sans Condensed', Arial, sans-serif;
+$heading-font: 'Bree Serif', $serif;
+// $alt-font: $sans-serif;
+// $alt-weight: 400;
+// $alt-size-adjustment: 0;
 $heading-weight: 400;
-$code-font: 'Source Code Pro', Monaco, Consola, monospace;
+$heading-size-adjustment: 0;
+$code-font: 'Source Code Pro', $monospace;
 $code-weight: 400;
+$code-size-adjustment: 0;
 
 /* Derivative values (do not edit!) */
-$heading-size-adjustment: 0;
 $xxxl: ceil($font-size * 3);
 $xxl: ceil($font-size * 2);
 $xl: ceil($font-size * 1.5);
@@ -69,6 +76,9 @@ $light-blue: #0099cc;
 $blue: #0066cc;
 $cyan: #6666cc;
 
+$gray-2: #222;
+$gray-3: #333;
+$gray-4: #444;
 $gray-5: #555;
 $gray-6: #666;
 $gray-9: #999; 
@@ -79,7 +89,10 @@ $gray-e: #eee;
 $gray-f: #f8f8f8;
 $white: #fff;
 
-$text-color: $grey-5;
+$text-color: $gray-4;
+$heading-color: inherit;
+$code-color: dark($orange);
+
 $link-color: $blue;
 $hover-color: dark($blue);
 $visited-color: dark($purple);
@@ -90,7 +103,7 @@ $content-color: $white;
 $header-color: $blue;
 $header-text-color: $white;
 
-$heading-color: inherit;
+
 
 /* Widget Colors */
 $primary-color: $pink;
