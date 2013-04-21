@@ -9,22 +9,14 @@
         "grouping",
         "text-level",
         "tabular",
+        "forms",
         // "responsive",
         "goodies";
 // "embedded";
 // "tabular";
-// "forms";
 
 
 // Embedded Content
 // ================
 // img, object, video
 
-// Forms
-// =====
-fieldset {
-  @extend %blocks;
-}
-::input-placeholder {
-  color: $border-color;
-}
