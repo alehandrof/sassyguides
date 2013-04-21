@@ -44,10 +44,10 @@ $light: #999;
 $lighter: #eee;
 
 @function dark($color: #f0f) {
-  @return darken($color, 20%);
+  @return darken($color, 15%);
 }
 @function light($color: #f0f) {
-  @return lighten($color, 20%);
+  @return lighten($color, 15%);
 }
 
 

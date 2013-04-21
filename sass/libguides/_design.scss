@@ -114,8 +114,9 @@
 #content {
   @include clearfix;
   background: $content-color;
-  @include box-shadow(0 1px 3px rgba($darker-color, 0.3));
+  @include box-shadow(0 1px 3px rgba($darker-color, 0.2));
   @include border-radius(rhythm($static-radius));
+  border: 1px solid $border-color;
   padding: $content-margin 0 0 $content-margin;
   width: $page-width;
   margin: 0;
@@ -255,28 +256,8 @@
 
 
 @import "tabs";
+@import "stitle";
 
-/* Page info below tab (stitle) */
-.stitle {
-  /* Overrides */
-  height: auto;
-  /* Styling */
-  @include adjust-font-size-to($xs);
-  @include box-shadow(0 0px 3px rgba($darker-color, 0.3));
-  @include border-radius(rhythm($static-radius) rhythm($static-radius) 0 0);
-  background: $content-color;
-  padding: rhythm(1) $content-margin;
-  /* The second definition will "hide" the border on browsers which support box-shadow */
-  border: 1px solid $gray-e;
-  border-color: transparent transparent $gray-e transparent;
-  & + #content,
-  & + div + #content {
-    @include border-radius(0 0 rhythm($static-radius) rhythm($static-radius));
-  }
-  table {
-    margin: 0;
-  }
-}
 
 /* Footer
    ========================================================================== */
