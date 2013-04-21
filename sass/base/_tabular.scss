@@ -1,3 +1,8 @@
+/* ==========================================================================
+   Tabular elements
+   ========================================================================== */
+
+/* Table placholder */
 %table {
   @extend %blocks;
   @include adjust-font-size-to ($s);
@@ -28,3 +33,6 @@
     margin: rhythm(2) 0;
   }
 }
+
+/* This is commented out in vary of extending .innerbox table */
+// table { @extend %table; }
