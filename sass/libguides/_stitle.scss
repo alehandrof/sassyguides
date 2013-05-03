@@ -3,9 +3,9 @@
   /* Overrides */
   height: auto;
   @extend %center-on-page;
-  table {
-    margin: 0;
-  }
+  // table {
+    // margin: 0;
+  // }
   /* Styling */
   @include adjust-font-size-to($xs);
   // @include background-image(linear-gradient(center top, $gray-f, $gray-d));
@@ -16,13 +16,14 @@
   border: 1px solid $border-color;
   // border-bottom-color: dark($border-color);
   padding: rhythm(1) $content-margin;
+  // z-index: 10;
   @if $hide-stitle { @extend %hide; }
   @else {
     /* Adjust top of #content if stitle is visible */
     & + #content,
     & + div + #content {
       @include border-radius(0 0 rhythm($static-radius) rhythm($static-radius));
-      border-top-color: light($border-color);
+      border-top-style: none;
     }
   }
 }
