@@ -9,11 +9,12 @@
 #tabsI,
 #tabs12 {
   @include adjust-font-size-to($s);
-  /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
-  margin: 0 ($content-margin / 2) rhythm(1);
   ul {
     @include clearfix;
-    margin-top: rhythm(1);
+    width: $page-width;
+    margin: rhythm(1) auto 0;
+    /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
+    padding: 0 ($content-margin / 2) rhythm(1);
     li {
       @include clearfix;
       display: inline-block;
