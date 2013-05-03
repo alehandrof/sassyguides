@@ -14,6 +14,9 @@
 $hide-tags: false !default;
 $hide-stitle: false !default;
 
+/* Decrease font size in the left & right columns */
+$side-columns-small-font: true !default;
+
 /* Default banner */
 #banner { @extend %hide; }
 

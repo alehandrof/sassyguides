@@ -8,22 +8,24 @@
 $gr: (1 + sqrt(5)) / 2;
 
 /* Sizes */
-$font-size: 16px;
-$line-height: 1.5;
+$font-size: 16px; // 15px;
+$line-height: 1.5; // 1.6;
 
 /* Font Families & Weights */
-$sans-serif: Helvetica, Arial, sans-serif;
-$serif: Georgia, Times, "Times New Roman", serif;
-$monospace: Monaco, Consolas, monospace;
-$text-font: 'Open Sans', $sans-serif;
+$sans-serif-safe: Helvetica, Arial, sans-serif;
+$serif-safe: Georgia, Times, "Times New Roman", serif;
+$monospace-safe: Monaco, Consolas, monospace;
+
+$text-font: 'Open Sans', $sans-serif-safe;
 $text-weight: 400;
-$heading-font: 'Bree Serif', $serif;
+$heading-font: 'Open Sans Condensed', $sans-serif-safe;
+// $heading-font: 'Bree Serif', $serif-safe;
+$heading-weight: 700;
+$heading-size-adjustment: 0;
 // $alt-font: $sans-serif;
 // $alt-weight: 400;
 // $alt-size-adjustment: 0;
-$heading-weight: 400;
-$heading-size-adjustment: 0;
-$code-font: 'Source Code Pro', $monospace;
+$code-font: 'Source Code Pro', $monospace-safe;
 $code-weight: 400;
 $code-size-adjustment: 0;
 

@@ -103,7 +103,7 @@
   }
 }
 .icomments, .irss, .iprint, .iemail {
-  // @todo: Replace icons with improved versions or (if possible) icon font
+  // TODO: Replace icons with improved versions or (if possible) icon font
 }
 
 
@@ -151,7 +151,9 @@
   padding-right: $content-margin !important; // override inline style $$$
 }
 #rightboxes, #leftboxes {
-  @include adjust-font-size-to($s, 4);
+  @if $side-columns-small-font { 
+    @include adjust-font-size-to($s, 3.5);
+  }
 }
 
 /* Boxes
