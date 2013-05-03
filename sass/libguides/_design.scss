@@ -264,7 +264,7 @@
 
 
 @import "tabs";
-@import "stitle";
+@import "stitle"; // must be after #content if they are yoked
 
 
 /* Footer

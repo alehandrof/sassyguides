@@ -9,18 +9,40 @@
 #tabsI,
 #tabs12 {
   @include adjust-font-size-to($s);
+  background: $white;
   ul {
     @include clearfix;
     width: $page-width;
-    margin: rhythm(1) auto 0;
+    margin: rhythm(1) auto;
     /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
-    padding: 0 ($content-margin / 2) rhythm(1);
+    padding: rhythm(1) ($content-margin / 2) 0;
     li {
       @include clearfix;
       display: inline-block;
       margin: 0 rhythm(1) rhythm(1) 0;
+      position: relative;
+      &:first-child:before { display: none; }
+      &:last-child:after { display: none; }
       &:last-child {
         margin-right: 0;
+      }
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        height: rhythm(4);
+        position: absolute;
+        top: rhythm(1.25);
+        width: 1px;
+        z-index: 10;
+      }
+      &:before {
+        background: $gray-f;
+        left: 0;
+      }
+      &:after {
+        background: $gray-c;
+        right: 0;
       }
     }
   }
