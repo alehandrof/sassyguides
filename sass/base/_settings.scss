@@ -18,10 +18,11 @@ $monospace-safe: Monaco, Consolas, monospace;
 
 $text-font: 'Open Sans', $sans-serif-safe;
 $text-weight: 400;
-$heading-font: 'Open Sans Condensed', $sans-serif-safe;
+$heading-font: 'Montserrat', $sans-serif-safe;
 // $heading-font: 'Bree Serif', $serif-safe;
-$heading-weight: 700;
+$heading-weight: 400;
 $heading-size-adjustment: 0;
+$heading-letter-spacing: -0.05em;
 // $alt-font: $sans-serif;
 // $alt-weight: 400;
 // $alt-size-adjustment: 0;
@@ -30,7 +31,7 @@ $code-weight: 400;
 $code-size-adjustment: 0;
 
 /* Derivative values (do not edit!) */
-$xxxl: ceil($font-size * 3);
+$xxxl: ceil($font-size * 2.75);
 $xxl: ceil($font-size * 2);
 $xl: ceil($font-size * 1.5);
 $l: ceil($font-size * 1.25);
@@ -94,9 +95,6 @@ $text-color: $gray-4;
 $heading-color: inherit;
 $code-color: dark($orange);
 
-$link-color: $blue;
-$hover-color: dark($blue);
-$visited-color: dark($purple);
 
 /* Page & content colors */
 $page-color: $gray-f;
@@ -111,6 +109,9 @@ $primary-color: $pink;
 $primary-active-color: $fuschia;
 $secondary-color: light($text-color);
 $default-color: $gray-c;
+$link-color: $blue;
+$hover-color: dark($blue);
+$visited-color: dark($purple);
 $info-color: dark($yellow);
 $success-color: $green;
 $warning-color: $orange;
