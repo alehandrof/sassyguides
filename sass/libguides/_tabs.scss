@@ -73,9 +73,11 @@
     margin: 0 -1px;
     z-index: 30;
     a {
-      @include background-image(linear-gradient(center top, $gray-5, $gray-6));
+      // @include background-image(linear-gradient(center top, $gray-5, $gray-6));
+      @include background-image(linear-gradient(center top, darken($primary-color, 5%), lighten($primary-color, 5%)));
       @include border-radius(rhythm($widget-radius));
       @include text-shadow(0 1px 1px $gray-3);
+      border: 1px solid darken($primary-color, 20%);
       color: $white;
       &:hover,
       &:focus {
@@ -117,7 +119,7 @@
     @include border-radius(rhythm($widget-radius));
   }
   &:hover {
-    background: $tab-active-color;
+    background: $secondary-color;
     color: $white;
   }
 }
