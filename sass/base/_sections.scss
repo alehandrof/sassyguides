@@ -28,21 +28,18 @@ body {
 }
 %h1 {
   @include adjust-font-size-to($xxxl + $heading-size-adjustment);
-  // @include adjust-leading-to(8, $xxxl + $heading-size-adjustment);
+  margin-left: -(rhythm(1/4));
 }
 %h2 {
   @include adjust-font-size-to($xxl + $heading-size-adjustment);
-  // @include adjust-leading-to(6, $xxl + $heading-size-adjustment);
   margin: 0 0 rhythm(2);
 }
 %h3 {
   @include adjust-font-size-to($xl + $heading-size-adjustment);
-  // @include adjust-leading-to(5, $xl + $heading-size-adjustment);
   margin: rhythm(2) 0 rhythm(2);
 }
 %h4 {
   @include adjust-font-size-to($l + $heading-size-adjustment);
-  // @include adjust-leading-to(4, $l + $heading-size-adjustment);
 }
 %h5 {
   @include adjust-font-size-to($m + $heading-size-adjustment);
@@ -51,7 +48,6 @@ body {
 }
 %h6 {
   @include adjust-font-size-to($s + $heading-size-adjustment);
-  // @include adjust-leading-to(4, $s + $heading-size-adjustment);
   text-transform: uppercase;
 }
 h1, h2, h3, h4, h5, h6 {
