@@ -10,8 +10,7 @@
 #tabs12 {
   @include adjust-font-size-to($s);
   /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
-  width: $page-width;
-  margin: 0 auto; // ($content-margin / 2) rhythm(1)
+  @extend %center-on-page;
   ul {
     @include clearfix;
     margin: rhythm(2) 0;

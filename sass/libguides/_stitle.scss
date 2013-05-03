@@ -2,8 +2,7 @@
 .stitle {
   /* Overrides */
   height: auto;
-  width: $page-width;
-  margin: 0 auto;
+  @extend %center-on-page;
   table {
     margin: 0;
   }

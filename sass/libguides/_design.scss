@@ -7,11 +7,15 @@
 
 @import "overrides";
 
+%center-on-page {
+  width: $page-width;
+  margin: 0 auto;
+}
+
 #wrapper {
 }
 #container {
-  // width: $page-width;
-  // margin: 0 auto;
+  // @extend %center-on-page;
 }
 
 /* Top stuff */
@@ -23,8 +27,7 @@
 .guideattr/*,
 #tabsI, #tabs12*/ {
   // margin: 0 $content-margin;
-  width: $page-width;
-  margin: 0 auto;
+  @extend %center-on-page;
   padding: 0 $content-margin;
 }
 
@@ -91,7 +94,7 @@
 
 .guidedesc, .pagedesc {
   @include adjust-font-size-to($s);
-  padding: rhythm(1/2) 0;
+  padding: rhythm(1/2) $content-margin;
   font-style: italic;
 }
 .guideattr {
@@ -121,8 +124,7 @@
   @include border-radius(rhythm($static-radius));
   border: 1px solid $border-color;
   padding: $content-margin 0 0 $content-margin;
-  width: $page-width;
-  margin: 0 auto;
+  @extend %center-on-page;
   & > div {
     float: left;
   }
@@ -274,8 +276,8 @@
   /* Overrides */
   text-align: right;
   /* Styling */
-  margin: 0 $content-margin;
-  padding: rhythm(4) 0;
+  @extend %center-on-page;
+  padding: rhythm(4) $content-margin;
   @include adjust-font-size-to($xs);
 }
 
