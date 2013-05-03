@@ -24,7 +24,7 @@ body {
   font-family: $heading-font;
   font-weight: $heading-weight;
   color: $heading-color;
-  // line-height: $line-height / $line-height;
+  letter-spacing: $heading-letter-spacing;
 }
 %h1 {
   @include adjust-font-size-to($xxxl + $heading-size-adjustment);
@@ -43,7 +43,6 @@ body {
 }
 %h5 {
   @include adjust-font-size-to($m + $heading-size-adjustment);
-  // @include adjust-leading-to(4, $m + $heading-size-adjustment);
   text-transform: uppercase;
 }
 %h6 {
