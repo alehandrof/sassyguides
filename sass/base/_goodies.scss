@@ -3,9 +3,13 @@
    ========================================================================== */
 
 /* Small caps */
-.small-caps {
+%small-caps {
   text-transform: uppercase;
-  @include adjust-font-size-to($s);
+  @include adjust-font-size-to($s);  
+}
+
+.small-caps {
+  @extend %small-caps;
 }
 
 /* Text alignment */
