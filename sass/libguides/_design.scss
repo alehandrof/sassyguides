@@ -39,10 +39,13 @@
 }
 .breadcrumbs, #breadcrumbsl, #breadcrumbsr {
   @include adjust-font-size-to($xs);
-  // @include adjust-leading-to(3, $xs);
 }
 .breadcrumb_spacer {
   padding: 0 rhythm(1);
+}
+/* Hide option */
+@if $hide-breadcrumbs {
+  #breadcrumbsl { @extend %hide; }
 }
 
 /* Guide Title */
@@ -63,11 +66,20 @@
 
 /* Guide Tags */
 .guidetags {
+  /* Change font styles from h1 */
   @include adjust-font-size-to($xs, 3, $xxxl);
-  font-weight: $text-weight;
   font-family: $text-font;
+  font-weight: $text-weight;
+  letter-spacing: 0;
+  /* Float right */
+  clear: right;
   float: right;
+  margin-top: rhythm(1);
+  text-align: right;
   width: 50%;
+  /* "Remove" the &nbsp; from the end of the span */
+  margin-right: -(rhythm(1.5));
+  /* Hide option */
   @if $hide-tags { @extend %hide; }
 }
 
@@ -96,17 +108,21 @@
   @include adjust-font-size-to($s);
   padding: rhythm(1/2) $content-margin;
   font-style: italic;
+  /* Hide option */
+  @if $hide-guidedesc { @extend %hide; }
 }
 .guideattr {
   @include adjust-font-size-to($xs);
   padding: rhythm(1/2) $content-margin;
   // @include adjust-leading-to(4, $s);
   > * {
-    // Override for inline styles
+    /* Override for inline styles */
     padding: 0 rhythm(3) 0 0 !important;
     border: 0 !important;
     // TODO: use the :before & :after pseudo-classes to create separators
   }
+  /* Hide option */
+  @if $hide-guideattr { @extend %hide; }
 }
 .icomments, .irss, .iprint, .iemail {
   // TODO: Replace icons with improved versions or (if possible) icon font
