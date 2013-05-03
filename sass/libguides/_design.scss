@@ -81,6 +81,10 @@
   margin-right: -(rhythm(1.5));
   /* Hide option */
   @if $hide-tags { @extend %hide; }
+  /* Icon */
+  &:before {
+    @include fontawesome("\f02c");
+  }
 }
 
 // #guide_header_title {
@@ -124,8 +128,11 @@
   /* Hide option */
   @if $hide-guideattr { @extend %hide; }
 }
+/* Icons */
 .icomments, .irss, .iprint, .iemail {
   // TODO: Replace icons with improved versions or (if possible) icon font
+}
+.icomments {
 }
 
 

@@ -5,28 +5,34 @@
 /* Google Web Fonts
    ========================================================================== */
 
-@import url(http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700,800&subset=latin,greek,greek-ext,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900&subset=latin,greek,greek-ext,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700,800&subset=latin,greek,greek-ext,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900&subset=latin,greek,greek-ext,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,greek,greek-ext,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic&subset=latin,greek,greek-ext,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,200italic,200,400italic,600,600italic,700,700italic,900,900italic&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=ABeeZee:400,400italic&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700&subset=latin,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,200italic,200,400italic,600,600italic,700,700italic,900,900italic&subset=latin,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=ABeeZee:400,400italic&subset=latin,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700&subset=latin,latin-ext);
+// @import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700&subset=latin,latin-ext);
 
 /* WeLoveIconFonts
    ========================================================================== */
 
+// Font Awesome
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-[class*="fontawesome-"]:before { font-family: 'FontAwesome', sans-serif; }
+@mixin fontawesome($content) {
+  font-family: "FontAwesome", sans-serif;
+  margin-right: rhythm(1);
+  content: $content;
+}
+[class*="fontawesome-"]:before { font-family: "FontAwesome", sans-serif; }
 
 // @import url(http://weloveiconfonts.com/api/?family=brandico|entypo|fontawesome|maki|openwebicons|typicons|zocial);
-[class*="brandico-"]:before { font-family: 'brandico', sans-serif; }
-[class*="entypo-"]:before { font-family: 'entypo', sans-serif; }
-[class*="maki-"]:before { font-family: 'maki', sans-serif; }
-[class*="openwebicons-"]:before { font-family: 'OpenWeb Icons', sans-serif; }
-[class*="typicons-"]:before { font-family: 'Typicons', sans-serif; }
-[class*="zocial-"]:before { font-family: 'zocial', sans-serif; }
+// [class*="brandico-"]:before { font-family: "brandico", sans-serif; }
+// [class*="entypo-"]:before { font-family: "entypo", sans-serif; }
+// [class*="maki-"]:before { font-family: "maki", sans-serif; }
+// [class*="openwebicons-"]:before { font-family: "OpenWeb Icons", sans-serif; }
+// [class*="typicons-"]:before { font-family: "Typicons", sans-serif; }
+// [class*="zocial-"]:before { font-family: "zocial", sans-serif; }
