@@ -82,9 +82,7 @@
   /* Hide option */
   @if $hide-tags { @extend %hide; }
   /* Icon */
-  &:before {
-    @include fontawesome("\f02c");
-  }
+  @include fontawesome("tags");
 }
 
 // #guide_header_title {
@@ -129,11 +127,10 @@
   @if $hide-guideattr { @extend %hide; }
 }
 /* Icons */
-.icomments, .irss, .iprint, .iemail {
-  // TODO: Replace icons with improved versions or (if possible) icon font
-}
-.icomments {
-}
+.icomments { @include fontawesome("comments"); }
+.irss { @include fontawesome("rss"); }
+.iprint  { @include fontawesome("print"); }
+.iemail { @include fontawesome("envelope"); }
 
 
 /* Content

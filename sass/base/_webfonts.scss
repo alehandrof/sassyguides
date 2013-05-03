@@ -21,13 +21,13 @@
    ========================================================================== */
 
 // Font Awesome
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-@mixin fontawesome($content) {
-  font-family: "FontAwesome", sans-serif;
-  margin-right: rhythm(1);
-  content: $content;
-}
-[class*="fontawesome-"]:before { font-family: "FontAwesome", sans-serif; }
+
+// @mixin fontawesome($content) {
+//   font-family: "FontAwesome", sans-serif;
+//   margin-right: rhythm(1);
+//   content: $content;
+// }
+
 
 // @import url(http://weloveiconfonts.com/api/?family=brandico|entypo|fontawesome|maki|openwebicons|typicons|zocial);
 // [class*="brandico-"]:before { font-family: "brandico", sans-serif; }
