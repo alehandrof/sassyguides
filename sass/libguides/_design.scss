@@ -5,6 +5,7 @@
 
 // $$$ @import "reset-classes";
 
+@import "settings";
 @import "overrides";
 
 %center-on-page {
@@ -107,9 +108,14 @@
    ========================================================================== */
 
 .guidedesc, .pagedesc {
-  @include adjust-font-size-to($s);
   padding: rhythm(1/2) $content-margin;
-  font-style: italic;
+  /* Style option */
+  @if $alt-guidedesc {
+    // @include adjust-font-size-to($xl);
+    @extend %heading;
+    @extend %h4;
+    @extend .muted;
+  }
   /* Hide option */
   @if $hide-guidedesc { @extend %hide; }
 }
