@@ -7,6 +7,7 @@
         "fontawesome",
         "mixins";
         
+@import "compass/reset";
 @include establish-baseline;
 
 @import "sections",
