@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Popups
+   ========================================================================== */
+
+/* The .popup class is used for the "More Info" dialogs in _Links & Lists_.
+ * The .balloon class is used for the dialog that appears when hovering over
+ * _Simple Web Links_ as well as _RSS Feeds and Podcasts_.
+ */
+
+.popup,
+.balloon {
+    /* Styling */
+    @include adjust-font-size-to($s, 3.333);
+    @include border-radius(rhythm($widget-radius));
+    @include box-shadow(0 1px 3px rgba($darker-color, 0.1));
+    background: $popup-color;
+    border: rhythm(1/2) solid darken($popup-color, 20%);
+    padding: rhythm(2);
+    /* Overrides */
+    width: rhythm(75) !important;
+}
+.popup_head,
+.balloon_head {
+    margin-bottom: rhythm(2);
+}
