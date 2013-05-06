@@ -23,3 +23,7 @@
 .balloon_head {
   margin-bottom: rhythm(2);
 }
+#popupinfocontent {
+  /* Overrides */
+  margin-bottom: rhythm(2) !important;
+}
