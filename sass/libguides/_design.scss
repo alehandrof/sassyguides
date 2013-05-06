@@ -218,19 +218,6 @@
 .boxatt {
   @extend %blocks;
 }
-.box_comments {
-  /* Styling */
-  @include adjust-font-size-to($s);
-  @include fontawesome("comments");
-  @extend %blocks;
-  & + div {
-    @extend %blocks;
-    padding: rhythm(4) rhythm(4) 0;
-    background: #ccc;
-  }
-  /* Overrides */
-  padding: 0 !important;
-}
 
 
 /* Itemlists
@@ -300,11 +287,6 @@
 .book_art_1 { width: rhythm(23);  } // was: 140px;
 .book_art_2 { width: rhythm(33);  } // was: 200px;
 
-
-@import "tabs";
-@import "stitle"; // must be after #content if they are yoked
-
-
 /* Footer
    ========================================================================== */
 
@@ -323,5 +305,9 @@ a:hover {
 }
 
 
+
+@import "tabs";
+@import "stitle"; // must be after #content if they are yoked
+@import "innerbox-comments";
 @import "popup";
 @import "admin";

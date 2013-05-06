@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Innerbox - Comments
+   ========================================================================== */
+
+.box_comments {
+  /* Styling */
+  @include fontawesome("comments");
+  &,
+  & + div {
+    @include adjust-font-size-to($s);
+    @include border-radius(rhythm($widget-radius));
+    @extend %blocks;
+    background: $lighter;
+  }
+  /* This is the unclassed div that holds the commments interface */
+  & + div {
+    padding: rhythm(3) rhythm(2) rhythm(2);
+    margin-top: -(rhythm(4) + rhythm($widget-radius));
+  }
+  /* Overrides */
+  padding: rhythm(2) !important;
+}
+.comment_head {
+  padding-bottom: rhythm(1);
+  border-bottom: 1px solid $border-color;
+  margin-bottom: rhythm(1);
+}
+.comment_date {
+  @include adjust-font-size-to($xs, 4, $s);
+  float: right;
+}
