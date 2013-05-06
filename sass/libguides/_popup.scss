@@ -9,17 +9,17 @@
 
 .popup,
 .balloon {
-    /* Styling */
-    @include adjust-font-size-to($s, 3.333);
-    @include border-radius(rhythm($widget-radius));
-    @include box-shadow(0 1px 3px rgba($darker-color, 0.1));
-    background: $popup-color;
-    border: rhythm(1/2) solid darken($popup-color, 20%);
-    padding: rhythm(2);
-    /* Overrides */
-    width: rhythm(75) !important;
+  /* Styling */
+  @include adjust-font-size-to($s, 3.333);
+  @include border-radius(rhythm($widget-radius));
+  @include box-shadow(0 1px 3px rgba($darker-color, 0.1));
+  background: $popup-color;
+  border: rhythm(1/2) solid darken($popup-color, 20%);
+  padding: rhythm(2);
+  /* Overrides */
+  width: rhythm(75) !important;
 }
 .popup_head,
 .balloon_head {
-    margin-bottom: rhythm(2);
+  margin-bottom: rhythm(2);
 }
