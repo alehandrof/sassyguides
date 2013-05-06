@@ -219,7 +219,17 @@
   @extend %blocks;
 }
 .box_comments {
-  padding: 0 !important; // $$$ force reset
+  /* Styling */
+  @include adjust-font-size-to($s);
+  @include fontawesome("comments");
+  @extend %blocks;
+  & + div {
+    @extend %blocks;
+    padding: rhythm(4) rhythm(4) 0;
+    background: #ccc;
+  }
+  /* Overrides */
+  padding: 0 !important;
 }
 
 
