@@ -2,25 +2,22 @@
    Base
    ========================================================================== */
 
+/* Compass setup & resets */
+@import "compass";
+@import "compass/reset";
+* { @include box-sizing(border-box); }
+@include establish-baseline;
+
+/* Base settings & styles */
 @import "settings",
         "webfonts",
         "fontawesome",
-        "mixins";
-        
-@import "compass/reset";
-@include establish-baseline;
-
-@import "sections",
+        "mixins",
+        "sections",
         "grouping",
         "text-level",
         "tabular",
         "forms",
         // "responsive",
         "goodies";
-// "embedded";
-
-
-// Embedded Content
-// ================
-// img, object, video
-
+// "embedded"; // img, object, video
