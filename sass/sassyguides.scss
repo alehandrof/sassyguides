@@ -1,0 +1,30 @@
+/* ==========================================================================
+   SassyGuides
+   ========================================================================== */
+
+/* 
+ * USER SETTINGS
+ * This is the place to override the default settings, preferably by importing
+ * an external file.
+ */
+
+// @import "user/settings";
+
+
+/* LibGuides brute reset */
+@import "libguides/brute-reset";
+
+/* Base resets & styles */
+@import "base/base";
+
+/* LibGuides styles */
+@import "libguides/design";
+
+
+/* 
+ * USER STYLES
+ * This is the place to extend the default styles, preferably by importing
+ * an external file.
+ */
+
+// @import "user/styles";
