@@ -9,35 +9,16 @@
 @import "overrides";
 
 
-%center-on-page {
-  margin: 0 auto;
-}
+/* Wrappers
+   ========================================================================== */
 
 #wrapper {
+  width: $page-width;
+  margin: 0 auto;
 }
 #container {
-  width: $page-width;
-  @extend %center-on-page;
-  & > div {
-    margin-left: $content-margin;
-    margin-right: $content-margin;
-  }
+  margin: 0 $page-margin;
 }
-
-/* Top stuff */
-.topnav,
-#guide_header_title,
-.pagetitle,
-.guidedesc,
-.pagedesc,
-.guideattr/*,
-#tabsI, #tabs12*/ {
-  // // margin: 0 $content-margin;
-  // @extend %center-on-page;
-  // padding: 0 $content-margin;
-}
-
-
 
 
 /* Header
@@ -100,7 +81,6 @@
    ========================================================================== */
 
 .guidedesc, .pagedesc {
-  // padding: rhythm(1/2) $content-margin;
   /* Style option */
   @if $alt-guidedesc {
     // @include adjust-font-size-to($xl);
@@ -113,9 +93,8 @@
 }
 .guideattr {
   @include adjust-font-size-to($xs);
-  // padding: rhythm(1/2) $content-margin;
   margin-top: rhythm(1);
-  > * {
+  & > * {
     /* Override for inline styles */
     padding: 0 rhythm(3) 0 0 !important;
     border: 0 !important;
@@ -134,13 +113,54 @@
 }
 
 
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
+/* Content
+   ========================================================================== */
 
+$content-margin: rhythm(8);
 
+#content {
+  @include clearfix;
+  margin-top: rhythm(3);
+  background: $content-color;
+  &:first-child {
+    margin-left: 0 !important;
+  }
+}
+
+#contentleft,
+#contentcenter,
+#contentright {
+  float: left;
+}
+
+#contentleft {
+  padding-right: $content-margin !important; 
+  margin-right: 8px;
+}
+#contentright {
+  padding-left: $content-margin !important;
+}
+
+/* Content Boxes
+   ========================================================================== */
+
+/* Center Column Boxes */
+#centerboxes > div {
+  border-top: 1px solid $border-color;
+  padding-top: rhythm(4);
+  &:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+/* Sidebar Font Sizes */
+#contentleft,
+#contentright {
+  @if $side-columns-small-font { 
+    @include adjust-font-size-to($s, 4);
+  }
+}
 
 /* Boxes
    ========================================================================== */
@@ -250,7 +270,7 @@
   text-align: right;
   /* Styling */
   @extend %center-on-page;
-  padding: rhythm(4) $content-margin;
+  padding: rhythm(4) 0;
   @include adjust-font-size-to($xs);
 }
 
@@ -263,7 +283,7 @@ a:hover {
 
 @import "layout";
 @import "tabs";
-@import "stitle"; // must be after #content if they are yoked
+@import "stitle";
 @import "innerbox-comments";
 @import "popup";
 @import "admin";

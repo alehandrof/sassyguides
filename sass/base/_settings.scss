@@ -127,7 +127,9 @@ $popup-color:      $white;
 
 /* Widths & sizes in pixels */
 $page-width:     985px;
-$content-margin: 18px; // rhythm(3); // TODO: Incorporate in settings, maybe;
+$max-content-width: 975px;
+$page-margin:    ($page-width - $max-content-width) / 2; // hard-wired; do not edit
+ // rhythm(3); // TODO: Incorporate in settings, maybe;
 
 /* Roundness (for border-radius) */
 $radius:        rhythm(2/3);
