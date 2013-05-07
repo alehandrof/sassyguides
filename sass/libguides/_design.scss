@@ -258,9 +258,9 @@ $content-margin: rhythm(8);
 .book_art_2 {
   margin: 0 rhythm(4) rhythm(1) 0;
 }
-.book_art_0 { width: rhythm(15); }  // was: 90px;
-.book_art_1 { width: rhythm(23);  } // was: 140px;
-.book_art_2 { width: rhythm(33);  } // was: 200px;
+.book_art_0 { width: $book-cover-width; } // was: 90px;
+.book_art_1 { width: $book-cover-width * 1.5;  } // was: 140px;
+.book_art_2 { width: $book-cover-width * 2;  } // was: 200px;
 
 /* Footer
    ========================================================================== */
@@ -281,7 +281,6 @@ a:hover {
 
 
 
-@import "layout";
 @import "tabs";
 @import "stitle";
 @import "innerbox-comments";
