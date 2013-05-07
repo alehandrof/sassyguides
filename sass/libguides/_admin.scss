@@ -4,5 +4,9 @@
 
 /* "Edit Box" link */
 .boxeditlink {
-    @include adjust-font-size-to($s);
+    @include adjust-font-size-to($m, 4, ($headerbox-size + $heading-size-adjustment));
+    font-family: $text-font;
+    letter-spacing: 0;
+    float: right;
+    padding-left: rhythm(2);
 }
