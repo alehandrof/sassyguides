@@ -1,0 +1,17 @@
+/* Innerbox - RSS Feeds & Podcasts 
+   ========================================================================== */
+
+.lg_rss_list {
+  @extend %blocks;
+}
+.rss_view_website,
+.rss_view_feed {
+  @include adjust-font-size-to($s, 4);
+}
+.rss_view_website {
+  /* Overrides */
+  padding-top: 0 !important;
+}
+.rss_view_feed {
+  @extend %blocks;
+}
