@@ -2,54 +2,42 @@
    LibGuides Tabs
    ========================================================================== */
 
-
 /* Guide Tabs
    ========================================================================== */
 
 #tabsI,
 #tabs12 {
   @include adjust-font-size-to($s);
-  /* The left/right value is an estimate of for: $content-margin - rhythm(1) */
-  // @extend %center-on-page;
   ul {
     @include clearfix;
-    margin-top: rhythm(2);
-    margin-left: -($content-margin + 1px);
-    margin-right: -($content-margin + 1px);
-    padding: rhythm(1) (($content-margin / 2));
     @include border-radius(rhythm($widget-radius));
     @include background-image(linear-gradient(center top, $page-color, darken($page-color, 5%)));
-    box-shadow: inset 0 1px 0 0 $white, 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    @include box-shadow(inset 0 1px 0 0 $white, 0 1px 3px rgba($darker-color, 0.1));
+    margin-top: rhythm(3);
+    margin-bottom: rhythm(3);
+    margin-left: -(($content-margin - 2px));
+    margin-right: -(($content-margin - 2px));
+    padding: rhythm(1/2) rhythm(1);
     border: 1px solid $border-color;
-    // text-align: center;
     li {
       @include clearfix;
-      display: inline-block;
-      // margin: 0 rhythm(1) rhythm(1) 0;
-      // float: left;
       position: relative;
-      /*&:first-child:before { display: none; }*/
-      &:last-child:after { display: none; }
+      display: inline-block;
       &:last-child {
         margin-right: 0;
+        &:after { display: none; }
       }
-      /*&:before,*/
       &:after {
         content: "";
         display: block;
-        height: rhythm(4);
+        height: rhythm(3.5);
         position: absolute;
-        top: rhythm(2/3);
+        top: rhythm(3/4);
         width: 1px;
         z-index: 10;
-      }
-      /*&:before {
-        background: $gray-f;
-        left: 0;
-      }*/
-      &:after {
         background: $border-color;
         right: 0;
+        border-right: 1px solid lighten($border-color, 33%); /* Problematic? */
       }
     }
   }
@@ -62,17 +50,17 @@
       color: $secondary-color;
     }
     span {
-      // color: #fff;
       padding: rhythm(1) rhythm(2);
     }
-    img {
-      vertical-align: middle;
-      padding-left: rhythm(1/2);
+    img[alt="Arrow"] {
+      vertical-align: middle !important;
+      margin-left: rhythm(1/2);
+      background: $white;
     }
   }
   li#current {
-    &:before, &:after { display: none; }
-    margin: 0 -1px;
+    &:after { display: none; }
+    margin: 0 -2px;
     z-index: 30;
     a {
       @include background-image(linear-gradient(center top, darken($primary-color, 5%), lighten($primary-color, 5%)));
@@ -93,34 +81,25 @@
    ========================================================================== */
 
 .dropmenudiv {
-  // position: absolute;  
-  // top: 0;    
-  // z-index: 100;   
-  width: rhythm(50); 
   @include adjust-font-size-to($s, 4);
   @include border-radius(rhythm($widget-radius));
+  width: rhythm(50); 
   border: 1px solid $border-color;
   background: $white;
 }
 .dropmenudiv a {  
-  // width: auto;   
-  /* Overrides */
-  text-indent: -(rhythm(2));
-  padding: 0 rhythm(2) 0 rhythm(4);
-  /* New Styles */
   border-top: 1px solid rgba($border-color, $shading * 2);
   &:first-child {
     border-top: 0;
     @include border-radius(rhythm($widget-radius) rhythm($widget-radius) 0 0);
+    &:last-child { @include border-radius(rhythm($widget-radius)); }
   } 
-  &:last-child {
-    @include border-radius(0 0 rhythm($widget-radius) rhythm($widget-radius));
-  } 
-  &:first-child:last-child {
-    @include border-radius(rhythm($widget-radius));
-  }
+  &:last-child { @include border-radius(0 0 rhythm($widget-radius) rhythm($widget-radius)); } 
   &:hover {
     background: $secondary-color;
     color: $white;
   }
+  /* Overrides */
+  text-indent: -(rhythm(2));
+  padding: 0 rhythm(2) 0 rhythm(4);
 }
