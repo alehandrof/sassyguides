@@ -7,11 +7,16 @@
 .rss_view_website,
 .rss_view_feed {
   @include adjust-font-size-to($s, 4);
+  display: inline-block;
+  margin-right: rhythm(4);
+  text-align: right;
 }
 .rss_view_website {
+  a { @include icon("globe"); }
   /* Overrides */
   padding-top: 0 !important;
 }
 .rss_view_feed {
   @extend %blocks;
+  a { @include icon("rss"); }
 }
