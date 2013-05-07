@@ -266,12 +266,10 @@ $content-margin: rhythm(8);
    ========================================================================== */
 
 #footer {
-  /* Overrides */
-  text-align: right;
-  /* Styling */
-  @extend %center-on-page;
   padding: rhythm(4) 0;
   @include adjust-font-size-to($xs);
+  /* Overrides */
+  text-align: right;
 }
 
 /* Misc */
