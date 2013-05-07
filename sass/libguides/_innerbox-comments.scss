@@ -2,28 +2,37 @@
    Innerbox - Comments
    ========================================================================== */
 
+/* The "Comments" link that appears (if enabled) at the bottom of all boxes */
 .box_comments {
   /* Styling */
-  @include fontawesome("comments");
+  margin-bottom: rhythm(4);
+  a {
+    @include fontawesome("comments");
+  }
   &,
   & + div {
     @include adjust-font-size-to($s);
-    @include border-radius(rhythm($widget-radius));
-    @extend %blocks;
-    background: $lighter;
   }
   /* This is the unclassed div that holds the commments interface */
   & + div {
-    padding: rhythm(3) rhythm(2) rhythm(2);
-    margin-top: -(rhythm(4) + rhythm($widget-radius));
+    @include border-radius(rhythm($widget-radius));
+    @extend %blocks;
+    background: $lighter;
+    padding: rhythm(2);
+    // margin-top: -(rhythm(4) + rhythm($widget-radius));
   }
   /* Overrides */
-  padding: rhythm(2) !important;
+  padding-top: 0 !important;
+}
+
+/* The comments that are revealed by clicking on the "Comments" link */
+.comment {
+  padding-bottom: rhythm(2);
+  border-bottom: 1px solid $border-color;
+  margin-bottom: rhythm(2);
 }
 .comment_head {
-  padding-bottom: rhythm(1);
-  border-bottom: 1px solid $border-color;
-  margin-bottom: rhythm(1);
+  // margin-bottom: rhythm(1);
 }
 .comment_date {
   @include adjust-font-size-to($xs, 4, $s);
