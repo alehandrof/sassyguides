@@ -125,10 +125,10 @@
   @if $hide-guideattr { @extend %hide; }
 }
 /* Icons */
-.icomments { @include fontawesome("comments"); }
-.irss { @include fontawesome("rss"); }
-.iprint  { @include fontawesome("print"); }
-.iemail { @include fontawesome("envelope"); }
+.icomments a { @include fontawesome("comments"); }
+.irss a { @include fontawesome("rss"); }
+.iprint a { @include fontawesome("print"); }
+.iemail a { @include fontawesome("envelope"); }
 
 
 
