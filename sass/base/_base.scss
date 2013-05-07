@@ -5,12 +5,14 @@
 /* Compass setup & resets */
 @import "compass";
 @import "compass/reset";
+
+/* Base settings */
 * { @include box-sizing(border-box); }
+@import "settings";
 @include establish-baseline;
 
-/* Base settings & styles */
-@import "settings",
-        "webfonts",
+/* Base styles */
+@import "webfonts",
         "fontawesome",
         "mixins",
         "sections",
