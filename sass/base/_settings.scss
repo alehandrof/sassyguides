@@ -1,4 +1,4 @@
-/* ==========================================================================
+/* = =========================================================================
    Settings (Base)
    ========================================================================== */
 
@@ -8,36 +8,35 @@
 $gr: (1 + sqrt(5)) / 2;
 
 /* Sizes */
-$font-size: 16px; // 15px;
+$font-size:   16px; // 15px;
 $line-height: 1.5; // 1.6;
 
 /* Font Families & Weights */
 $sans-serif-safe: Helvetica, Arial, sans-serif;
-$serif-safe: Georgia, Times, "Times New Roman", serif;
-$monospace-safe: Monaco, Consolas, monospace;
+$serif-safe:      Georgia, Times, "Times New Roman", serif;
+$monospace-safe:  Monaco, Consolas, monospace;
 
-$text-font: 'Open Sans', $sans-serif-safe;
-$text-weight: 400;
-$heading-font: 'Montserrat', $sans-serif-safe;
-// $heading-font: 'Bree Serif', $serif-safe;
-$heading-weight: 400;
+$text-font:               'Open Sans', $sans-serif-safe;
+$text-weight:             400;
+$heading-font:            'Montserrat', $sans-serif-safe;
+$heading-weight:          400;
 $heading-size-adjustment: 0;
-$heading-letter-spacing: -0.05em;
-// $alt-font: $sans-serif;
-// $alt-weight: 400;
-// $alt-size-adjustment: 0;
-$code-font: 'Source Code Pro', $monospace-safe;
-$code-weight: 400;
-$code-size-adjustment: 0;
+$heading-letter-spacing:  -0.05em;
+$alt-font:                $sans-serif;
+$alt-weight:              400;
+$alt-size-adjustment:     0;
+$code-font:               'Source Code Pro', $monospace-safe;
+$code-weight:             400;
+$code-size-adjustment:    0;
 
 /* Derivative values (do not edit!) */
 $xxxl: ceil($font-size * 2.75);
-$xxl: ceil($font-size * 2);
-$xl: ceil($font-size * 1.5);
-$l: ceil($font-size * 1.25);
-$m: ceil($font-size * 1); // 16px
-$s: ceil($font-size * 0.85); // 14px
-$xs: ceil($font-size * 0.75); // 12px
+$xxl:  ceil($font-size * 2);
+$xl:   ceil($font-size * 1.5);
+$l:    ceil($font-size * 1.25);
+$m:    ceil($font-size * 1); // 16px
+$s:    ceil($font-size * 0.85); // 14px
+$xs:   ceil($font-size * 0.75); // 12px
 
 $headerbox-size: $xl;
 
@@ -45,12 +44,12 @@ $headerbox-size: $xl;
    ========================================================================== */
 
 /* Black, white & grays */
-$black-color: #000;
-$white: #fff;
+$black-color:  #000;
+$white:        #fff;
 $darker-color: #222;
-$mid-color: #555;
-$light: #999;
-$lighter: #eee;
+$mid-color:    #555;
+$light:        #999;
+$lighter:      #eee;
 
 @function dark($color: #f0f) {
   @return darken($color, 15%);
@@ -61,19 +60,19 @@ $lighter: #eee;
 
 
 /* Palette */
-$purple: #336699;
-$mauve: #663399;
-$fuschia: #993399;
-$pink: #ea4c88;
-$red: #cc0000;
-$mellow-red: #cc3333;
-$orange: #ff6600;
-$brown: #996633;
-$yellow: #ffcc33;
+$purple:         #336699;
+$mauve:          #663399;
+$fuschia:        #993399;
+$pink:           #ea4c88;
+$red:            #cc0000;
+$mellow-red:     #cc3333;
+$orange:         #ff6600;
+$brown:          #996633;
+$yellow:         #ffcc33;
 // $grass-green: #999900;
-$green: #336600;
-// $turquoise:;
-$light-blue: #0099cc;
+$green:          #336600;
+// $turquoise:   ;
+$light-blue:     #0099cc;
 
 $blue: #0066cc;
 $cyan: #6666cc;
@@ -89,56 +88,56 @@ $gray-c: #ccc;
 $gray-d: #ddd; 
 $gray-e: #eee; 
 $gray-f: #f8f8f8;
-$white: #fff;
+$white:  #fff;
 
-$text-color: $gray-4;
+$text-color:    $gray-4;
 $heading-color: inherit;
-$code-color: dark($orange);
+$code-color:    dark($orange);
 
 
 /* Page & content colors */
-$page-color: $white;
-$content-color: $white;
-$header-color: $blue;
+$page-color:        $white;
+$content-color:     $white;
+$header-color:      $blue;
 $header-text-color: $white;
 
 
 
 /* Widget Colors */
-$primary-color: $pink;
+$primary-color:        $pink;
 $primary-active-color: $fuschia;
-$secondary-color: light($text-color);
-$default-color: $gray-c;
-$link-color: $blue;
-$hover-color: dark($blue);
-$visited-color: dark($purple);
-$info-color: dark($yellow);
-$success-color: $green;
-$warning-color: $orange;
-$error-color: $red;
-$border-color: $gray-c;
+$secondary-color:      light($text-color);
+$default-color:        $gray-c;
+$link-color:           $blue;
+$hover-color:          dark($blue);
+$visited-color:        dark($purple);
+$info-color:           dark($yellow);
+$success-color:        $green;
+$warning-color:        $orange;
+$error-color:          $red;
+$border-color:         $gray-c;
 
 $shading: 0.25;
 
 
 // settings to move into the LibGuides section
-$tab-color: $primary-color;
+$tab-color:        $primary-color;
 $tab-active-color: $primary-active-color;
-$popup-color: $white;
+$popup-color:      $white;
 
 /* Widths & sizes in pixels */
-$page-width: 985px;
+$page-width:     985px;
 $content-margin: 18px; // rhythm(3); // TODO: Incorporate in settings, maybe;
 
 /* Roundness (for border-radius) */
-$radius: rhythm(2/3);
+$radius:        rhythm(2/3);
 $static-radius: 2/3; // in "rhythm"
 $widget-radius: 2/3; // in "rhythm"
 
 /* Compass
    ========================================================================== */
 
-$base-font-size: $font-size;
-$base-line-height: ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
-// $base-line-height: round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+$base-font-size:        $font-size;
+$base-line-height:      ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+// $base-line-height:   round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
 $default-border-radius: rhythm(2/3);
