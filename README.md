@@ -2,7 +2,7 @@
 
 SassyGuides is a framework for customizing [LibGuides](http://springshare.com/libguides/) written in [Sass](http://sass-lang.com/) by [Alex Armstrong](http://github.com/alehandrof/).
 
-**SassyGuides is being updated almost daily. There has been no stable release yet. Do not use in production!**
+**SassyGuides is under development. There is no stable release yet. Do not use in production!**
 
 Check out the [live demo](http://sandbox.campusguides.com/sassyguides).
 
