@@ -129,7 +129,9 @@
 .irss a { @include fontawesome("rss"); }
 .iprint a { @include fontawesome("print"); }
 .iemail a { @include fontawesome("envelope"); }
-
+.guideshare {
+  @if $hide-guide-share { @extend %hide; }
+}
 
 
 /* ********************************************************** */
