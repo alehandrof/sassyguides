@@ -17,6 +17,7 @@ a {
   &:hover {
     color: $hover-color;
     outline: none;
+    text-decoration: underline;
   }
   a:link,
   a:visited,

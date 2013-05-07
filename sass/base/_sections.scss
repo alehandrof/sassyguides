@@ -28,7 +28,7 @@ body {
 }
 %h1 {
   @include adjust-font-size-to($xxxl + $heading-size-adjustment);
-  margin-left: -(rhythm(1/4));
+  margin-left: -(rhythm(1/5));
 }
 %h2 {
   @include adjust-font-size-to($xxl + $heading-size-adjustment);

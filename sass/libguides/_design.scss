@@ -8,15 +8,20 @@
 @import "settings";
 @import "overrides";
 
+
 %center-on-page {
-  width: $page-width;
   margin: 0 auto;
 }
 
 #wrapper {
 }
 #container {
-  // @extend %center-on-page;
+  width: $page-width;
+  @extend %center-on-page;
+  & > div {
+    margin-left: $content-margin;
+    margin-right: $content-margin;
+  }
 }
 
 /* Top stuff */
@@ -27,16 +32,20 @@
 .pagedesc,
 .guideattr/*,
 #tabsI, #tabs12*/ {
-  // margin: 0 $content-margin;
-  @extend %center-on-page;
-  padding: 0 $content-margin;
+  // // margin: 0 $content-margin;
+  // @extend %center-on-page;
+  // padding: 0 $content-margin;
 }
+
+
+
 
 /* Header
    ========================================================================== */
 
 /* Breadcrumbs */
 .topnav {
+  margin-bottom: rhythm(1);
 }
 .breadcrumbs, #breadcrumbsl, #breadcrumbsr {
   @include adjust-font-size-to($xs);
@@ -91,7 +100,7 @@
    ========================================================================== */
 
 .guidedesc, .pagedesc {
-  padding: rhythm(1/2) $content-margin;
+  // padding: rhythm(1/2) $content-margin;
   /* Style option */
   @if $alt-guidedesc {
     // @include adjust-font-size-to($xl);
@@ -104,7 +113,8 @@
 }
 .guideattr {
   @include adjust-font-size-to($xs);
-  padding: rhythm(1/2) $content-margin;
+  // padding: rhythm(1/2) $content-margin;
+  margin-top: rhythm(1);
   > * {
     /* Override for inline styles */
     padding: 0 rhythm(3) 0 0 !important;
@@ -121,53 +131,14 @@
 .iemail { @include fontawesome("envelope"); }
 
 
-/* Content
-   ========================================================================== */
 
-/* Content */
-#content {
-  @include clearfix;
-  background: $content-color;
-  @include box-shadow(0 1px 3px rgba($darker-color, 0.2));
-  @include border-radius(rhythm($static-radius));
-  border: 1px solid $border-color;
-  padding: $content-margin 0 0 $content-margin;
-  @extend %center-on-page;
-  & > div {
-    float: left;
-  }
-}
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
 
-/* Center Column & Boxes */
-#contentcenter {
-  margin-left: 0 !important; // override inline style $$$
-  margin-right: 0 !important; // override inline style $$$
-  padding-right: $content-margin;
-}
-#centerboxes {
-  & > div {
-    border-top: 1px solid $border-color;
-    padding-top: rhythm(4);
-    &:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-  }
-}
 
-/* Left & Right Columns & Boxes */
-#contentleft {
-  padding-right: $content-margin * 2;
-}
-#contentright {
-  padding-left: $content-margin;
-  padding-right: $content-margin !important; // override inline style $$$
-}
-#rightboxes, #leftboxes {
-  @if $side-columns-small-font { 
-    @include adjust-font-size-to($s, 3.5);
-  }
-}
 
 /* Boxes
    ========================================================================== */
@@ -288,6 +259,7 @@ a:hover {
 
 
 
+@import "layout";
 @import "tabs";
 @import "stitle"; // must be after #content if they are yoked
 @import "innerbox-comments";
