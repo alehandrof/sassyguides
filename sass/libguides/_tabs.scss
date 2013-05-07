@@ -7,7 +7,7 @@
 
 #tabsI,
 #tabs12 {
-  @include adjust-font-size-to($s);
+  @include adjust-font-size-to($s, 3);
   ul {
     @include clearfix;
     @include border-radius(rhythm($widget-radius));

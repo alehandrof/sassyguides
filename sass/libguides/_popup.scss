@@ -10,7 +10,7 @@
 .popup,
 .balloon {
   /* Styling */
-  @include adjust-font-size-to($s, 3.333);
+  @include adjust-font-size-to($s, 4);
   @include border-radius(rhythm($widget-radius));
   @include box-shadow(0 1px 3px rgba($darker-color, 0.1));
   background: $popup-color;
