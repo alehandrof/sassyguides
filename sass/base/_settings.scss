@@ -138,6 +138,6 @@ $widget-radius: 2/3; // in "rhythm"
    ========================================================================== */
 
 $base-font-size:        $font-size;
-$base-line-height:      ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
-// $base-line-height:   round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+// $base-line-height:   ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
+$base-line-height:      round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
 $default-border-radius: rhythm(2/3);
