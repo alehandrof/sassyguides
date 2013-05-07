@@ -5,11 +5,11 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 %fontawesome {
   font-family: "FontAwesome", sans-serif;
-  }
+}
 [class*="fontawesome-"]:before {
   @extend %fontawesome;
 }
-@mixin fontawesome($content) {
+@mixin icon($content) {
   &:before {
     @extend %fontawesome;
     margin-right: rhythm(1);

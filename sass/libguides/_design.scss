@@ -73,7 +73,7 @@
   /* Hide option */
   @if $hide-guide-tags { @extend %hide; }
   /* Icon */
-  @include fontawesome("tags");
+  @include icon("tags");
 }
 
 
@@ -104,10 +104,10 @@
   @if $hide-guide-info { @extend %hide; }
 }
 /* Icons */
-.icomments a { @include fontawesome("comments"); }
-.irss a { @include fontawesome("rss"); }
-.iprint a { @include fontawesome("print"); }
-.iemail a { @include fontawesome("envelope"); }
+.icomments a { @include icon("comments"); }
+.irss a { @include icon("rss"); }
+.iprint a { @include icon("print"); }
+.iemail a { @include icon("envelope"); }
 .guideshare {
   @if $hide-guide-share { @extend %hide; }
 }

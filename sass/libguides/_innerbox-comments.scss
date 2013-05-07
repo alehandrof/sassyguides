@@ -7,7 +7,7 @@
   /* Styling */
   margin-bottom: rhythm(4);
   a {
-    @include fontawesome("comments");
+    @include icon("comments");
   }
   &,
   & + div {
