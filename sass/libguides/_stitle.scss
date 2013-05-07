@@ -13,17 +13,15 @@
   background: $content-color;
   border-bottom: 1px solid $border-color;
   padding: rhythm(2) 0;
-  margin-bottom: rhythm(3);
-  @if $hide-stitle { @extend %hide; }
-  @else {
-    /* Adjust top of #content if stitle is visible */
-    & + #content,
-    & + div + #content {
-      @include border-radius(0 0 rhythm($static-radius) rhythm($static-radius));
-      border-top-style: none;
-    }
-  }
   td > span {
     padding: 0 rhythm(3) 0 0 !important;
   }
+  /* Hide option */
+  @if $hide-page-info { @extend %hide; }
+}
+.lgsearch {
+  display: block;
+}
+.icomments {
+  @if $hide-page-comments { @extend %hide; }
 }

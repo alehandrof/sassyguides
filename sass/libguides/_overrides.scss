@@ -12,11 +12,12 @@
 
 /* Options (will be triggered at the relevant wherever) */
 $hide-breadcrumbs: false !default;
-$hide-tags: false !default;
-$hide-stitle: false !default;
-$hide-guidedesc: false !default;
-$hide-guideattr: false !default;
-
+$hide-guide-tags: false !default;
+$hide-guide-description: false !default;
+$hide-guide-info: false !default;
+$hide-page-comments: false !default;
+$hide-page-info: false !default;
+$hide-box-comments: false !default;
 
 /* Decrease font size in the left & right columns */
 $side-columns-small-font: true !default;

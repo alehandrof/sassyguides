@@ -90,7 +90,7 @@
   /* "Remove" the &nbsp; from the end of the span */
   margin-right: -(rhythm(1.5));
   /* Hide option */
-  @if $hide-tags { @extend %hide; }
+  @if $hide-guide-tags { @extend %hide; }
   /* Icon */
   @include fontawesome("tags");
 }
@@ -109,7 +109,7 @@
     @extend .muted;
   }
   /* Hide option */
-  @if $hide-guidedesc { @extend %hide; }
+  @if $hide-guide-description { @extend %hide; }
 }
 .guideattr {
   @include adjust-font-size-to($xs);
@@ -122,7 +122,7 @@
     // TODO: use the :before & :after pseudo-classes to create separators
   }
   /* Hide option */
-  @if $hide-guideattr { @extend %hide; }
+  @if $hide-guide-info { @extend %hide; }
 }
 /* Icons */
 .icomments a { @include fontawesome("comments"); }

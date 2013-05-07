@@ -12,6 +12,7 @@
   &,
   & + div {
     @include adjust-font-size-to($s);
+    @if $hide-box-comments { @extend %hide; }
   }
   /* This is the unclassed div that holds the commments interface */
   & + div {
