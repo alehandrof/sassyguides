@@ -1,27 +1,36 @@
-/* Page info below tab (stitle) */
+/* Page - Info
+   ========================================================================== */
+
+/* Page info below guide tabs (stitle) */
 .stitle {
-  /* Overrides */
-  @extend %center-on-page;
-  height: auto;
-  // table {
-    // margin: 0;
-  // }
-  /* Styling */
   @include adjust-font-size-to($xs);
-  // @include border-radius(rhythm($static-radius) rhythm($static-radius) 0 0);
-  // @include box-shadow(0 1px 2px rgba($darker-color, 0.2));
   background: $content-color;
+  padding-bottom: rhythm(2);
   border-bottom: 1px solid $border-color;
-  padding: rhythm(2) 0;
-  td > span {
-    padding: 0 rhythm(3) 0 0 !important;
-  }
+  /* Overrides */
+  height: auto;
   /* Hide option */
   @if $hide-page-info { @extend %hide; }
 }
-.lgsearch {
-  display: block;
+
+/* Left-side */
+#guide_tab_title_bar_page_name,
+#guide_tab_title_bar_page_comments,
+#guide_tab_title_bar_page_print {
+  padding-right: rhythm(3);
 }
+
+/* Page Comments */
 .icomments {
   @if $hide-page-comments { @extend %hide; }
+}
+div[id="commentslistp"] {
+  /* Doesn't work $$$ */
+  margin: rhythm(2) $content-margin 0 !important;
+}
+
+/* Search box */
+.lgsearch {
+  display: block;
+  padding-right: 0;
 }
