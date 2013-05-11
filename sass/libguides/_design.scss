@@ -3,8 +3,6 @@
    ========================================================================== */
 
 
-// $$$ @import "reset-classes";
-
 @import "settings";
 @import "overrides";
 
@@ -83,7 +81,6 @@
 .guidedesc, .pagedesc {
   /* Style option */
   @if $alt-guidedesc {
-    // @include adjust-font-size-to($xl);
     @extend %heading;
     @extend %h4;
     @extend .muted;
@@ -191,7 +188,7 @@ $content-margin: rhythm(8);
   }
 }
 .boxatt {
-  @extend %blocks;
+  // @extend %blocks;
 }
 
 
@@ -199,62 +196,57 @@ $content-margin: rhythm(8);
    ========================================================================== */
 
 /* Resets */
-/*#rlist, .itemlist {
-  ul, li {
-  }
-  ul {
-    @extend %base-ul;
-  }
-  li {
-    @extend %base-li;
-  }
-}     
-#sidelist, .linklist {
-  ul, li {
-  }
-  ul {
-    @extend %base-ul;
-  }
-  li {
-    @extend %base-li;
-  }
-}
+/*#rlist,
+.itemlist,
+#sidelist,
+.linklist,
 #filelist {
-  ul, li {
-  }
-  ul {
-    @extend %base-ul;
-  }
-  li {
-    @extend %base-li;
-  }
+ul { }
+li { }
 }
 .resdesc,
 .helpdesc,
 .linkdesc {
 } */
-/* Post-reset */
-.itemlist ul {
-  li {
-    margin-left: rhythm(4);
-  }
-  .linkdesc {
-    padding-bottom: rhythm(2);
-  }
-  #centerboxes & {
-    // @include no-bullets;
-  }
+
+/* Simple Web Links */
+.linklist {
+  ul { @extend %base-ul; }
+  li { @extend %base-li; }
 }
+
+/* Links & Lists */
+.itemlist {
+  ul { @extend %base-ul; }
+  li { @extend %base-li; }
+}
+/* Fancy Links & Lists in the center column */
+/*#centerboxes .itemlist {
+  @include no-bullets;
+  li {
+    @include adjust-font-size-to($l);
+    border-top: 1px dotted $border-color;
+    padding-top: rhythm(2);
+    &:first-child {
+      border-top: none; 
+      padding-top: 0;
+    }
+    .linkdesc {
+      @include adjust-font-size-to($m, 4, $l);
+    }
+  }
+}*/
 
 /**
  * "More Information" button
- * 1. Add an icon to the <a> which triggers the popup
+ * 1. Add an icon to the <a> which triggers the popup, along with some padding
  * 2. Hide the default button
  * I forgot to note that this is very, very hacky :)
  */
 .itemlist {
   a[title="More Information"] {
     @include icon("info-sign"); /* 1 */
+    padding-left: rhythm(1/2);
   }
 }
 .b_moreinfo { @extend %hide; } /* 2 */
@@ -272,11 +264,6 @@ $content-margin: rhythm(8);
 
 /* Books from the Catalog */
 // .book_cover, .book_title, .book_author, .book_callno, .book_isbn, .book_pubyear, .book_description { }
-.book_title {
-  font-weight: $text-weight; // reset
-}
-.book_div {
-}
 .book_art_0,
 .book_art_1,
 .book_art_2 {

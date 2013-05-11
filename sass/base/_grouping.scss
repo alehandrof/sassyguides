@@ -48,13 +48,13 @@ ol {
   list-style-type: decimal;
 }
 %base-ul {
-  @extend %base-list;
   list-style-type: square;
   & li li {
     list-style-type: circle;
   }
 }
 ul  {
+  @extend %base-list;
   @extend %base-ul;
   &.unstyled { @include no-bullets; }
   &.inline { @include inline-list; }
