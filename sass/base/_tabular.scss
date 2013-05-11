@@ -34,5 +34,10 @@
   }
 }
 
-/* This is commented out in vary of extending .innerbox table */
+/* This is commented out in favor of extending .innerbox table */
 // table { @extend %table; }
+
+/* Remove unwanted table stylings placeholder */
+%undo-table {
+  // @include adjust-font-size-to ($m, 4, $s);
+}

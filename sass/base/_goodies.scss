@@ -23,3 +23,18 @@
 .text-error { color: $error-color; }
 .text-info { color: $info-color; }
 .text-success { color: $success-color; }
+
+/* Glow button placeholder class */
+%glow-button {
+  &,
+  & > img {
+    @include border-radius(rhythm($widget-radius));
+  }
+  @include box-shadow(0 1px rhythm(1/2) rgba($border-color, 0.5));
+  border: 1px solid $border-color;
+  padding: rhythm(1);
+  &:hover {
+    @include box-shadow(0 0 rhythm(2) rgba($link-color, 0.25));
+    border: 1px solid $link-color;
+  }
+}

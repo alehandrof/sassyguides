@@ -253,6 +253,10 @@ li { }
 
 /* "Documents & Files" box */
 #filelist {
+  ul {
+    @extend %base-ul;
+    @extend %blocks;
+  }
   /* Overrides */
   li {
     background-position: bottom;
@@ -295,4 +299,6 @@ a:hover {
 @import "innerbox-rss";
 @import "innerbox-comments";
 @import "popup";
+@import "profiles"; /* Profile boxes */
+@import "toc";      /* Table of Contents boxes */
 @import "admin";
