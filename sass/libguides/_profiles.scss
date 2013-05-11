@@ -1,0 +1,33 @@
+/* Profile boxes
+   ========================================================================== */
+
+.profile_image_box {
+  @extend %blocks;
+  a {
+    @extend %blocks;
+    @extend %glow-button;
+    display: block;
+    float: left;
+  }
+}
+.profile_display_name {
+  @include adjust-font-size-to($l);
+  clear: left;
+  /* Overrides */
+  text-align: left;
+}
+.profileh4 > div {
+  @extend %blocks;
+}
+.profilecontent {
+  /* Overrides */
+  text-align: left !important;
+}
+
+/**
+ * "User Profile" box
+ * There are some unresolved issues with the user profile box,
+ * because of the <table> inside the .profile_wrapper
+ */
+.profile_box_content > table {
+}
