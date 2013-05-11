@@ -104,7 +104,7 @@ hr {
   display: block;
 }
 hr::after {
-  content: "···";
+  content: "\b7\b7\b7";
   color: $gray-9;
   letter-spacing: rhythm(2);
   padding-left: rhythm(1);
