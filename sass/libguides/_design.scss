@@ -199,7 +199,7 @@ $content-margin: rhythm(8);
    ========================================================================== */
 
 /* Resets */
-#rlist, .itemlist {
+/*#rlist, .itemlist {
   ul, li {
   }
   ul {
@@ -232,7 +232,7 @@ $content-margin: rhythm(8);
 .resdesc,
 .helpdesc,
 .linkdesc {
-} 
+} */
 /* Post-reset */
 .itemlist ul {
   li {
@@ -242,7 +242,30 @@ $content-margin: rhythm(8);
     padding-bottom: rhythm(2);
   }
   #centerboxes & {
-    @include no-bullets;
+    // @include no-bullets;
+  }
+}
+
+/**
+ * "More Information" button
+ * 1. Add an icon to the <a> which triggers the popup
+ * 2. Hide the default button
+ */
+.itemlist {
+  a[title="More Information"] {
+    @include icon("info-sign"); /* 1 */
+  }
+}
+.b_moreinfo { @extend %hide; } /* 2 */
+
+/* "Documents & Files" box */
+#filelist {
+  /* Overrides */
+  li {
+    background-position: bottom;
+  }
+  li a {
+    padding-left: rhythm(4) !important;
   }
 }
 

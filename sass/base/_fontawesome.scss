@@ -21,8 +21,11 @@
   font-family: "FontAwesome", sans-serif;
   font-weight: normal;
   font-style: normal;
-  text-decoration: inherit;
+  // text-decoration: inherit;
+  text-decoration: none;
   display: inline-block;
+  font-size:1.1em;
+  @include adjust-font-size-to(($m+$l)/2);
   // width: auto;
   // height: auto;
   // line-height: normal;
