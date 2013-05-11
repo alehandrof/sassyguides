@@ -1,3 +1,8 @@
+/* Reset font
+   ========================================================================== */
+
+/* Methodology: Reset all selectors that include "font" or "line-height" properties. */
+
 %reset-font {
   font: inherit;
 }

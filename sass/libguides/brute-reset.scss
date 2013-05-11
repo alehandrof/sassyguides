@@ -3,15 +3,13 @@
    ========================================================================== */
 
 /**
-  * Methodology
-  *
-  * - Compress the default LibGuides stylesheet
-  *   (css111/libguides.css, currently)
-  * - Search for a property and then construct a SCSS file that resets all
-  *   appropriate selectors.
-  *
-  *   Note: "color" requires a regex to avoid picking out "background-color".
-  */
+ * Methodology
+ *
+ * Compress the default LibGuides stylesheet (css111/libguides.css, currently)
+ * 
+ * Search for a property and then construct a SCSS file that resets all
+ * appropriate selectors.
+ */
 
 @import "brute-reset/margin";
 @import "brute-reset/border";

@@ -1,3 +1,11 @@
+/* Reset color
+   ========================================================================== */
+
+/*
+ * Methodology: Reset all selectors that include "color" except for
+ * "background-color" (use a regex to exclude it).
+ */
+
 %reset-color {
   color: inherit; // #f0f; // DEBUG
 }
