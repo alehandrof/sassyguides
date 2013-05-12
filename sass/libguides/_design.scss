@@ -205,7 +205,7 @@ li { }
 .linkdesc {
 } */
 
-/* Simple Web Links */
+/* Box - Simple Web Links */
 .linklist {
   ul {
     @extend %blocks;
@@ -213,8 +213,7 @@ li { }
   }
   li { @extend %base-li; }
 }
-
-/* Links & Lists */
+/* Box - Links & Lists */
 .itemlist {
   ul {
     @extend %blocks;
@@ -222,7 +221,9 @@ li { }
   }
   li { @extend %base-li; }
 }
-.linkdesc {
+/* List item description */
+.linkdesc,
+.resdesc {
   margin-bottom: rhythm(2);
 }
 /* Style option */
@@ -237,7 +238,8 @@ li { }
         border-top: none; 
         padding-top: 0;
       }
-      .linkdesc {
+      .linkdesc,
+      .resdesc {
         @include adjust-font-size-to($m, 4, $l);
       }
     }
@@ -251,15 +253,13 @@ li { }
  * 2. Hide the default button
  * I forgot to note that this is very, very hacky :)
  */
-.itemlist {
-  a[title="More Information"] {
-    @include icon("info-sign"); /* 1 */
-    padding-left: rhythm(1/2);
-  }
+.itemlist a[title="More Information"] {
+  @include icon("info-sign"); /* 1 */
+  padding-left: rhythm(1/2);
 }
 .b_moreinfo { @extend %hide; } /* 2 */
 
-/* "Documents & Files" box */
+/* Box - Documents & Files */
 #filelist {
   ul {
     @extend %base-ul;
@@ -277,31 +277,46 @@ li { }
   }
 }
 
-/* Books from the Catalog */
+/* Box - Books from the Catalog */
 // .book_cover, .book_title, .book_author, .book_callno, .book_isbn, .book_pubyear, .book_description { }
-.book_art_0,
-.book_art_1,
-.book_art_2 {
-  margin: 0 rhythm(4) rhythm(1) 0;
+.book_cover {
+  a {
+    @include clearfix();
+    @extend %glow-button;
+    display: block;
+    float: left;
+    margin: 0 rhythm(3) rhythm(1) 0;
+  }
 }
+// .book_art_0,
+// .book_art_1,
+// .book_art_2 {
+// }
 .book_art_0 { width: $book-cover-width; } // was: 90px;
 .book_art_1 { width: $book-cover-width * 1.5;  } // was: 140px;
 .book_art_2 { width: $book-cover-width * 2;  } // was: 200px;
 
-/* User Link Submission -- doesn't really work */
-.linklist + br {
-  @extend %hide;
-}
-div[id="linksubmit"] {
-  @extend %blocks;
-}
+/**
+ * Box - User Link Submission 
+ * Aside from the hacks below, this is styled as a Simple Web Links box (.linklist)
+ */
+.linklist + br { @extend %hide; }
+div[id^="linksubmit"] { @extend %blocks; }
 
-/* Embedded Media & Widgets */
+/* Box - Embedded Media & Widgets */
 .embedclass {
   iframe,
   object {
     width: 100%;
   }
+}
+
+/**
+ * Box - Dates & Events
+ * Aside from the hack below, this is styled as a Links & Lists box (.itemlist)
+ */
+.itemlist a[id^="event"] strong {
+  font-weight: $text-weight;
 }
 
 /* Footer
