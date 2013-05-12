@@ -2,11 +2,6 @@
    SassyGuides :: Design - LibGuides
    ========================================================================== */
 
-
-@import "settings";
-@import "overrides";
-
-
 /* Wrappers
    ========================================================================== */
 
@@ -291,15 +286,3 @@ li { }
 a:hover {
   text-decoration: inherit;
 }
-
-
-
-@import "tabs";
-@import "stitle";
-@import "innerbox-rss";
-@import "innerbox-comments";
-@import "popup";
-@import "profiles"; /* Profile boxes */
-@import "toc";      /* Table of Contents boxes */
-@import "homepage"; /* Homepage */
-@import "admin";
