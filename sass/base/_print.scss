@@ -2,6 +2,8 @@
    Print styles
    ========================================================================== */
 
+/* Loosely based on P. R. Lloyd's _Barebones_ & Zurb's _Foundation_ */
+
 @media print {
   * {
     color: #000 !important;
@@ -26,5 +28,21 @@
   }
   a[href^="#"]:after {
       content: "";
+  }
+  thead {
+    display: table-header-group;
+  }
+  th, tr, img {
+    page-break-inside: avoid;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  textarea {
+    @include box-shadow(none);
+    border: 1px solid $light;
+    border-style: none none solid none;
   }
 }
