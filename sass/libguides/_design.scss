@@ -75,7 +75,7 @@
 
 .guidedesc, .pagedesc {
   /* Style option */
-  @if $alt-guidedesc {
+  @if $alt-guide-description {
     @extend %heading;
     @extend %h4;
     @extend .muted;
@@ -176,7 +176,7 @@ $content-margin: rhythm(8);
     @extend %blocks;
   }
   a {
-    @extend %link-with-border;
+    // @extend %link-with-border;
   }
 }
 .innerbox table {
@@ -225,22 +225,25 @@ li { }
 .linkdesc {
   margin-bottom: rhythm(2);
 }
-/* Fancy Links & Lists in the center column */
-/*#centerboxes .itemlist {
-  @include no-bullets;
-  li {
-    @include adjust-font-size-to($l);
-    border-top: 1px dotted $border-color;
-    padding-top: rhythm(2);
-    &:first-child {
-      border-top: none; 
-      padding-top: 0;
-    }
-    .linkdesc {
-      @include adjust-font-size-to($m, 4, $l);
+/* Style option */
+@if $alt-link-and-lists {
+  #centerboxes .itemlist {
+    @include no-bullets;
+    li {
+      @include adjust-font-size-to($l);
+      border-top: 1px dotted $border-color;
+      padding-top: rhythm(2);
+      &:first-child {
+        border-top: none; 
+        padding-top: 0;
+      }
+      .linkdesc {
+        @include adjust-font-size-to($m, 4, $l);
+      }
     }
   }
-}*/
+}
+
 
 /**
  * "More Information" button

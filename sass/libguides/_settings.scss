@@ -7,7 +7,10 @@
 
 /* Make the guide description more prominent.
    Tip: short descriptions will work best. */
-$alt-guidedesc: true !default;
+$alt-guide-description: true !default;
+
+/* Make the titles/links for Links & Lists more prominent */
+$alt-link-and-lists: true !default;
 
 
 $book-cover-width: rhythm(15);
