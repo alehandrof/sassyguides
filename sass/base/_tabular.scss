@@ -5,21 +5,23 @@
 /* Table placholder */
 %table {
   @extend %blocks;
-  @include adjust-font-size-to ($s);
+  // @include adjust-font-size-to ($s);
   border-collapse: collapse;
   border-spacing: 0;
+  border: 1px solid $border-color;
   td, th {
     text-align: left;
     padding: rhythm(1) rhythm(2);
     vertical-align: top;
-    border-bottom: 1px solid $border-color;
-    border-left: 1px dotted $border-color;
+    border: 1px solid $border-color;
+    // border-left: 1px dotted $border-color;
+    border-style: solid none solid dotted;
     &:first-child {
       border-left: none;
     }
   }
   th {
-    border-top: 1px solid $border-color;
+    // border-top: 1px solid $border-color;
   }
   th, tfoot td {
     font-weight: 700;
