@@ -5,7 +5,7 @@
 .pagedesc {
   padding-bottom: rhythm(2);
   border-bottom: 1px solid $border-color;
-  margin-bottom: rhythm(2);
+  margin-bottom: rhythm(1);
 }
 
 /* Tag Cloud box */
@@ -14,7 +14,7 @@
   @extend %blocks;
   a {
     @include adjust-font-size-to ($s);
-    margin-left: rhythm(2);
+    margin-left: rhythm(1);
     // float: left;
     // display: block;
     &:first-child { margin-left: 0; }
