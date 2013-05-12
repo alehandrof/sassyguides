@@ -178,9 +178,10 @@ $content-margin: rhythm(8);
   a {
     @extend %link-with-border;
   }
-  table {
-    @extend %table;
-  }
+}
+.innerbox table {
+  /* For some reason I can't nest this extend. I can't figure out why. */
+  @extend %table;
 }
 .boxatt {
   // @extend %blocks;
