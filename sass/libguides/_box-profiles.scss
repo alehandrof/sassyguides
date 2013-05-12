@@ -29,5 +29,6 @@
  * There are some unresolved issues with the user profile box,
  * because of the <table> inside the .profile_wrapper
  */
-.profile_box_content > table {
+.profile_box_content table {
+  @extend %undo-table;
 }

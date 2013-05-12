@@ -42,4 +42,10 @@
 /* Remove unwanted table stylings placeholder */
 %undo-table {
   // @include adjust-font-size-to ($m, 4, $s);
+  border: 0;
+  margin-bottom: 0;
+  td {
+    border: 0;
+    padding: 0;
+  }
 }
