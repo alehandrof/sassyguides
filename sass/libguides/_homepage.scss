@@ -1,0 +1,28 @@
+/* Homepage
+   ========================================================================== */
+
+/* Homepage stitle */
+.pagedesc {
+  padding-bottom: rhythm(2);
+  border-bottom: 1px solid $border-color;
+  margin-bottom: rhythm(2);
+}
+
+/* Tag Cloud box */
+#tagcloudbox {
+  // @incldue clearfix();
+  @extend %blocks;
+  a {
+    @include adjust-font-size-to ($s);
+    margin-left: rhythm(2);
+    // float: left;
+    // display: block;
+    &:first-child { margin-left: 0; }
+  }
+  /* Overrides */
+  margin-top: 0;
+}
+#ptags,
+#atags {
+  @extend %blocks;
+}
