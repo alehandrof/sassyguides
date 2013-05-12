@@ -29,9 +29,9 @@ a {
     outline: none;
     @include single-transition(none);
   }
-  img {
-    border: 0;
-  }
+  // img {
+  //   border: 0;
+  // }
 }
 
 /* Links with bottom border for decoration (instead of underline) */

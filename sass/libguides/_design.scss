@@ -206,13 +206,19 @@ li { }
 
 /* Simple Web Links */
 .linklist {
-  ul { @extend %base-ul; }
+  ul {
+    @extend %blocks;
+    @extend %base-ul;
+  }
   li { @extend %base-li; }
 }
 
 /* Links & Lists */
 .itemlist {
-  ul { @extend %base-ul; }
+  ul {
+    @extend %blocks;
+    @extend %base-ul;
+  }
   li { @extend %base-li; }
 }
 /* Fancy Links & Lists in the center column */
@@ -252,12 +258,15 @@ li { }
     @extend %base-ul;
     @extend %blocks;
   }
+  li {
+    margin-top: rhythm(1);
+  }
   /* Overrides */
   li {
-    background-position: bottom;
-  }
-  li a {
-    padding-left: rhythm(4) !important;
+    padding-top: 0 !important;
+    a {
+      padding-left: rhythm(4) !important;
+    }
   }
 }
 
@@ -271,6 +280,22 @@ li { }
 .book_art_0 { width: $book-cover-width; } // was: 90px;
 .book_art_1 { width: $book-cover-width * 1.5;  } // was: 140px;
 .book_art_2 { width: $book-cover-width * 2;  } // was: 200px;
+
+/* User Link Submission -- doesn't really work */
+.linklist + br {
+  @extend %hide;
+}
+div[id="linksubmit"] {
+  @extend %blocks;
+}
+
+/* Embedded Media & Widgets */
+.embedclass {
+  iframe,
+  object {
+    width: 100%;
+  }
+}
 
 /* Footer
    ========================================================================== */
