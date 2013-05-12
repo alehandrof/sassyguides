@@ -7,14 +7,10 @@
 
 body {
   color: $text-color;
-  // font-size: $base-font-size;
   font-family: $text-font;
   font-weight: $text-weight;
   @include adjust-font-size-to ($base-font-size, 4);
   background: $page-color;
-  // background: $page-color url("/home/alex/Dropbox/TRANSPORT/Wub/scriptogram/dropmarkbg.png");
-  // background: $page-color url("../images/pdf.js.texture.png");
-  // background: $page-color url("/home/alex/Dropbox/TRANSPORT/Wub/scriptogram/www-refreshbg-vflC3wnbM.png");
 }
 
 /* Headings
@@ -27,26 +23,27 @@ body {
   letter-spacing: $heading-letter-spacing;
 }
 %h1 {
-  @include adjust-font-size-to($xxxl + $heading-size-adjustment);
+  @include adjust-font-size-to($h1-font-size);
   margin-left: -(rhythm(1/5));
 }
 %h2 {
-  @include adjust-font-size-to($xxl + $heading-size-adjustment);
+  @include adjust-font-size-to($h2-font-size);
   margin: 0 0 rhythm(2);
 }
 %h3 {
-  @include adjust-font-size-to($xl + $heading-size-adjustment);
+  @include adjust-font-size-to($h3-font-size);
   margin: rhythm(2) 0 rhythm(2);
 }
 %h4 {
-  @include adjust-font-size-to($l + $heading-size-adjustment);
+  @include adjust-font-size-to($h4-font-size);
+  margin: rhythm(2) 0 rhythm(2);
 }
 %h5 {
-  @include adjust-font-size-to($m + $heading-size-adjustment);
-  text-transform: uppercase;
+  @include adjust-font-size-to($h5-font-size);
+  // text-transform: uppercase;
 }
 %h6 {
-  @include adjust-font-size-to($s + $heading-size-adjustment);
+  @include adjust-font-size-to($h6-font-size);
   text-transform: uppercase;
 }
 h1, h2, h3, h4, h5, h6 {

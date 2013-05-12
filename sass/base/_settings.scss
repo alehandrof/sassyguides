@@ -40,6 +40,13 @@ $xs:   ceil($font-size * 0.75); // 12px
 
 $headerbox-size: $xl;
 
+$h1-font-size: $xxxl + $heading-size-adjustment;
+$h2-font-size: $xl + $heading-size-adjustment;
+$h3-font-size: $l + $heading-size-adjustment;
+$h4-font-size: $m + $heading-size-adjustment;
+$h5-font-size: $s + $heading-size-adjustment;
+$h6-font-size: $xs + $heading-size-adjustment;
+
 /* Colors
    ========================================================================== */
 
