@@ -40,3 +40,8 @@ $side-columns-small-font: true !default;
 
 /* Break between page (NOT guide) description & .stitle */
 .pagedesc + br { @extend %hide; }
+
+/* Feedback form */
+[id^="feedbackform"] table {
+  @extend %undo-table;
+}
