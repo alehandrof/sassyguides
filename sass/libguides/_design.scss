@@ -79,13 +79,14 @@
     @extend %heading;
     @extend %h4;
     @extend .muted;
+    margin: 0;
   }
   /* Hide option */
   @if $hide-guide-description { @extend %hide; }
 }
 .guideattr {
   @include adjust-font-size-to($xs);
-  margin-top: rhythm(1);
+  // margin-top: rhythm(1);
   & > * {
     /* Override for inline styles */
     padding: 0 rhythm(3) 0 0 !important;
