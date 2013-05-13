@@ -18,7 +18,7 @@
   & + div {
     @include border-radius(rhythm($widget-radius));
     @extend %blocks;
-    background: $lighter;
+    background: $lighter-color;
     padding: rhythm(2);
     // margin-top: -(rhythm(4) + rhythm($widget-radius));
   }

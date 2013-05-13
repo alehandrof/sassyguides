@@ -5,66 +5,64 @@
 /* Fonts
    ========================================================================== */
 
-$gr: (1 + sqrt(5)) / 2;
-
-/* Sizes */
-$font-size:   16px; // 15px;
-$line-height: 1.5; // 1.6;
-
 /* Font Families & Weights */
-$sans-serif-safe: Helvetica, Arial, sans-serif;
-$serif-safe:      Georgia, Times, "Times New Roman", serif;
-$monospace-safe:  Monaco, Consolas, monospace;
-
-$text-font:               'Open Sans', $sans-serif-safe;
+$sans-serif-safe:         Helvetica, Arial, sans-serif;
+$serif-safe:              Georgia, Times, "Times New Roman", serif;
+$monospace-safe:          Monaco, Consolas, monospace;
+$text-font:               "Open Sans", $sans-serif-safe;
 $text-weight:             400;
-$heading-font:            'Montserrat', $sans-serif-safe;
+$heading-font:            "Montserrat", $sans-serif-safe;
 $heading-weight:          400;
 $heading-size-adjustment: 0;
 $heading-letter-spacing:  -0.05em;
-// $alt-font:                $sans-serif-safe;
-// $alt-weight:              400;
-// $alt-size-adjustment:     0;
-$code-font:               'Source Code Pro', $monospace-safe;
+$code-font:               "Source Code Pro", $monospace-safe;
 $code-weight:             400;
 $code-size-adjustment:    0;
 
-/* Derivative values (do not edit!) */
-$xxxl: ceil($font-size * 2.75);
-$xxl:  ceil($font-size * 2);
-$xl:   ceil($font-size * 1.5);
-$l:    ceil($font-size * 1.25);
-$m:    ceil($font-size * 1); // 16px
-$s:    ceil($font-size * 0.85); // 14px
-$xs:   ceil($font-size * 0.75); // 12px
+/* Sizes -- edit these as desired */
+$font-size:   16px;
+$line-height: 1.5;
 
-$headerbox-size: $xl;
-
-$h1-font-size: $xxxl + $heading-size-adjustment;
-$h2-font-size: $xl + $heading-size-adjustment;
-$h3-font-size: $l + $heading-size-adjustment;
-$h4-font-size: $m + $heading-size-adjustment;
-$h5-font-size: $s + $heading-size-adjustment;
-$h6-font-size: $xs + $heading-size-adjustment;
+/* Derivatives sizes (do not edit!) */
+$xxxl:           ceil($font-size * 2.75); // 44px
+$xxl:            ceil($font-size * 2);    // 32px
+$xl:             ceil($font-size * 1.5);  // 24px
+$l:              ceil($font-size * 1.25); // 20px
+$m:              ceil($font-size * 1);    // 16px
+$s:              ceil($font-size * 0.85); // 14px
+$xs:             ceil($font-size * 0.75); // 12px
+$h1-font-size:   $xxxl + $heading-size-adjustment;
+$h2-font-size:   $xl + $heading-size-adjustment;
+$h3-font-size:   $l + $heading-size-adjustment;
+$h4-font-size:   $m + $heading-size-adjustment;
+$h5-font-size:   $s + $heading-size-adjustment;
+$h6-font-size:   $xs + $heading-size-adjustment;
+$headerbox-size: $h2-font-size;
 
 /* Colors
    ========================================================================== */
 
 /* Black, white & grays */
-$black-color:  #000;
-$white:        #fff;
-$darker-color: #222;
-$mid-color:    #555;
-$light:        #999;
-$lighter:      #eee;
+$black:  #000;
+$gray-2: #222;
+$gray-3: #333;
+$gray-4: #444;
+$gray-5: #555;
+$gray-6: #666;
+$gray-9: #999; 
+$gray-a: #aaa; 
+$gray-c: #ccc; 
+$gray-d: #ddd; 
+$gray-e: #eee; 
+$gray-f: #f8f8f8;
+$white:  #fff;
 
-@function dark($color: #f0f) {
+@function dark($color) {
   @return darken($color, 15%);
 }
-@function light($color: #f0f) {
+@function light($color) {
   @return lighten($color, 15%);
 }
-
 
 /* Palette */
 $purple:         #336699;
@@ -84,31 +82,16 @@ $light-blue:     #0099cc;
 $blue: #0066cc;
 $cyan: #6666cc;
 
-$gray-2: #222;
-$gray-3: #333;
-$gray-4: #444;
-$gray-5: #555;
-$gray-6: #666;
-$gray-9: #999; 
-$gray-a: #aaa; 
-$gray-c: #ccc; 
-$gray-d: #ddd; 
-$gray-e: #eee; 
-$gray-f: #f8f8f8;
-$white:  #fff;
 
+/* Text colors */
 $text-color:    $gray-4;
 $heading-color: inherit;
+$off-color:     light($text-color); // $gray-5;
 $code-color:    dark($orange);
-
 
 /* Page & content colors */
 $page-color:        $white;
 $content-color:     $white;
-$header-color:      $blue;
-$header-text-color: $white;
-
-
 
 /* Widget Colors */
 $primary-color:        $pink;
@@ -122,21 +105,20 @@ $info-color:           dark($yellow);
 $success-color:        $green;
 $warning-color:        $orange;
 $error-color:          $red;
-$border-color:         $gray-c;
+$darker-color:         $text-color;
+$mid-color:            light($darker-color);
+$lighter-color:        $gray-c;
+$border-color:         $lighter-color;
 
 $shading: 0.25;
 
-
-// settings to move into the LibGuides section
-$tab-color:        $primary-color;
-$tab-active-color: $primary-active-color;
-$popup-color:      $white;
+/* Misc. values
+   ========================================================================== */
 
 /* Widths & sizes in pixels */
-$page-width:     985px;
+$page-width:        985px;
 $max-content-width: 975px;
-$page-margin:    ($page-width - $max-content-width) / 2; // hard-wired; do not edit
- // rhythm(3); // TODO: Incorporate in settings, maybe;
+$page-margin:       ($page-width - $max-content-width) / 2; // hard-wired; do not edit
 
 /* Roundness (for border-radius) */
 $radius:        rhythm(2/3);
