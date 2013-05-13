@@ -6,16 +6,16 @@
    ========================================================================== */
 
 /* Font Families & Weights */
-$sans-serif-safe:         Helvetica, Arial, sans-serif !default;
-$serif-safe:              Georgia, Times, "Times New Roman", serif !default;
-$monospace-safe:          Monaco, Consolas, monospace !default;
-$text-font:               "Open Sans", $sans-serif-safe !default;
+$sans-serif-fallback:     Helvetica, Arial, sans-serif !default;
+$serif-fallback:          Georgia, Times, "Times New Roman", serif !default;
+$monospace-fallback:      Monaco, Consolas, monospace !default;
+$text-font:               "Open Sans", $sans-serif-fallback !default;
 $text-weight:             400 !default;
-$heading-font:            "Montserrat", $sans-serif-safe !default;
+$heading-font:            "Montserrat", $sans-serif-fallback !default;
 $heading-weight:          400 !default;
 $heading-size-adjustment: 0 !default;
 $heading-letter-spacing:  -0.05em !default;
-$code-font:               "Source Code Pro", $monospace-safe !default;
+$code-font:               "Source Code Pro", $monospace-fallback !default;
 $code-weight:             400 !default;
 $code-size-adjustment:    0 !default;
 
