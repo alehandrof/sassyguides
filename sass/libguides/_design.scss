@@ -66,7 +66,7 @@
   /* Hide option */
   @if $hide-guide-tags { @extend %hide; }
   /* Icon */
-  @include icon("tags");
+  // @include icon("tags");
 }
 
 
@@ -77,7 +77,7 @@
   /* Style option */
   @if $alt-guide-description {
     @extend %heading;
-    @extend %h4;
+    @extend %h3;
     @extend .muted;
     margin: 0;
   }
