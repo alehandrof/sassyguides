@@ -25,26 +25,32 @@ body {
 %h1 {
   @include adjust-font-size-to($h1-font-size);
   margin-left: -(rhythm(1/5));
+  color: $h1-color;
 }
 %h2 {
   @include adjust-font-size-to($h2-font-size);
   margin: 0 0 rhythm(2);
+  color: $h2-color;
 }
 %h3 {
   @include adjust-font-size-to($h3-font-size);
   margin: rhythm(2) 0 rhythm(2);
+  color: $h3-color;
 }
 %h4 {
   @include adjust-font-size-to($h4-font-size);
   margin: rhythm(2) 0 rhythm(2);
+  color: $h4-color;
 }
 %h5 {
   @include adjust-font-size-to($h5-font-size);
+  color: $h5-color;
   // text-transform: uppercase;
 }
 %h6 {
   @include adjust-font-size-to($h6-font-size);
   text-transform: uppercase;
+  color: $h6-color;
 }
 h1, h2, h3, h4, h5, h6 {
   @extend %heading;

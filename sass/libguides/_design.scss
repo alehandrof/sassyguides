@@ -163,7 +163,8 @@ $content-margin: rhythm(8);
 .headerbox {
   h2 {
     @extend %heading;
-    @include adjust-font-size-to($headerbox-size + $heading-size-adjustment);
+    // @include adjust-font-size-to($headerbox-size + $heading-size-adjustment);
+    @extend %h2;
   }
 }
 .innerbox {

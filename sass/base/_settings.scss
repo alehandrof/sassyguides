@@ -82,33 +82,41 @@ $light-blue:     #0099cc !default;
 $blue: #0066cc !default;
 $cyan: #6666cc !default;
 
+/* Base Colors */
+$primary-color:   $mauve !default;
+$secondary-color: $fuschia !default;
+$tertiary-color:  $pink !default;
+$neutral-color:   $gray-c !default;
 
 /* Text colors */
 $text-color:    $gray-4 !default;
-$heading-color: inherit !default;
 $off-color:     light($text-color) !default; // $gray-5
+$heading-color: inherit !default;
+$h1-color:      $primary-color !default;
+$h2-color:      $secondary-color !default;
+$h3-color:      $tertiary-color !default;
+$h4-color:      $heading-color !default;
+$h5-color:      $heading-color !default;
+$h6-color:      $heading-color !default;
 $code-color:    dark($orange) !default;
 
 /* Page & content colors */
 $page-color:        $white !default;
 $content-color:     $white !default;
 
-/* Widget Colors */
-$primary-color:        $pink !default;
-$primary-active-color: $fuschia !default;
-$secondary-color:      light($text-color) !default;
-$default-color:        $gray-c !default;
-$link-color:           $blue !default;
-$hover-color:          dark($blue) !default;
-$visited-color:        dark($purple) !default;
-$info-color:           dark($yellow) !default;
-$success-color:        $green !default;
-$warning-color:        $orange !default;
-$error-color:          $red !default;
-$darker-color:         $text-color !default;
-$mid-color:            light($darker-color) !default;
-$lighter-color:        $gray-c !default;
-$border-color:         $lighter-color !default;
+/* Widget colors */
+$link-color:    $blue !default;
+$hover-color:   dark($blue) !default;
+$visited-color: dark($purple) !default;
+$info-color:    dark($yellow) !default;
+$success-color: $green !default;
+$warning-color: $orange !default;
+$error-color:   $red !default;
+$darker-color:  $text-color !default;
+$mid-color:     light($darker-color) !default;
+$lighter-color: $gray-c !default;
+$border-color:  $lighter-color !default;
+$tab-color:     $tertiary-color !default;
 
 $shading: 0.25;
 
