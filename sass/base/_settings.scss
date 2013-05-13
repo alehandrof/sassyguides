@@ -6,56 +6,56 @@
    ========================================================================== */
 
 /* Font Families & Weights */
-$sans-serif-safe:         Helvetica, Arial, sans-serif;
-$serif-safe:              Georgia, Times, "Times New Roman", serif;
-$monospace-safe:          Monaco, Consolas, monospace;
-$text-font:               "Open Sans", $sans-serif-safe;
-$text-weight:             400;
-$heading-font:            "Montserrat", $sans-serif-safe;
-$heading-weight:          400;
-$heading-size-adjustment: 0;
-$heading-letter-spacing:  -0.05em;
-$code-font:               "Source Code Pro", $monospace-safe;
-$code-weight:             400;
-$code-size-adjustment:    0;
+$sans-serif-safe:         Helvetica, Arial, sans-serif !default;
+$serif-safe:              Georgia, Times, "Times New Roman", serif !default;
+$monospace-safe:          Monaco, Consolas, monospace !default;
+$text-font:               "Open Sans", $sans-serif-safe !default;
+$text-weight:             400 !default;
+$heading-font:            "Montserrat", $sans-serif-safe !default;
+$heading-weight:          400 !default;
+$heading-size-adjustment: 0 !default;
+$heading-letter-spacing:  -0.05em !default;
+$code-font:               "Source Code Pro", $monospace-safe !default;
+$code-weight:             400 !default;
+$code-size-adjustment:    0 !default;
 
 /* Sizes -- edit these as desired */
-$font-size:   16px;
-$line-height: 1.5;
+$font-size:   16px !default;
+$line-height: 1.5 !default;
 
 /* Derivatives sizes (do not edit!) */
-$xxxl:           ceil($font-size * 2.75); // 44px
-$xxl:            ceil($font-size * 2);    // 32px
-$xl:             ceil($font-size * 1.5);  // 24px
-$l:              ceil($font-size * 1.25); // 20px
-$m:              ceil($font-size * 1);    // 16px
-$s:              ceil($font-size * 0.85); // 14px
-$xs:             ceil($font-size * 0.75); // 12px
-$h1-font-size:   $xxxl + $heading-size-adjustment;
-$h2-font-size:   $xl + $heading-size-adjustment;
-$h3-font-size:   $l + $heading-size-adjustment;
-$h4-font-size:   $m + $heading-size-adjustment;
-$h5-font-size:   $s + $heading-size-adjustment;
-$h6-font-size:   $xs + $heading-size-adjustment;
-$headerbox-size: $h2-font-size;
+$xxxl:           ceil($font-size * 2.75) !default; // 44px
+$xxl:            ceil($font-size * 2) !default;    // 32px
+$xl:             ceil($font-size * 1.5) !default;  // 24px
+$l:              ceil($font-size * 1.25) !default; // 20px
+$m:              ceil($font-size * 1) !default;    // 16px
+$s:              ceil($font-size * 0.85) !default; // 14px
+$xs:             ceil($font-size * 0.75) !default; // 12px
+$h1-font-size:   $xxxl + $heading-size-adjustment !default;
+$h2-font-size:   $xl + $heading-size-adjustment !default;
+$h3-font-size:   $l + $heading-size-adjustment !default;
+$h4-font-size:   $m + $heading-size-adjustment !default;
+$h5-font-size:   $s + $heading-size-adjustment !default;
+$h6-font-size:   $xs + $heading-size-adjustment !default;
+$headerbox-size: $h2-font-size !default;
 
 /* Colors
    ========================================================================== */
 
 /* Black, white & grays */
-$black:  #000;
-$gray-2: #222;
-$gray-3: #333;
-$gray-4: #444;
-$gray-5: #555;
-$gray-6: #666;
-$gray-9: #999; 
-$gray-a: #aaa; 
-$gray-c: #ccc; 
-$gray-d: #ddd; 
-$gray-e: #eee; 
-$gray-f: #f8f8f8;
-$white:  #fff;
+$black:  #000 !default;
+$gray-2: #222 !default;
+$gray-3: #333 !default;
+$gray-4: #444 !default;
+$gray-5: #555 !default;
+$gray-6: #666 !default;
+$gray-9: #999 !default; 
+$gray-a: #aaa !default; 
+$gray-c: #ccc !default; 
+$gray-d: #ddd !default; 
+$gray-e: #eee !default; 
+$gray-f: #f8f8f8 !default;
+$white:  #fff !default;
 
 @function dark($color) {
   @return darken($color, 15%);
@@ -65,50 +65,50 @@ $white:  #fff;
 }
 
 /* Palette */
-$purple:         #336699;
-$mauve:          #663399;
-$fuschia:        #993399;
-$pink:           #ea4c88;
-$red:            #cc0000;
-$mellow-red:     #cc3333;
-$orange:         #ff6600;
-$brown:          #996633;
-$yellow:         #ffcc33;
-// $grass-green: #999900;
-$green:          #336600;
-// $turquoise:   ;
-$light-blue:     #0099cc;
+$purple:         #336699 !default;
+$mauve:          #663399 !default;
+$fuschia:        #993399 !default;
+$pink:           #ea4c88 !default;
+$red:            #cc0000 !default;
+$mellow-red:     #cc3333 !default;
+$orange:         #ff6600 !default;
+$brown:          #996633 !default;
+$yellow:         #ffcc33 !default;
+// $grass-green: #999900 !default;
+$green:          #336600 !default;
+// $turquoise:    !default;
+$light-blue:     #0099cc !default;
 
-$blue: #0066cc;
-$cyan: #6666cc;
+$blue: #0066cc !default;
+$cyan: #6666cc !default;
 
 
 /* Text colors */
-$text-color:    $gray-4;
-$heading-color: inherit;
-$off-color:     light($text-color); // $gray-5;
-$code-color:    dark($orange);
+$text-color:    $gray-4 !default;
+$heading-color: inherit !default;
+$off-color:     light($text-color) !default; // $gray-5
+$code-color:    dark($orange) !default;
 
 /* Page & content colors */
-$page-color:        $white;
-$content-color:     $white;
+$page-color:        $white !default;
+$content-color:     $white !default;
 
 /* Widget Colors */
-$primary-color:        $pink;
-$primary-active-color: $fuschia;
-$secondary-color:      light($text-color);
-$default-color:        $gray-c;
-$link-color:           $blue;
-$hover-color:          dark($blue);
-$visited-color:        dark($purple);
-$info-color:           dark($yellow);
-$success-color:        $green;
-$warning-color:        $orange;
-$error-color:          $red;
-$darker-color:         $text-color;
-$mid-color:            light($darker-color);
-$lighter-color:        $gray-c;
-$border-color:         $lighter-color;
+$primary-color:        $pink !default;
+$primary-active-color: $fuschia !default;
+$secondary-color:      light($text-color) !default;
+$default-color:        $gray-c !default;
+$link-color:           $blue !default;
+$hover-color:          dark($blue) !default;
+$visited-color:        dark($purple) !default;
+$info-color:           dark($yellow) !default;
+$success-color:        $green !default;
+$warning-color:        $orange !default;
+$error-color:          $red !default;
+$darker-color:         $text-color !default;
+$mid-color:            light($darker-color) !default;
+$lighter-color:        $gray-c !default;
+$border-color:         $lighter-color !default;
 
 $shading: 0.25;
 
@@ -118,12 +118,12 @@ $shading: 0.25;
 /* Widths & sizes in pixels */
 $page-width:        985px;
 $max-content-width: 975px;
-$page-margin:       ($page-width - $max-content-width) / 2; // hard-wired; do not edit
+$page-margin:       ($page-width - $max-content-width) / 2 !default; // hard-wired; do not edit
 
 /* Roundness (for border-radius) */
-$radius:        rhythm(2/3);
-$static-radius: 2/3; // in "rhythm"
-$widget-radius: 2/3; // in "rhythm"
+$radius:        rhythm(2/3) !default;
+$static-radius: 2/3 !default; // in "rhythm"
+$widget-radius: 2/3 !default; // in "rhythm"
 
 /* Compass
    ========================================================================== */
@@ -131,4 +131,4 @@ $widget-radius: 2/3; // in "rhythm"
 $base-font-size:        $font-size;
 // $base-line-height:   ceil($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
 $base-line-height:      round($base-font-size * $line-height / 4); // 6px for default (16px) $base-font-size
-$default-border-radius: rhythm(2/3);
+$default-border-radius: rhythm($static-radius);
