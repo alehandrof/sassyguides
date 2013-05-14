@@ -27,7 +27,7 @@ pre {
 /* Blockquote */
 blockquote {
   @extend %blocks;
-  color: $secondary-color;
+  color: $off-color;
   border-left: rhythm(1) solid $gray-c;
   padding: 0 rhythm(4) 0 rhythm(3);
   p {
@@ -88,7 +88,7 @@ figcaption {
   }
   & > * {
     @include adjust-font-size-to($s);
-    color: $secondary-color;
+    color: $off-color;
   }
 }
 
