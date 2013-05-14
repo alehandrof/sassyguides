@@ -34,12 +34,12 @@ body {
 }
 %h3 {
   @include adjust-font-size-to($h3-font-size);
-  margin: rhythm(2) 0 rhythm(2);
+  margin: 0 0 rhythm(2);
   color: $h3-color;
 }
 %h4 {
   @include adjust-font-size-to($h4-font-size);
-  margin: rhythm(2) 0 rhythm(2);
+  margin: 0 0 rhythm(2);
   color: $h4-color;
 }
 %h5 {

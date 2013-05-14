@@ -24,19 +24,20 @@ $font-size:   16px !default;
 $line-height: 1.5 !default;
 
 /* Derivatives sizes (do not edit!) */
-$xxxl:           ceil($font-size * 2.75) !default; // 44px
-$xxl:            ceil($font-size * 2) !default;    // 32px
-$xl:             ceil($font-size * 1.5) !default;  // 24px
-$l:              ceil($font-size * 1.25) !default; // 20px
-$m:              ceil($font-size * 1) !default;    // 16px
-$s:              ceil($font-size * 0.85) !default; // 14px
-$xs:             ceil($font-size * 0.75) !default; // 12px
-$h1-font-size:   $xxxl + $heading-size-adjustment !default;
-$h2-font-size:   $xl + $heading-size-adjustment !default;
-$h3-font-size:   $l + $heading-size-adjustment !default;
-$h4-font-size:   $m + $heading-size-adjustment !default;
-$h5-font-size:   $s + $heading-size-adjustment !default;
-$h6-font-size:   $xs + $heading-size-adjustment !default;
+$xxxxl:          ceil($font-size * 3) !default;      // 48px
+$xxxl:           ceil($font-size * 2.25) !default;   // 36px
+$xxl:            ceil($font-size * 1.5) !default;    // 24px
+$xl:             ceil($font-size * 1.3125) !default; // 21px
+$l:              ceil($font-size * 1.125) !default;  // 18px
+$m:              ceil($font-size * 1) !default;      // 16px
+$s:              ceil($font-size * 0.85) !default;   // 14px
+$xs:             ceil($font-size * 0.75) !default;   // 12px
+$h1-font-size:   $xxxxl + $heading-size-adjustment !default;
+$h2-font-size:   $xxl + $heading-size-adjustment !default;
+$h3-font-size:   $xl + $heading-size-adjustment !default;
+$h4-font-size:   $l + $heading-size-adjustment !default;
+$h5-font-size:   $m + $heading-size-adjustment !default;
+$h6-font-size:   $s + $heading-size-adjustment !default;
 $headerbox-size: $h2-font-size !default;
 
 /* Colors
