@@ -2,9 +2,6 @@
    Forms
    ========================================================================== */
 
-fieldset {
+form {
   @extend %blocks;
-}
-::input-placeholder {
-  color: $border-color;
 }
