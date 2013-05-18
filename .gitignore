@@ -1,11 +1,4 @@
-*.html
 *.sublime-*
-*_files
-*conflicted copy*
 .sass-cache/
-BACKUP/
 css/
-docs/
-images/
-reference/
-TODO.mdo
+temp/
