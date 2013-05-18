@@ -330,8 +330,3 @@ div[id^="linksubmit"] { @extend %blocks; }
   /* Overrides */
   text-align: right;
 }
-
-/* Misc */
-a:hover {
-  text-decoration: inherit;
-}

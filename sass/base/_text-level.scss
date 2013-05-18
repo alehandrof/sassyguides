@@ -34,14 +34,6 @@ a {
   // }
 }
 
-/* Links with bottom border for decoration (instead of underline) */
-%link-with-border {
-  border-bottom: 1px solid rgba($link-color, $shading);
-  &:hover {
-    border-color: rgba($hover-color, $shading * 2);
-  }
-}
-
 /* Emphasised & italicized text */
 em,
 i,
