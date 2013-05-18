@@ -96,12 +96,13 @@ kbd {
 sub,
 sup {
   @include adjust-font-size-to($xs);
+  // position : relative;
 }
 sub {
-  vertical-align: sub;
+  bottom: -(rhythm(1));
 }
 sup {
-  vertical-align: super;
+  top: -(rhythm(1.25));
 }
 
 /* Marked text */
