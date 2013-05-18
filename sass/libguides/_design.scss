@@ -61,6 +61,8 @@
   margin-top: rhythm(1);
   text-align: right;
   width: 50%;
+  /* Set color, because it inherits the color of the heading */
+  color: $text-color;
   /* "Remove" the &nbsp; from the end of the span */
   margin-right: -(rhythm(1.5));
   /* Hide option */
