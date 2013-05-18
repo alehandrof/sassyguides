@@ -9,13 +9,13 @@
 $sans-serif-fallback:     Helvetica, Arial, sans-serif !default;
 $serif-fallback:          Georgia, Times, "Times New Roman", serif !default;
 $monospace-fallback:      Monaco, Consolas, monospace !default;
-$text-font:               "Open Sans", $sans-serif-fallback !default;
+$text-font:               $sans-serif-fallback !default;
 $text-weight:             400 !default;
-$heading-font:            "Montserrat", $sans-serif-fallback !default;
-$heading-weight:          400 !default;
+$heading-font:            $sans-serif-fallback !default;
+$heading-weight:          700 !default;
 $heading-size-adjustment: 0 !default;
-$heading-letter-spacing:  -0.05em !default;
-$code-font:               "Source Code Pro", $monospace-fallback !default;
+$heading-letter-spacing:  0 !default;
+$code-font:               $monospace-fallback !default;
 $code-weight:             400 !default;
 $code-size-adjustment:    0 !default;
 
@@ -77,25 +77,24 @@ $brown:          #996633 !default;
 $yellow:         #ffcc33 !default;
 // $grass-green: #999900 !default;
 $green:          #336600 !default;
-// $turquoise:    !default;
+// $turquoise:   !default;
 $light-blue:     #0099cc !default;
-
-$blue: #0066cc !default;
-$cyan: #6666cc !default;
+$blue:           #0066cc !default;
+$cyan:           #6666cc !default;
 
 /* Base Colors */
-$primary-color:   $mauve !default;
-$secondary-color: $fuschia !default;
-$tertiary-color:  $pink !default;
-$neutral-color:   $gray-c !default;
+$primary-color:     $mauve !default;
+$secondary-color:   $pink !default;
+// $tertiary-color: $pink !default;
+$neutral-color:     $gray-c !default;
 
 /* Text colors */
 $text-color:    $gray-4 !default;
 $off-color:     light($text-color) !default; // $gray-5
 $heading-color: inherit !default;
 $h1-color:      $primary-color !default;
-$h2-color:      $secondary-color !default;
-$h3-color:      $tertiary-color !default;
+$h2-color:      $heading-color !default;
+$h3-color:      $heading-color !default;
 $h4-color:      $heading-color !default;
 $h5-color:      $heading-color !default;
 $h6-color:      $heading-color !default;
@@ -107,7 +106,7 @@ $content-color:     $white !default;
 
 /* Widget colors */
 $link-color:    $blue !default;
-$hover-color:   dark($blue) !default;
+$hover-color:   dark($link-color) !default;
 $visited-color: dark($purple) !default;
 $info-color:    dark($yellow) !default;
 $success-color: $green !default;
@@ -117,7 +116,7 @@ $darker-color:  $text-color !default;
 $mid-color:     light($darker-color) !default;
 $lighter-color: $gray-c !default;
 $border-color:  $lighter-color !default;
-$tab-color:     $tertiary-color !default;
+$tab-color:     $secondary-color !default;
 
 $shading: 0.25;
 
