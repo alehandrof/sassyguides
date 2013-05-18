@@ -10,6 +10,34 @@
 
 // @import "user/settings";
 
+// $primary-color:           #5ba525;
+// $secondary-color:         #eb6d20;
+// $link-color:              #08c;
+
+$primary-color:            inherit;
+$secondary-color:          #08c;
+
+
+
+
+$font-size:               13px;
+$font-size:               20px;
+$font-size:               16px;
+$text-font:               "Open Sans";
+$font-size:               15px;
+$heading-font:            "Montserrat";
+$heading-weight:          normal;
+$hide-guide-tags:         true;
+$hide-page-info:          true;
+$hide-guide-info:         true;
+$alt-guide-description:   true;
+$alt-link-and-lists:      true;
+$side-columns-small-font: true;
+$primary-color:           #d33682;
+$secondary-color:         #8757ad;
+$link-color:              #446fbd;
+
+
 
 /* LibGuides brute reset */
 @import "libguides/brute-reset";
@@ -19,7 +47,6 @@
 
 /* LibGuides styles */
 @import "libguides/libguides";
-
 
 /* 
  * USER STYLES
