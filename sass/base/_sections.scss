@@ -26,20 +26,21 @@ body {
   @include adjust-font-size-to($h1-font-size);
   margin-left: -(rhythm(1/5));
   color: $h1-color;
+  margin-bottom: rhythm(1);
 }
 %h2 {
   @include adjust-font-size-to($h2-font-size);
-  margin: 0 0 rhythm(2);
+  margin-bottom: rhythm(2);
   color: $h2-color;
 }
 %h3 {
   @include adjust-font-size-to($h3-font-size);
-  margin: 0 0 rhythm(2);
+  margin-bottom: rhythm(2);
   color: $h3-color;
 }
 %h4 {
   @include adjust-font-size-to($h4-font-size);
-  margin: 0 0 rhythm(2);
+  margin-bottom: rhythm(2);
   color: $h4-color;
 }
 %h5 {

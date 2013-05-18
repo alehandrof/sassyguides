@@ -2,10 +2,40 @@
    Grouping content
    ========================================================================== */
 
+
+/* Placeholders
+   ========================================================================== */
+
+/**
+  * I follow some of the vocabulary (but not quite the spec) of
+  * http://csswizardry.com/2012/06/single-direction-margin-declarations
+  */
+
 /* Block-level placeholder */
 %blocks {
-  margin: 0 0 rhythm(4) 0;
+  margin-bottom: rhythm(4);
 }
+%half-block {
+  margin-bottom: rhythm(2);
+}
+%island {
+  @extend %blocks;
+  padding: rhythm(4) rhythm(4) 0;
+}
+%islet {
+  @extend %blocks;
+  padding: rhythm(2) rhythm(2) 0;
+  & > *{
+    @extend %half-block;
+  }
+}
+%island,
+%islet {
+}
+
+
+/* Elements
+   ========================================================================== */
 
 /* Paragraphs */
 p {
@@ -31,7 +61,7 @@ blockquote {
   border-left: rhythm(1) solid $gray-c;
   padding: 0 rhythm(4) 0 rhythm(3);
   p {
-    margin: 0 0 rhythm(2);
+    @extend %half-block;
   }
 }
 
@@ -95,8 +125,8 @@ figcaption {
 /* Horizontal Rulers */
 hr {
   @extend %h1;
-  text-align: center;
   @extend %blocks;
+  text-align: center;
   border: 0;
   padding: 0;
   height: 0;
