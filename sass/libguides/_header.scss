@@ -1,0 +1,138 @@
+/* Guide - Header
+   ========================================================================== */
+
+/* Breadcrumbs
+   ========================================================================== */
+
+.topnav {
+  @include adjust-font-size-to($xs);
+  margin-bottom: rhythm($header-margin, $xs);
+}
+.breadcrumbs, #breadcrumbsl, #breadcrumbsr { }
+.breadcrumb_spacer {
+  padding: 0 rhythm(1);
+}
+/* Hide option */
+@if $hide-breadcrumbs {
+  #breadcrumbsl { @extend %hide; }
+}
+
+/* Guide Title
+   ========================================================================== */
+
+/* Guide Title */
+#guide_header_title {
+  /* Overrides */
+  &,
+  & > h1,
+  & > span {
+    display: block;
+  }
+}
+
+/* Page Title */
+.pagetitle {
+  @extend %heading;
+  @extend %h1;
+}
+
+#guide_header_title h1,
+.pagetitle {
+  margin-bottom: rhythm($header-margin, $h1-font-size);
+}
+
+/* Guide Tags
+   ========================================================================== */
+
+.guidetags {
+  /* Change font styles from h1 */
+  @include adjust-font-size-to($xs, 3, $h1-font-size);
+  font-family: $text-font;
+  font-weight: $text-weight;
+  letter-spacing: 0;
+  /* Float right */
+  clear: right;
+  float: right;
+  margin-top: rhythm(1);
+  text-align: right;
+  width: 50%;
+  /* Set color, because it inherits the color of the heading */
+  color: $text-color;
+  /* "Remove" the &nbsp; from the end of the span */
+  margin-right: -(rhythm(1.5));
+  /* Hide option */
+  @if $hide-guide-tags { @extend %hide; }
+  /* Icon */
+  // @include icon("tags");
+}
+
+/* Guide Description
+   ========================================================================== */
+
+.guidedesc, .pagedesc {
+  margin-bottom: rhythm($header-margin);
+  /* Style option */
+  @if $alt-guide-description {
+    @extend %heading;
+    @extend %h3;
+    @extend .muted;
+    margin-bottom: rhythm($header-margin, $h3-font-size);
+  }
+  /* Hide option */
+  @if $hide-guide-description { @extend %hide; }
+}
+
+/* Guide Info
+   ========================================================================== */
+
+.guideattr {
+  @include adjust-font-size-to($xs);
+  margin-bottom: rhythm($header-margin, $xs);
+  & > * {
+    /* Override for inline styles */
+    padding: 0 rhythm(3) 0 0 !important;
+    border: 0 !important;
+    // TODO: use the :before & :after pseudo-classes to create separators
+  }
+  /* Hide option */
+  @if $hide-guide-info { @extend %hide; }
+}
+
+/* Last Updated */
+.lastupdate {
+  /* Hide option */
+  @if $hide-guide-info-update { @extend %hide; }
+}
+
+/* Guide URL */
+.guideurl {
+  /* Hide option */
+  @if $hide-guide-info-url { @extend %hide; }
+}
+
+/* Print Guide */
+.printguideurl {
+  /* Hide option */
+  @if $hide-guide-info-print { @extend %hide; }
+}
+
+/* RSS Updates */
+.rssupdatelink {
+  /* Hide option */
+  @if $hide-guide-info-feed { @extend %hide; }
+}
+
+/* Email Alerts */
+.emailalertlink {
+  /* Hide option */
+  @if $hide-guide-info-email { @extend %hide; }
+}
+
+/* Icons */
+.icomments a { @include icon("comments"); }
+.irss a { @include icon("rss"); }
+.iprint a { @include icon("print"); }
+.iemail a { @include icon("envelope"); }
+.guideshare {
+  @if $hide-guide-info-social { @extend %hide; }
+}
