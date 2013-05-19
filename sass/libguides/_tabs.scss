@@ -104,6 +104,7 @@
   &:hover {
     background: $tab-color;
     color: $white;
+    text-decoration: none;
   }
   /* Overrides */
   text-indent: -(rhythm(2));
