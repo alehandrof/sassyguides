@@ -60,13 +60,9 @@
   }
 }
 %nav-list-active {
-  a {
+  a,
+  a:hover {
+    color: $white;
     background: $link-color;
-    &, &:hover {
-      color: $white;
-    }
-    &:hover {
-      background: $link-color
-    }
   }
 }
