@@ -1,6 +1,11 @@
 /* Box - Profiles
    ========================================================================== */
 
+.innerboxprofile {
+  /* Overrides */
+  padding: 0 !important;
+}
+
 .profile_image_box {
   @extend %blocks;
   a {
