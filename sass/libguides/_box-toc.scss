@@ -2,8 +2,15 @@
    ========================================================================== */
 
 .box_toc_page {
-
+  @extend %nav-list;
+  /* Make it look like there's margin at the bottom */
+  &:last-child {
+    @extend %blocks;
+    a {
+      margin-bottom: 0;
+    }
+  }
 }
 .box_toc_current {
-  
+  @extend %nav-list-active;
 }
