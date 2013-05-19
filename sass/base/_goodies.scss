@@ -55,6 +55,7 @@
     /* Icon */
     @include icon("chevron-right");
     &:before {
+      margin-left: ($nav-list-padding / 2);
       float: right;
     }
   }
