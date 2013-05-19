@@ -18,6 +18,12 @@
 %half-block {
   margin-bottom: rhythm(2);
 }
+
+/* Islands & Islets */
+%island,
+%islet {
+  @include clearfix();
+}
 %island {
   @extend %blocks;
   padding: rhythm(4) rhythm(4) 0;
@@ -25,13 +31,11 @@
 %islet {
   @extend %blocks;
   padding: rhythm(2) rhythm(2) 0;
-  & > *{
+  & > * {
     @extend %half-block;
   }
 }
-%island,
-%islet {
-}
+
 
 
 /* Elements

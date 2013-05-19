@@ -150,10 +150,32 @@ $content-margin: rhythm(8);
 }
 
 /* Sidebar Font Sizes */
-#contentleft,
-#contentright {
-  @if $side-columns-small-font { 
-    @include adjust-font-size-to($s, 4);
+%sidebar-decrease-font-size {
+  @include adjust-font-size-to($s, 4);
+}
+@if $left-column-decrease-font-size {
+  #contentleft { @extend %sidebar-decrease-font-size; }
+}
+@if $right-column-decrease-font-size {
+  #contentright { @extend %sidebar-decrease-font-size; }
+}
+
+/* Sidebar Islands */
+%sidebar-island {
+  @include border-radius(rhythm($widget-radius));
+  @extend %island;
+  background: $sidebar-color;
+}
+@if $left-column-island {
+  #contentleft {
+    padding-right: $content-margin / 2 !important;
+    & > * { @extend %sidebar-island; }
+  }
+}
+@if $right-column-island {
+  #contentright {
+    padding-left: $content-margin / 2 !important;
+    & > * { @extend %sidebar-island; }
   }
 }
 
