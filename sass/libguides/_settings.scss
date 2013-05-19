@@ -36,9 +36,9 @@ $alt-guide-description: false !default;
 $alt-link-and-lists: false !default;
 
 /* Decrease font size in the left or right columns */
-$left-column-decrease-font-size: true !default;
-$right-column-decrease-font-size: true !default;
+$left-column-decrease-font-size: false !default;
+$right-column-decrease-font-size: false !default;
 
 /* Wrap the content of the left or right columns in a frame -- doesn't work */
-$left-column-island: true !default;
-$right-column-island: true !default;
+$left-column-island: false !default;
+$right-column-island: false !default;
