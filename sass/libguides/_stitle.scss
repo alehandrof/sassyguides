@@ -5,7 +5,7 @@
 .stitle {
   @include adjust-font-size-to($xs);
   background: $content-color;
-  padding-bottom: rhythm(2);
+  padding-bottom: rhythm($header-margin * 4, $xs);
   border-bottom: 1px solid $border-color;
   /* Overrides */
   height: auto;
