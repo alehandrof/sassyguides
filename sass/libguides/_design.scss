@@ -19,10 +19,10 @@
 
 /* Breadcrumbs */
 .topnav {
-  margin-bottom: rhythm(1);
+  @include adjust-font-size-to($xs);
+  margin-bottom: rhythm($header-margin, $xs);
 }
 .breadcrumbs, #breadcrumbsl, #breadcrumbsr {
-  @include adjust-font-size-to($xs);
 }
 .breadcrumb_spacer {
   padding: 0 rhythm(1);
@@ -46,6 +46,11 @@
 .pagetitle {
   @extend %heading;
   @extend %h1;
+}
+
+#guide_header_title h1,
+.pagetitle {
+  margin-bottom: rhythm($header-margin, $h1-font-size);
 }
 
 /* Guide Tags */
@@ -76,19 +81,20 @@
    ========================================================================== */
 
 .guidedesc, .pagedesc {
+  margin-bottom: rhythm($header-margin);
   /* Style option */
   @if $alt-guide-description {
     @extend %heading;
     @extend %h3;
     @extend .muted;
-    margin: 0;
+    margin-bottom: rhythm($header-margin, $h3-font-size);
   }
   /* Hide option */
   @if $hide-guide-description { @extend %hide; }
 }
 .guideattr {
   @include adjust-font-size-to($xs);
-  // margin-top: rhythm(1);
+  margin-bottom: rhythm($header-margin, $xs);
   & > * {
     /* Override for inline styles */
     padding: 0 rhythm(3) 0 0 !important;
@@ -150,10 +156,36 @@ $content-margin: rhythm(8);
 }
 
 /* Sidebar Font Sizes */
-#contentleft,
-#contentright {
-  @if $side-columns-small-font { 
-    @include adjust-font-size-to($s, 4);
+%sidebar-decrease-font-size {
+  @include adjust-font-size-to($s, 4);
+}
+@if $left-column-decrease-font-size {
+  #contentleft { @extend %sidebar-decrease-font-size; }
+}
+@if $right-column-decrease-font-size {
+  #contentright { @extend %sidebar-decrease-font-size; }
+}
+
+/* Sidebar Islands */
+%sidebar-island {
+  @include border-radius(rhythm($widget-radius));
+  @extend %island;
+  background: $sidebar-color;
+}
+@if $left-column-island {
+  #contentleft {
+    padding-right: $content-margin / 2 !important;
+    & > * {
+      @extend %sidebar-island;
+    }
+  }
+}
+@if $right-column-island {
+  #contentright {
+    padding-left: $content-margin / 2 !important;
+    & > * {
+      @extend %sidebar-island;
+    }
   }
 }
 

@@ -117,6 +117,7 @@ $mid-color:     light($darker-color) !default;
 $lighter-color: $gray-c !default;
 $border-color:  $lighter-color !default;
 $tab-color:     $secondary-color !default;
+$widget-color:  $gray-e;
 
 $shading: 0.25;
 
@@ -132,6 +133,10 @@ $page-margin:       ($page-width - $max-content-width) / 2 !default; // hard-wir
 $radius:        rhythm(2/3) !default;
 $static-radius: 2/3 !default; // in "rhythm"
 $widget-radius: 2/3 !default; // in "rhythm"
+
+/* Widgets */
+$header-margin:   0.5; // How much space to put between items in the header
+$nav-list-padding: rhythm(1);
 
 /* Compass
    ========================================================================== */

@@ -6,11 +6,11 @@
 
 $popup-color:      $white !default;
 $book-cover-width: rhythm(15) !default;
+$sidebar-color:    $gray-f;
 
-/* Alternative style options
+/* Hide elements
    ========================================================================== */
 
-/* Hide various elements */
 $hide-breadcrumbs:       false !default;
 $hide-guide-tags:        false !default;
 $hide-guide-description: false !default;
@@ -20,6 +20,9 @@ $hide-page-comments:     false !default;
 $hide-page-info:         false !default;
 $hide-box-comments:      false !default;
 
+/* Alternative styling
+   ========================================================================== */
+
 /* Make the guide description more prominent.
    Tip: short descriptions will work best. */
 $alt-guide-description: false !default;
@@ -27,5 +30,10 @@ $alt-guide-description: false !default;
 /* Make the titles/links for Links & Lists more prominent */
 $alt-link-and-lists: false !default;
 
-/* Decrease font size in the left & right columns */
-$side-columns-small-font: false !default;
+/* Decrease font size in the left or right columns */
+$left-column-decrease-font-size: true !default;
+$right-column-decrease-font-size: true !default;
+
+/* Wrap the content of the left or right columns in a frame -- doesn't work */
+$left-column-island: true !default;
+$right-column-island: true !default;

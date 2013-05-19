@@ -38,3 +38,35 @@
     border: 1px solid $link-color;
   }
 }
+
+/* Nav-list -- rather too inspired by Bootstrap :) */
+%nav-list {
+  a {
+    @include border-radius(rhythm($widget-radius));
+    display: block;
+    padding: ($nav-list-padding / 2) $nav-list-padding;
+    margin-left: -($nav-list-padding);
+    margin-right: -($nav-list-padding);
+    margin-bottom: $nav-list-padding/ 2;
+    &:hover {
+      background: $widget-color;
+      text-decoration: none;
+    }
+    /* Icon */
+    @include icon("chevron-right");
+    &:before {
+      float: right;
+    }
+  }
+}
+%nav-list-active {
+  a {
+    background: $link-color;
+    &, &:hover {
+      color: $white;
+    }
+    &:hover {
+      background: $link-color
+    }
+  }
+}
