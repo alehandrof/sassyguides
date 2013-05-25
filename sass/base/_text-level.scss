@@ -74,10 +74,7 @@ dfn[title] {
 /* Code & sample output */
 code,
 samp {
-  font-family: $code-font;
-  font-weight: $code-weight;
-  color: $code-color;
-  @include adjust-font-size-to($m + $code-size-adjustment);
+  @extend %code;
 }
 
 /* Keyboard input */
