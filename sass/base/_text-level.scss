@@ -46,7 +46,6 @@ cite {
 /* Strong and embolded text */
 strong,
 b {
-  color: light($text-color);
   font-weight: 700;
   /* @todo: I've encountered this pattern in the wild. Is it worth accounting for? */
   a & {
