@@ -67,7 +67,7 @@ $content-margin: rhythm(8);
 
 /* Sidebar Islands */
 %sidebar-island {
-  @include border-radius(rhythm($widget-radius));
+  @include border-radius($widget-roundness);
   @extend %island;
   background: $sidebar-color;
 }

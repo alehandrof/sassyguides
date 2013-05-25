@@ -11,7 +11,7 @@
 .balloon {
   /* Styling */
   @include adjust-font-size-to($s, 4);
-  @include border-radius(rhythm($widget-radius));
+  @include border-radius($widget-roundness);
   @include box-shadow(0 1px 3px rgba($darker-color, 0.1));
   background: $popup-color;
   border: rhythm(1/2) solid darken($popup-color, 20%);

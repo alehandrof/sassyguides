@@ -28,7 +28,7 @@
 %glow-button {
   &,
   & > img {
-    @include border-radius(rhythm($widget-radius));
+    @include border-radius($widget-roundness);
   }
   @include box-shadow(0 1px rhythm(1/2) rgba($border-color, 0.5));
   border: 1px solid $border-color;
@@ -42,7 +42,7 @@
 /* Nav-list -- rather too inspired by Bootstrap :) */
 %nav-list {
   a {
-    @include border-radius(rhythm($widget-radius));
+    @include border-radius($widget-roundness);
     display: block;
     padding: ($nav-list-padding / 2) $nav-list-padding;
     margin-left: -($nav-list-padding);

@@ -16,11 +16,11 @@
   }
   /* This is the unclassed div that holds the commments interface */
   & + div {
-    @include border-radius(rhythm($widget-radius));
+    @include border-radius($widget-roundness);
     @extend %blocks;
     background: $lighter-color;
     padding: rhythm(2);
-    // margin-top: -(rhythm(4) + rhythm($widget-radius));
+    // margin-top: -(rhythm(4) + $widget-roundness);
   }
   /* Overrides */
   padding-top: 0 !important;

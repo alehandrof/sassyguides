@@ -85,7 +85,7 @@ kbd {
   @include adjust-font-size-to($s);
   color: $gray-6;
   background-color: $gray-e;
-  @include border-radius(rhythm($static-radius));
+  @include border-radius($roundness);
 }
 
 /* Superscripts & subscripts */
