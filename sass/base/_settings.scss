@@ -91,7 +91,7 @@ $neutral-color:     $gray-c !default;
 /* Text colors */
 $text-color:    $gray-4 !default;
 $off-color:     light($text-color) !default; // $gray-5
-$heading-color: inherit !default;
+$heading-color: $gray-5 !default;
 $h1-color:      $primary-color !default;
 $h2-color:      $heading-color !default;
 $h3-color:      $heading-color !default;
@@ -101,8 +101,9 @@ $h6-color:      $heading-color !default;
 $code-color:    dark($orange) !default;
 
 /* Page & content colors */
-$page-color:        $white !default;
-$content-color:     $white !default;
+$page-color:    $white !default;
+$content-color: $white !default;
+$nested-color:   $gray-f;
 
 /* Widget colors */
 $link-color:    $blue !default;
