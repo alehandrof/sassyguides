@@ -25,21 +25,24 @@
 .text-success { color: $success-color; }
 
 /* Glow button placeholder class */
+%glow-effect {
+  @include box-shadow(0 0 rhythm(2) rgba($link-color, 0.25));
+  border: 1px solid $link-color;  
+}
 %glow-button {
-  &,
-  & > img {
-    @include border-radius($widget-roundness);
-  }
+  @include border-radius($widget-roundness);
   @include box-shadow(0 1px rhythm(1/2) rgba($border-color, 0.5));
   border: 1px solid $border-color;
   padding: rhythm(1);
   &:hover {
-    @include box-shadow(0 0 rhythm(2) rgba($link-color, 0.25));
-    border: 1px solid $link-color;
+    @extend %glow-effect;
+  }
+  img {
+    @include border-radius($widget-roundness);
   }
 }
 
-/* Nav-list -- rather too inspired by Bootstrap :) */
+/* Nav-list */
 %nav-list {
   a {
     @include border-radius($widget-roundness);
@@ -48,15 +51,16 @@
     margin-left: -($nav-list-padding);
     margin-right: -($nav-list-padding);
     margin-bottom: $nav-list-padding/ 2;
+    // border-top: 1px dotted $border-color;
+    // &:first-child { border-top: 0; }
     &:hover {
       background: $widget-color;
       text-decoration: none;
     }
     /* Icon */
-    @include icon("chevron-right");
+    @include icon("chevron-sign-right");
     &:before {
-      margin-left: ($nav-list-padding / 2);
-      float: right;
+      color: mix($widget-color, $link-color, 50%);
     }
   }
 }
@@ -65,5 +69,13 @@
   a:hover {
     color: $white;
     background: $link-color;
+  }
+}
+
+.nav-list {
+  @include no-bullets; 
+  @extend %nav-list;
+  .active {
+    @extend %nav-list-active;
   }
 }
