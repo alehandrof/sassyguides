@@ -1,6 +1,8 @@
-%reset-width {
-  width: auto;
-}
+/* Reset width, min-width & max-width
+   ========================================================================== */
+
+/* Target property: `[^-]width:` */
+
 #wrapper,
 #container,
 #header,
@@ -13,7 +15,7 @@
 .b_moreinfo,.b_edit,.b_stat,.b_pen,
 .b_edit,
 .b_stat,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
 .pf_bookmark,.pf_comment,.pf_print,
 .mediumbox,
 .widebox,
@@ -54,21 +56,24 @@ button.aptsch,
 #la_askqform label.radiolabel,
 #la_askqform input,#la_askqform textarea,
 #la_askqform input[type=checkbox],
-#la_askqform select {
-  @extend %reset-width;
+#la_askqform select,
+#browsec .column,#browsec .floatcols,
+#browsec ul.browse_list,
+#browsec a.toggle_button {
+  width: auto;
 }
 
-%reset-min-width {
+
+/* Target property: `min-width` */
+
+.b_moreinfo,.b_edit,.b_stat,.b_pen,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search {
   min-width: 0;
 }
-.b_moreinfo,.b_edit,.b_stat,.b_pen,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search {
-  @extend %reset-min-width;
-}
 
-%reset-max-width {
-  max-width: none;
-}
+
+/* Target property: `max-width` */
+
 .narrowboxmid img,
 .mediumboxmid img,
 .wideboxmid img,
@@ -77,5 +82,5 @@ button.aptsch,
 .innerbox table img,.innerbox table object,.innerbox table embed,.innerbox table input,.innerbox table select,
 .profileimage,
 .la_video {
-  @extend %reset-max-width;
+  max-width: none;
 }

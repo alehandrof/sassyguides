@@ -1,6 +1,8 @@
-%reset-border {
-  border: 0 none;
-}
+/* Reset border
+   ========================================================================== */
+
+/* Target property: `border` */
+
 #header,
 .searchField,
 #tabsI,#tabs12,
@@ -61,6 +63,8 @@ button.aptsch,
 #la_askqform select,
 #la_askqform #qsubmitbutton,
 #la_askqform #qsubmitbutton:hover,
-#la_widgetform #la_result {
-  @extend %reset-border;
+#la_widgetform #la_result,
+#browsec a.toggle_button,
+#browsec a.toggle_button:hover {
+  border: 0 none;
 }

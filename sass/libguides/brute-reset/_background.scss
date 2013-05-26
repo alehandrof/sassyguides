@@ -1,6 +1,8 @@
-%reset-background {
-  background: none;
-}
+/* Reset background
+   ========================================================================== */
+
+/* Target property: `background` */
+
 body,
 #wrapper,
 #container,
@@ -27,13 +29,12 @@ input.searchField,
 .b_edit,
 .b_stat,
 .b_pen,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
 .bi_links,
 .bi_file,
 .bi_rss,
 .bi_event,
 .bi_video,
-.bi_podcast,
 .bi_poll,
 .bi_books,
 .bi_search,
@@ -93,7 +94,6 @@ button.aptsch,
 button.aptsch:hover,
 button.aptsch:active,
 .tag_selected,
-.tag_unselected,
 .la_bcap,
 .la_answer .la_bcap,
 #la_widgetform,
@@ -101,6 +101,7 @@ button.aptsch:active,
 #la_askqform select,
 #la_askqform #qsubmitbutton,
 #la_askqform #qsubmitbutton:hover,
-#la_widgetform #la_result {
-  @extend %reset-background;
+#la_widgetform #la_result,
+#browsec a.toggle_button {
+  background: none;
 }

@@ -1,11 +1,8 @@
 /* Reset font
    ========================================================================== */
 
-/* Methodology: Reset all selectors that include "font" or "line-height" properties. */
+/* Target property: `(font|line-height)` */
 
-%reset-font {
-  font: inherit;
-}
 body,
 #instname,
 .pagetitle,
@@ -32,7 +29,7 @@ h6,
 .font14,
 #tabsI,#tabs12,
 .b_moreinfo,.b_edit,.b_stat,.b_pen,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
 .pf_bookmark,.pf_comment,.pf_print,
 .mediumboxtop h2,.wideboxtop h2,.narrowboxtop h2,.xwideboxtop h2,
 .mediumboxtop h3,.wideboxtop h3,.narrowboxtop h3,.xwideboxtop h3,
@@ -88,7 +85,6 @@ table.qt td.grey_out,
 .std_profile_widget_header,
 button.aptsch,
 .tag_selected,
-.tag_unselected,
 .book_title,
 .spring_ui_req,
 .la_box_qa h4,
@@ -101,6 +97,9 @@ button.aptsch,
 #la_askqform select,
 #la_askqform .reqnote,
 #la_askqform #qsubmitbutton,
-.ui-widget .auto_qa {
-  @extend %reset-font;
+.ui-widget .auto_qa,
+#browsec li.subject_link,#browsec li.user_link,
+#browsec a.toggle_button,
+#browsec ul.guide_links {
+  font: inherit;
 }

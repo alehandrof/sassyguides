@@ -1,21 +1,22 @@
 /* ==========================================================================
-   Brute reset
+   LibGuides - Brute reset
    ========================================================================== */
 
 /**
  * Methodology
  *
- * Compress the default LibGuides stylesheet (css111/libguides.css, currently)
+ * Compress the default LibGuides stylesheet (css112/libguides.css, currently)
+ * using the YUI compressor at: http://refresh-sf.com/
  * 
  * Search for a property and then construct a SCSS file that resets all
  * appropriate selectors.
  */
 
-@import "brute-reset/margin";
-@import "brute-reset/border";
-@import "brute-reset/padding";
-@import "brute-reset/background";
-@import "brute-reset/font";
-@import "brute-reset/color";
-@import "brute-reset/width";
-@import "brute-reset/float";
+@import "brute-reset/margin",
+        "brute-reset/border",
+        "brute-reset/padding",
+        "brute-reset/background",
+        "brute-reset/font",
+        "brute-reset/color",
+        "brute-reset/width",
+        "brute-reset/float";

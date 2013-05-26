@@ -1,6 +1,8 @@
-%reset-padding {
-  padding: 0;
-}
+/* Reset padding
+   ========================================================================== */
+
+/* Target property: `padding` */
+
 body,
 #wrapper,
 #container,
@@ -37,7 +39,7 @@ h5,
 #tabs12 ul,
 #tabs12 a,
 .b_moreinfo,.b_edit,.b_stat,.b_pen,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
 .icomments,.irss,.iprint,.iemail,
 .mediumboxmid,
 .wideboxmid,
@@ -121,6 +123,11 @@ button.aptsch,
 #la_askqform #qsubmitbutton,
 #la_widgetform #la_result,
 .lg_rss_list,
-.lg_rss_list_item {
-  @extend %reset-padding;
+.lg_rss_list_item,
+#browsec .column,#browsec .floatcols,
+#browsec ul.browse_list,
+#browsec li.subject_link,#browsec li.user_link,
+#browsec a.toggle_button,
+#browsec ul.guide_links {
+  padding: 0;
 }

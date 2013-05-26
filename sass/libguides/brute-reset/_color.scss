@@ -1,14 +1,8 @@
 /* Reset color
    ========================================================================== */
 
-/*
- * Methodology: Reset all selectors that include "color" except for
- * "background-color" (use a regex to exclude it).
- */
+/* Target property: `[^-]color:` */
 
-%reset-color {
-  color: inherit; // #f0f; // DEBUG
-}
 a,
 #header,
 #instname,
@@ -60,14 +54,13 @@ table.qt td.grey_out,
 button.aptsch,
 button.aptsch:hover,
 button.aptsch:active,
-.color_cube,.color_cube_selected,
-.color_cube,
-.color_cube_selected,
 .spring_ui_req,
 .la_bcap,
 .la_answer .la_bcap,
 #la_askqform input,#la_askqform textarea,
 #la_askqform select,
-#la_askqform .reqnote {
-  @extend %reset-color;
+#la_askqform .reqnote,
+#browsec a.toggle_button,
+#browsec a.toggle_button:hover {
+  color: inherit;
 }

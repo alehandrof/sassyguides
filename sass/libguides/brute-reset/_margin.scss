@@ -1,6 +1,8 @@
-%reset-margin {
-  margin: 0;
-}
+/* Reset margin
+   ========================================================================== */
+
+/* Target property: `margin` */
+
 body,
 #wrapper,
 #container,
@@ -25,7 +27,7 @@ p,
 #tabsI li,#tabs12 li,
 #tabsI a,#tabs12 a,
 .b_moreinfo,.b_edit,.b_stat,.b_pen,
-.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_podcast,.bi_video,.bi_poll,.bi_books,.bi_search,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
 .pf_bookmark,.pf_comment,.pf_print,
 .mediumbox,.widebox,.xwidebox,.narrowbox,
 .mediumboxtop h2,.wideboxtop h2,.narrowboxtop h2,.xwideboxtop h2,
@@ -72,8 +74,7 @@ p,
 .profilecontent,
 button.aptsch,
 .libguides_api_list,
-.tag_selected,
-.tag_unselected,
+.tag_selected,.tag_unselected,
 .color_cube,.color_cube_selected,
 .book_div,
 .la_box_qa h4,
@@ -89,6 +90,12 @@ button.aptsch,
 #la_askqform,
 #la_askqform .la_askintro,
 #la_widgetform #la_result,
-.lg_rss_list {
-  @extend %reset-margin;
+.lg_rss_list,
+#browsec .column,#browsec .floatcols,
+#browsec li.subject_link,#browsec li.user_link,
+#browsec a.toggle_button,
+#browsec ul.guide_links li,
+#browsec ul.guide_links,
+.box_toc_subpage {
+  margin: 0;
 }
