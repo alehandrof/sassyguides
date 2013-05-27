@@ -5,3 +5,74 @@
 form {
   @extend %blocks;
 }
+
+fieldset {
+}
+
+legend {
+  @extend %heading;
+  @extend %h4;
+}
+
+$input-shadow: 0 1px 1px rgba($text-color, 0.1) inset;
+$glow-shadow: 0 0 rhythm(1.5) rgba($link-color, 0.5);
+
+%form-elements-common {
+  @include border-radius($widget-roundness);
+  border: 1px solid $border-color;
+  line-height: rhythm(4);
+  height: rhythm(5);
+  padding: rhythm(1/2) rhythm(1);
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  // @extend %glow-button;
+  @extend %form-elements-common;
+  @include box-shadow($input-shadow);
+  @include single-transition(all, 0.15s, linear);
+  background-color: $nested-color;
+  color: inherit;
+  font: inherit;
+  // @include adjust-font-size-to($s);
+  // display: block;
+  &:focus {
+    // @extend %glow-effect;
+    @include box-shadow($input-shadow, $glow-shadow);
+    border-color: $link-color;
+    border-color: rgba($link-color, 0.75);
+    background: $white;
+    outline: none;
+  }
+  &[disabled] {
+    background-color: $widget-color;
+  }
+}
+
+%select {
+  @extend %form-elements-common;
+  background: $white;
+}
+
+select {
+  @extend %select;
+}
+
+/* LibGuides stuff */
+
+.dropdownform {
+ @extend %select; 
+}
