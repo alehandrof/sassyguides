@@ -1,0 +1,47 @@
+/* Reset height & min-height
+   ========================================================================== */
+
+/* Target property: `[^-]height:` */
+
+html,
+body,
+* html #wrapper,
+html>body #wrapper,
+* html #container,
+html>body #container,
+#contentleft,#contentcenter,#contentright,
+#instname,
+.stitle,
+.searchField,
+.b_moreinfo,.b_edit,.b_stat,.b_pen,
+.bi_text,.bi_links,.bi_file,.bi_rss,.bi_event,.bi_video,.bi_poll,.bi_books,.bi_search,
+.pf_bookmark,.pf_comment,.pf_print,
+.mediumboxtop,.wideboxtop,.xwideboxtop,.narrowboxtop,
+.popupdiv,
+.descdiv,
+.popuphelp,
+.popup,
+.popup_head h6,
+.balloon,
+.balloon_head h6,
+#toolbox,
+.cg_home_table td,
+.res_icon,
+#la_qentry.la_box,
+#la_boxbutton,
+.color_cube,.color_cube_selected,
+#la_askqform input#pquestion,
+#la_askqform textarea#pquestion {
+  height: auto;
+}
+
+
+/* Target property: `min-height` */
+
+body,
+#wrapper,
+#container,
+#contentleft,#contentcenter,#contentright,
+.cg_home_table td {
+    min-height: 0;
+}
