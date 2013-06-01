@@ -89,18 +89,18 @@
 .dropmenudiv {
   @include adjust-font-size-to($s, 4);
   @include border-radius($widget-roundness);
-  width: rhythm(50); 
+  width: rhythm(50);
   border: 1px solid $border-color;
   background: $white;
 }
-.dropmenudiv a {  
+.dropmenudiv a {
   border-top: 1px solid rgba($border-color, $shading * 2);
   &:first-child {
     border-top: 0;
     @include border-radius($widget-roundness $widget-roundness 0 0);
     &:last-child { @include border-radius($widget-roundness); }
-  } 
-  &:last-child { @include border-radius(0 0 $widget-roundness $widget-roundness); } 
+  }
+  &:last-child { @include border-radius(0 0 $widget-roundness $widget-roundness); }
   &:hover {
     background: $tab-color;
     color: $white;

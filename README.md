@@ -52,7 +52,7 @@ You can contact me by [email](mailto:alehandrof@gmail.com) and [twitter](http://
 
 ---
 
-## Recommended Ruby Environment 
+## Recommended Ruby Environment
 
 The environment I use to develop SassyGuides combines Ruby, Guard, Compass & LiveReload. The idea is to have Guard watch the SassyGuides directory so that it will re-compile the Sass when you edit it and then call LiveReload to refresh your browser. There are instructions on how to set this and similar workflows around the web but, while the outline below is from memory and rather inelegant, it should get you there. Feel free to ask me for help if you get stuck.
 
