@@ -1,28 +1,106 @@
 /* Homepage page
    ========================================================================== */
 
-/* Insert a border between the description & the .stitle */
+/**
+ * Note: the homepage uses various custom widgets which are hard to style
+ * either because there are no selectors or because they are overridden with
+ * inline styles.
+ *
+ * It's possible to elude the issues of the default homepage entirely by using
+ * a guide as the homepage and re-creating the features you would like to use via
+ * the LibGuides API.
+ */
+
+
+/**
+ * Page description
+ * Like guide description but for the home & search pages.
+ */
 .pagedesc {
-  padding-bottom: rhythm(2);
+  /* Inherit the guide-descripton style */
+  @extend .guidedesc;
+  /* Insert a border between the description & the .stitle */
+  padding-bottom: rhythm($header-margin * 4);
   border-bottom: 1px solid $border-color;
-  margin-bottom: rhythm(1);
+  margin-bottom: rhythm($header-margin * 4);
+  @if $alt-guide-description {
+    padding-bottom: rhythm($header-margin * 4, $h3-font-size);
+    margin-bottom: rhythm($header-margin * 4, $h3-font-size);
+  }
 }
+
+
+/* Browse Subjects & Authors box */
+#browsec {
+  @include adjust-font-size-to($s);
+  margin-bottom: rhythm(4, $s); // $$$ this is basically @extend %blocks($s) -- switch to @mixin?
+}
+#sidelist {
+  @include adjust-font-size-to($m, 4, $s);
+  ul {
+    // $$$ this follows the Links & Lists styles -- collapse them into an @extend?
+    @extend %blocks;
+    @extend %base-ul;
+  }
+  li { @extend %base-li; }
+  /* Override */
+  padding-top: 0 !important;
+  margin-top: rhythm(4);
+}
+
 
 /* Tag Cloud box */
 #tagcloudbox {
-  // @incldue clearfix();
   @extend %blocks;
   a {
-    @include adjust-font-size-to ($s);
     margin-left: rhythm(1);
-    // float: left;
-    // display: block;
+    @include adjust-font-size-to ($xs);
     &:first-child { margin-left: 0; }
   }
   /* Overrides */
-  margin-top: 0;
+  margin-top: rhythm(4) !important;
 }
 #ptags,
 #atags {
   @extend %blocks;
 }
+
+
+/* Guides box */
+#ca {
+  & > div {
+    @extend %lead;
+  }
+  /* Override */
+  margin-top: rhythm(4) !important;
+  table {
+    margin-top: rhythm(4);
+    td div {
+      font: inherit !important;
+    }
+  }
+}
+/**
+ * Icons for Guides box
+ * Admittedly, these are a little bit tongue-in-cheek :)
+ */
+.home_popular { @include icon("thumbs-up"); }
+.home_new { @include icon("calendar"); }
+.home_featured { @include icon("reorder"); }
+
+
+
+/* Info/Alert box */
+// Can't get this box to appear in the sandbox
+
+
+/* Email Signup box */
+// No selectors to style :(
+
+
+/* Featured Profile box */
+// Styled by .innerboxprofile
+
+
+/* Group List box */
+// No selectors to style :(

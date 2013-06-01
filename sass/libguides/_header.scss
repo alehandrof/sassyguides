@@ -69,7 +69,7 @@
 /* Guide Description
    ========================================================================== */
 
-.guidedesc, .pagedesc {
+.guidedesc {
   margin-bottom: rhythm($header-margin);
   /* Style option */
   @if $alt-guide-description {
