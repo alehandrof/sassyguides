@@ -2,7 +2,7 @@
    SassyGuides
    ========================================================================== */
 
-/* 
+/*
  * USER SETTINGS
  * This is the place to override the default settings, preferably by importing
  * an external file. Check the _settings.scss files for available options
@@ -10,6 +10,7 @@
 
 // @import "user/settings";
 
+@import "base/constants";
 
 // $font-size:                    17px;
 // $line-height:                  1.54;
@@ -19,9 +20,7 @@ $line-height:                     1.6;
 // $heading-font:                 "Montserrat";
 // $heading-weight:               normal;
 $heading-weight:                  bold;
-$primary-color:                   #d33682;
-$secondary-color:                 #8757ad;
-$link-color:                      #446fbd;
+$link-color:                      $blue;
 // $side-columns-small-font:      true;
 $hide-guide-info-url:             true;
 $alt-guide-description:           true;
@@ -39,7 +38,7 @@ $right-column-island:             true !default;
 /* LibGuides styles */
 @import "libguides/libguides";
 
-/* 
+/*
  * USER STYLES
  * This is the place to extend the default styles, preferably by importing
  * an external file.

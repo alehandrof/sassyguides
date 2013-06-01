@@ -34,7 +34,7 @@ $content-margin: rhythm(8);
 }
 
 #contentleft {
-  padding-right: $content-margin !important; 
+  padding-right: $content-margin !important;
   margin-right: 8px;
 }
 #contentright {
@@ -170,7 +170,7 @@ li { }
       border-top: 1px dotted $border-color;
       padding-top: rhythm(2);
       &:first-child {
-        border-top: none; 
+        border-top: none;
         padding-top: 0;
       }
       .linkdesc,
@@ -232,7 +232,7 @@ li { }
 .book_art_2 { width: $book-cover-width * 2;  } // was: 200px;
 
 /**
- * Box - User Link Submission 
+ * Box - User Link Submission
  * Aside from the hacks below, this is styled as a Simple Web Links box (.linklist)
  */
 .linklist + br { @extend %hide; }

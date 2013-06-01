@@ -6,13 +6,11 @@
    ========================================================================== */
 
 /* Font Families & Weights */
-$sans-serif-fallback:     Helvetica, Arial, sans-serif !default;
-$serif-fallback:          Georgia, Times, "Times New Roman", serif !default;
-$monospace-fallback:      Monaco, Consolas, monospace !default;
 $text-font:               $sans-serif-fallback !default;
 $text-weight:             400 !default;
 $heading-font:            $sans-serif-fallback !default;
 $heading-weight:          700 !default;
+/* Adjust the size of headings relative to the text, e.g., +2 or -2 */
 $heading-size-adjustment: 0 !default;
 $heading-letter-spacing:  0 !default;
 $code-font:               $monospace-fallback !default;
@@ -21,7 +19,7 @@ $code-size-adjustment:    0 !default;
 
 /* Sizes -- edit these as desired */
 $font-size:   16px !default;
-$line-height: 1.5 !default;
+$line-height: 2 !default;
 
 /* Derivatives sizes (do not edit!) */
 $xxxxl:          ceil($font-size * 3) !default;      // 48px
@@ -43,55 +41,16 @@ $headerbox-size: $h2-font-size !default;
 /* Colors
    ========================================================================== */
 
-/* Black, white & grays */
-$black:  #000 !default;
-$gray-2: #222 !default;
-$gray-3: #333 !default;
-$gray-4: #444 !default;
-$gray-5: #555 !default;
-$gray-6: #666 !default;
-$gray-9: #999 !default; 
-$gray-a: #aaa !default; 
-$gray-c: #ccc !default; 
-$gray-d: #ddd !default; 
-$gray-e: #eee !default; 
-$gray-f: #f8f8f8 !default;
-$white:  #fff !default;
-
-@function dark($color) {
-  @return darken($color, 15%);
-}
-@function light($color) {
-  @return lighten($color, 15%);
-}
-
-/* Palette */
-$purple:         #336699 !default;
-$mauve:          #663399 !default;
-$fuschia:        #993399 !default;
-$pink:           #ea4c88 !default;
-$red:            #cc0000 !default;
-$mellow-red:     #cc3333 !default;
-$orange:         #ff6600 !default;
-$brown:          #996633 !default;
-$yellow:         #ffcc33 !default;
-// $grass-green: #999900 !default;
-$green:          #336600 !default;
-// $turquoise:   !default;
-$light-blue:     #0099cc !default;
-$blue:           #0066cc !default;
-$cyan:           #6666cc !default;
-
 /* Base Colors */
-$primary-color:     $mauve !default;
-$secondary-color:   $pink !default;
+$primary-color:     $pink !default;
+$secondary-color:   $fuschia !default;
 // $tertiary-color: $pink !default;
 $neutral-color:     $gray-c !default;
 
 /* Text colors */
-$text-color:    $gray-4 !default;
-$off-color:     light($text-color) !default; // $gray-5
-$heading-color: $gray-5 !default;
+$text-color:    $gray-5 !default;
+$off-color:     light($text-color) !default;
+$heading-color: dark($text-color) !default;
 $h1-color:      $primary-color !default;
 $h2-color:      $heading-color !default;
 $h3-color:      $heading-color !default;
@@ -103,23 +62,22 @@ $code-color:    dark($orange) !default;
 /* Page & content colors */
 $page-color:    $white !default;
 $content-color: $white !default;
-$nested-color:   $gray-f;
+$nested-color:  $gray-f;
 
 /* Widget colors */
-$link-color:    $blue !default;
+$link-color:    $light-blue !default;
 $hover-color:   dark($link-color) !default;
-$visited-color: dark($purple) !default;
-$info-color:    $light-blue !default;
+$visited-color: dark($mauve) !default;
+$info-color:    $blue !default;
 $success-color: $green !default;
-$warning-color: dark($yellow) !default;
-$error-color:   $mellow-red !default;
+$warning-color: $yellow !default;
+$error-color:   $red !default;
 $alert-color:   $info-color !default;
 $darker-color:  $text-color !default;
 $mid-color:     light($darker-color) !default;
-$lighter-color: $gray-c !default;
-$border-color:  $lighter-color !default;
+$border-color:  $gray-c !default;
 $tab-color:     $secondary-color !default;
-$widget-color:  $gray-e;
+$widget-color:  $gray-e !default;
 
 $shading: 0.25;
 

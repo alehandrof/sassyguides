@@ -18,7 +18,7 @@
   & + div {
     @include border-radius($widget-roundness);
     @extend %blocks;
-    background: $lighter-color;
+    background: $nested-color;
     padding: rhythm(2);
     // margin-top: -(rhythm(4) + $widget-roundness);
   }
