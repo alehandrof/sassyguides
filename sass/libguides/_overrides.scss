@@ -10,6 +10,9 @@
   display: none;
 }
 
+/* Wrap content in a div or span with the clutter class to hide it */
+.clutter { @extend %hide; }
+
 /* Default banner */
 #banner { @extend %hide; }
 
