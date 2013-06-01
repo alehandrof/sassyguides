@@ -32,7 +32,7 @@ SassyGuides is a framework for customizing [LibGuides](http://springshare.com/li
 
 - The [sassyguides.scss](http://github.com/alehandrof/sassyguides/blob/master/sass/sassyguides.scss) stylesheet combines all the other components. It's therefore a good place to start.
 
-- The settings files -- [base/\_settings.scss](http://github.com/alehandrof/sassyguides/blob/master/sass/base/_settings.scss) and [libguides/\_settings.scss](http://github.com/alehandrof/sassyguides/blob/master/sass/libguides/_settings.scss) -- are also good starting points. You can override settings by adding them in new file and importing it into `sassyguides.scss`.
+- The settings files &ndash; [base/\_settings.scss](http://github.com/alehandrof/sassyguides/blob/master/sass/base/_settings.scss) and [libguides/\_settings.scss](http://github.com/alehandrof/sassyguides/blob/master/sass/libguides/_settings.scss) &ndash; are also good starting points. You can override settings by adding them in new file and importing it into `sassyguides.scss`.
 
 ### 4. Use SassyGuides:
 
@@ -54,9 +54,9 @@ The environment I use to develop SassyGuides combines Ruby, Guard, Compass & Liv
 * Install LiveReload:
     - Install the [LiveReload extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) on the browser you'll be using for development.
 * Install Ruby:
-    - _Windows_ -- http://rubyinstaller.org/
-    - _Linux_ -- `sudo apt-get install ruby`
-    - _Mac_ -- Already installed
+    - _Windows_ &ndash; http://rubyinstaller.org/
+    - _Linux_ &ndash; `sudo apt-get install ruby`
+    - _Mac_ &ndash; Already installed
 * Install the required Ruby gems:
     - `gem install guard-compass guard-livereload`
     - On _Linux_ you will need to add `sudo` before the above command.
