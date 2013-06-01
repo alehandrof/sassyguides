@@ -2,12 +2,19 @@
    Goodies (Classes?)
    ========================================================================== */
 
-/* Small caps */
+/* Lead (or lede) unit; intended for block-level elements, such as <p> */
+%lead {
+  color: $off-color;
+  margin-bottom: rhythm(4, $l);
+  @include adjust-font-size-to($l, 4.5);
+}
+.lede, .lead { @extend %lead; }
+
+/* Small caps (inline) */
 %small-caps {
   text-transform: uppercase;
-  @include adjust-font-size-to($s);  
+  @include adjust-font-size-to($s);
 }
-
 .small-caps {
   @extend %small-caps;
 }
@@ -18,7 +25,7 @@
 .text-right { text-align: right; }
 
 /* Emphasis classes */
-.muted { color: $gray-9; }
+.muted { color: $muted-color; }
 .text-warning { color: $warning-color; }
 .text-error { color: $error-color; }
 .text-info { color: $info-color; }
@@ -27,7 +34,7 @@
 /* Glow button placeholder class */
 %glow-effect {
   @include box-shadow(0 0 rhythm(2) rgba($link-color, 0.25));
-  border: 1px solid $link-color;  
+  border: 1px solid $link-color;
 }
 %glow-button {
   @include border-radius($widget-roundness);
@@ -73,7 +80,7 @@
 }
 
 .nav-list {
-  @include no-bullets; 
+  @include no-bullets;
   @extend %nav-list;
   .active {
     @extend %nav-list-active;

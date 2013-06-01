@@ -50,6 +50,7 @@ $neutral-color:     $gray-c !default;
 /* Text colors */
 $text-color:    $gray-5 !default;
 $off-color:     light($text-color) !default;
+$muted-color:   light($off-color) !default;
 $heading-color: dark($text-color) !default;
 $h1-color:      $primary-color !default;
 $h2-color:      $heading-color !default;

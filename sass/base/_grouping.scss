@@ -42,11 +42,6 @@
 /* Paragraphs */
 p {
   @extend %blocks;
-  &.lede,
-  &.lead {
-    @include adjust-font-size-to($l);
-    color: $mid-color;
-  }
 }
 
 /* Code & preformatted placeholder */
@@ -109,7 +104,7 @@ li {
 
 /* Definition lists */
 dl {
- @extend %blocks; 
+ @extend %blocks;
 }
 dt {
   font-weight: 700;
