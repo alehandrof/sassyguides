@@ -4,7 +4,9 @@ SassyGuides is a framework for customizing [LibGuides](http://springshare.com/li
 
 **SassyGuides is under development. There is no stable release yet. Do not use in production!**
 
-Check out the [live demo](http://sandbox.campusguides.com/sassyguides).
+- Check out the [live demo](http://sandbox.campusguides.com/sassyguides) to see what it looks like.
+- Read the [changelog](http://github.com/alehandrof/sassyguides/blob/master/CHANGELOG.md) to find out what's changed recently.
+- Questions or comments? Contact me by [email](mailto:alehandrof@gmail.com) or on [twitter](http://twitter.com/alehandrof).
 
 ---
 
@@ -23,6 +25,7 @@ Check out the [live demo](http://sandbox.campusguides.com/sassyguides).
     - [Compass.app](http://compass.handlino.com/). Linux, Mac & Windows. Commercial.
     - [CodeKit](http://incident57.com/codekit/). Mac. Commercial.
     - [LiveReload](http://livereload.com/). Mac & Windows. Commercial.
+    - [Prepros](http://alphapixels.com/prepros/). Windows. Free.
     - [Scout](http://mhs.github.io/scout-app/). Mac & Windows. Free.
 
 ### 3. Customize SassyGuides:
@@ -44,15 +47,7 @@ To work locally, download some LibGuides pages and then edit the HTML files to a
 
 ---
 
-## Help / Feedback
-
-Please report any [issues](http://github.com/alehandrof/sassyguides/issues) you come across.
-
-You can contact me by [email](mailto:alehandrof@gmail.com) and [twitter](http://twitter.com/alehandrof).
-
----
-
-## Recommended Ruby Environment
+### Recommended Ruby Environment
 
 The environment I use to develop SassyGuides combines Ruby, Guard, Compass & LiveReload. The idea is to have Guard watch the SassyGuides directory so that it will re-compile the Sass when you edit it and then call LiveReload to refresh your browser. There are instructions on how to set this and similar workflows around the web but, while the outline below is from memory and rather inelegant, it should get you there. Feel free to ask me for help if you get stuck.
 
