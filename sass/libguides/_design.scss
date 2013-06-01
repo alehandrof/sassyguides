@@ -45,12 +45,15 @@ $content-margin: rhythm(8);
    ========================================================================== */
 
 /* Center Column Boxes */
-#centerboxes > div {
-  border-top: 1px solid $border-color;
-  padding-top: rhythm(4);
-  &:first-child {
-    border-top: none;
-    padding-top: 0;
+#contentcenter,
+#centerboxes {
+  & > div {
+    border-top: 1px solid $border-color;
+    padding-top: rhythm(4);
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
   }
 }
 
@@ -74,7 +77,7 @@ $content-margin: rhythm(8);
 @if $left-column-island {
   #contentleft {
     padding-right: $content-margin / 2 !important;
-    & > * {
+    .outerbox {
       @extend %sidebar-island;
     }
   }
@@ -82,7 +85,7 @@ $content-margin: rhythm(8);
 @if $right-column-island {
   #contentright {
     padding-left: $content-margin / 2 !important;
-    & > * {
+    .outerbox {
       @extend %sidebar-island;
     }
   }
@@ -101,6 +104,7 @@ $content-margin: rhythm(8);
   }
 }
 .innerbox {
+  @extend %blocks;
 }
 .innerboxprofile {
 }
@@ -109,6 +113,7 @@ $content-margin: rhythm(8);
 .innerbox {
   p {
     @extend %blocks;
+    &.lead { @extend %lead; }
   }
   a {
     // @extend %link-with-border;
@@ -258,7 +263,8 @@ div[id^="linksubmit"] { @extend %blocks; }
    ========================================================================== */
 
 #footer {
-  padding: rhythm(4) 0;
+  border-top: 1px solid $border-color;
+  padding: rhythm(4, $xs) 0;
   @include adjust-font-size-to($xs);
   /* Overrides */
   text-align: right;

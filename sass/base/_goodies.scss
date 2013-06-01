@@ -5,8 +5,8 @@
 /* Lead (or lede) unit; intended for block-level elements, such as <p> */
 %lead {
   color: $off-color;
-  margin-bottom: rhythm(4, $l);
   @include adjust-font-size-to($l, 4.5);
+  margin-bottom: rhythm(4, $l);
 }
 .lede, .lead { @extend %lead; }
 
