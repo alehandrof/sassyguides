@@ -2,6 +2,8 @@
    SassyGuides
    ========================================================================== */
 
+@import "base/constants";
+
 /*
  * USER SETTINGS
  * This is the place to override the default settings, preferably by importing
@@ -9,8 +11,6 @@
  */
 
 // @import "user/settings";
-
-@import "base/constants";
 
 // $font-size:                    17px;
 // $line-height:                  1.54;
@@ -37,6 +37,9 @@ $right-column-island:             true !default;
 
 /* LibGuides styles */
 @import "libguides/libguides";
+
+/* Enable the uber-hacky responsive mode */
+@import "base/responsive";
 
 /*
  * USER STYLES

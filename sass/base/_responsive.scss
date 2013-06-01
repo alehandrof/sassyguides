@@ -1,19 +1,68 @@
+/* Responsive hack
+   ========================================================================== */
 
-$small-screen: "(max-width:768px)";
-$medium-screen: "(min-width: 768px) and (max-width: 979px)";
-$large-screen: "(min-width: 980px)";
+/**
+ * This is a proof-of-concept hack (if there is such a thing), that I _think_
+ * can become reasonably robust for one- and two-column layouts. Three-column
+ * layouts will remain problematic (or maybe I'm not thinking this through
+ * clearly). Incidentally, this is _not_ a true responsive layout: it has
+ * not been designed from the beginning as such, nor does it take into account
+ * performance issues. An attempt to cater for content (amid the myriad possible
+ * uses of LibGuides) is done by insisting on the one- and two- column layouts.
+ * This can be improved with the cooperation of content creator (that's probably
+ * you who are reading this paragraph)
+ *
+ * There are other issues as well (popups, for example), but this preamble is
+ * sufficiently discouraging.
+ *
+ * N.B. The following code is TERRIBLE HORRIBLE NO GOOD VERY BAD.
+ */
 
-@media #{$small-screen} {
-  body {
-    // @include adjust-font-size-to ($base-font-size * 0.875, 4 * 0.8333);
+$responsive-mode: true;
+
+/* Set up break points */
+$bp1: rhythm(120); // ~770px
+$bp2: rhythm(160); // ~980px
+$bp3: rhythm(200); // ~1200px
+
+/* Set up media queries */
+$small-screen:  "(max-width: #{$bp1})";
+$medium-screen: "(min-width: #{$bp1}) and (max-width: #{$bp2})";
+$large-screen:  "(min-width: #{$bp2})";
+
+/* Disco! */
+@if $responsive-mode {
+
+  #content > div:first-child { width: 65% !important; float: left !important; }
+  #content > div:last-child  { width: 30% !important; float: right !important; }
+  #content > div:first-child:last-child { width: 100% !important; }
+  #tabsI, #tabs12 {
+    ul {
+      margin-left:  0;
+      margin-right: 0;
+    }
   }
-}
-@media #{$medium-screen} {
-  body {
+
+  @media #{$large-screen} {
+    body { @include adjust-font-size-to ($base-font-size * 1.125, 4 * 1.1667); } // 18px / 28px
+    #wrapper { width: 80%; }
   }
-}
-@media #{$large-screen} {
-  body {
-    // @include adjust-font-size-to ($base-font-size * 1.125, 4 * 1.1666);
+
+  @media #{$medium-screen} {
+    #wrapper { width: 92% }
   }
+
+  @media #{$small-screen} {
+    body { @include adjust-font-size-to($base-font-size * 0.937, 4 * 0.875); } // 15px / 21px
+    #wrapper { width: 98% }
+    #content > div:first-child { width: 100% !important; }
+    #content > div:last-child  { width: 100% !important; }
+    #contentleft,
+    #contentright {
+      float: right !important;
+      padding: 0 !important;
+    }
+    /*.topnav,*/ .guidetags, .guideattr, .stitle{ display: none; }
+   }
+
 }
