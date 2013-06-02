@@ -33,9 +33,20 @@ $large-screen:  "(min-width: #{$bp2})";
 /* Disco! */
 @if $responsive-mode {
 
-  #content > div:first-child { width: 65% !important; float: left !important; }
-  #content > div:last-child  { width: 30% !important; float: right !important; }
-  #content > div:first-child:last-child { width: 100% !important; }
+  #contentleft, #contentcenter { float: left !important; }
+  #contentright { float: right !important; }
+
+  /* Two columns */
+  #contentcenter:first-child { width: 60% !important; float: left !important; }
+  #contentright:last-child  { width: 35% !important; float: right !important; }
+
+  /* Three columns */
+  #contentleft, #contentleft ~ #contentright { width: 25% !important; }
+  #contentleft + #contentcenter { width: 45% !important; margin: 0 auto;}
+
+  /* One column */
+  #contentcenter:first-child:last-child { width: 100% !important; }
+
   #tabsI, #tabs12 {
     ul {
       margin-left:  0;
@@ -55,8 +66,7 @@ $large-screen:  "(min-width: #{$bp2})";
   @media #{$small-screen} {
     body { @include adjust-font-size-to($base-font-size * 0.937, 4 * 0.875); } // 15px / 21px
     #wrapper { width: 98% }
-    #content > div:first-child { width: 100% !important; }
-    #content > div:last-child  { width: 100% !important; }
+    #content > * { width: 100% !important; }
     #contentleft,
     #contentright {
       float: right !important;
